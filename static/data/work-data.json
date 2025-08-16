@@ -1,0 +1,135 @@
+[
+    {
+        "id": "tabble",
+        "title": "Tabble",
+        "details": {
+            "description": "Ultra-luxury hotel dining tablet app with velvet-black UI, gold accents, sensor automation, and seamless ordering. Designed for premium hospitality experiences with sophisticated visual design and intuitive user flows.",
+            "summary": "Luxury Hospitality App"
+        },
+        "roles": [
+            "UI/UX Designer",
+            "Full-Stack Developer",
+            "Product Strategy"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "View Project",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "id": "genrec",
+        "title": "Genrec AI Website",
+        "details": {
+            "description": "Corporate showcase for privacy-focused, high-impact AI solutions. Built to represent cutting-edge AI technology with elegant design and strategic positioning for enterprise clients.",
+            "summary": "AI Corporate Website"
+        },
+        "roles": [
+            "Co-Founder",
+            "UI/UX Designer",
+            "Full-Stack Developer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Visit Site",
+                "link": "https://genrec.ai"
+            }
+        ]
+    },
+    {
+        "id": "revolvo",
+        "title": "Revolvo",
+        "details": {
+            "description": "AI learning platform that evaluates and quizzes users in real time. Features adaptive learning algorithms, personalized content delivery, and comprehensive progress tracking for enhanced educational outcomes.",
+            "summary": "AI Learning Platform"
+        },
+        "roles": [
+            "AI Integration Specialist",
+            "Full-Stack Developer",
+            "Product Designer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "View Demo",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "id": "solo-level-up",
+        "title": "Solo Level Up",
+        "details": {
+            "description": "Gamified productivity app with immersive, in-character progression. Transforms daily tasks into engaging RPG-style experiences with achievement systems, character development, and motivational mechanics.",
+            "summary": "Gamified Productivity"
+        },
+        "roles": [
+            "Product Designer",
+            "Full-Stack Developer",
+            "Animation Systems"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Explore App",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "id": "wheres-my-bus",
+        "title": "Where's My Bus",
+        "details": {
+            "description": "Real-time government bus tracker providing accurate transit information. Features live GPS tracking, route optimization, arrival predictions, and user-friendly interface for seamless public transportation navigation.",
+            "summary": "Transit Tracking App"
+        },
+        "roles": [
+            "Full-Stack Developer",
+            "API Integration",
+            "Mobile Developer"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "View Project",
+                "link": "#"
+            }
+        ]
+    },
+    {
+        "id": "syncstream",
+        "title": "SyncStream",
+        "details": {
+            "description": "Advanced utility application with integrated AI processing capabilities. Streamlines workflow automation and data synchronization across multiple platforms with intelligent processing algorithms.",
+            "summary": "AI-Powered Utility"
+        },
+        "roles": [
+            "AI Integration",
+            "Full-Stack Developer",
+            "Cloud Architecture"
+        ]
+    },
+    {
+        "id": "wordcounter",
+        "title": "WordCounterTool",
+        "details": {
+            "description": "AI-powered text analysis tool providing comprehensive writing insights. Features advanced natural language processing, readability analysis, and intelligent content optimization suggestions.",
+            "summary": "AI Text Analysis"
+        },
+        "roles": [
+            "AI Developer",
+            "Frontend Developer",
+            "NLP Integration"
+        ],
+        "links": [
+            {
+                "type": "web",
+                "text": "Try Tool",
+                "link": "#"
+            }
+        ]
+    }
+]

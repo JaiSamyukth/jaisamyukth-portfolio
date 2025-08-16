@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Questrial:wght@400;600;700&display=swap')
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap')
+
+// Dark luxury theme colors
+$c_primary_bg: #0a0f1f
+$c_secondary_bg: #1a2332
+$c_accent_gold: #d4af37
+$c_accent_cyan: #00bcd4
+$c_text_primary: #f5f5f5
+$c_text_secondary: #b8c5d1
+$c_text_muted: #8a9ba8
+
+$titleFont: "Playfair Display", serif
+$font: "Questrial", sans-serif
+
+
+@mixin textStyles()
+
+	button.interactive
+		position: default
+		display: default
+		border: none
+		background-color: transparent
+		outline: none
+		color: inherit
+		font-family: inherit
+		font-weight: inherit
+		font-size: inherit
+		
+	
+	@media only screen and (max-width: 750px)
+		.paragraph
+			font-size: 3.4vw !important
+
+		.title
+			font-size: 22vw
+
+		.subtitle
+			font-size: 4vw
+			letter-spacing: 0.7vw
+
+		.subheader
+			font-size: 3vw
+			letter-spacing: 0.7vw
+
+	@media only screen and (min-width: 750px)
+		.title
+			font-size: 19vh
+
+		.subtitle
+			font-size: 3vh
+			letter-spacing: 1vh
+
+		.subheader
+			font-size: 2vh
+			letter-spacing: 1vh
+
+	@media only screen and (min-width: 950px)
+		.paragraph
+			font-size: 1.8vh
+			line-height: 150%
+			width: 60%
+			letter-spacing: 0.05vw
+
+	@media only screen and (max-width: 950px)
+		.paragraph
+			font-size: 2vw
+			line-height: 180% !important
+			letter-spacing: 0
+			width: 100% !important
+
+	.title
+		color: $c_text_primary
+		font-weight: 400
+		font-style: normal
+		font-family: $titleFont
+		text-transform: lowercase
+		line-height: 80%
+
+	.subtitle, .subheader
+		color: $c_accent_gold
+		font-weight: 600
+		font-style: normal
+		font-family: $titleFont
+		text-transform: lowercase
+
+	.paragraph
+		font-family: $font
+		color: $c_text_secondary
+
+	.button
+		font-family: $font
+		text-transform: lowercase
+		color: $c_text_primary
+		display: inline-block
+		position: relative
+		cursor: pointer
+		padding-bottom: 1%
+		text-decoration: none
+
+		a
+			text-decoration: none
+			color: inherit
+			display: inline-block
+
+		&:not(.no-decor)
+			&::after, &::before
+				content: ""
+				position: absolute
+				width: 100%
+				height: 2px
+				bottom: 0
+				background-color: $c_accent_gold
+
+			&::after
+				left: 0
+				width: 0%
+
+			&::before
+				right: 0
+				width: 100%
+
+			&:hover::after
+				width: 100%
+				transition: width 0.8s ease
+
+			&:hover::before
+				width: 0%
+				transition: width 0.5s ease
+				
