@@ -40,26 +40,6 @@
         ]
     },
     {
-        "id": "revolvo",
-        "title": "Revolvo",
-        "details": {
-            "description": "AI learning platform that evaluates and quizzes users in real time. Features adaptive learning algorithms, personalized content delivery, and comprehensive progress tracking for enhanced educational outcomes.",
-            "summary": "AI Learning Platform"
-        },
-        "roles": [
-            "AI Integration Specialist",
-            "Full-Stack Developer",
-            "Product Designer"
-        ],
-        "links": [
-            {
-                "type": "web",
-                "text": "View Demo",
-                "link": "#"
-            }
-        ]
-    },
-    {
         "id": "solo-level-up",
         "title": "Solo Level Up",
         "details": {

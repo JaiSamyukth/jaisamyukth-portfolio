@@ -160,9 +160,19 @@
 							bind:this={ workItems[i] }>
 
 							<div class="img-wrapper">
-								{#await loadImage(`assets/imgs/work-back/${item.id}/cover.jpg`) then src}
-									<img bind:this={images[i]} src="{src}" ondragstart={(e) => {e.preventDefault()}} draggable="false" alt="{item.title} Background">
-								{/await}
+								{#if item.id === 'tabble'}
+									{#await loadImage('assets/imgs/tabble.png') then src}
+										<img bind:this={images[i]} src="{src}" ondragstart={(e) => {e.preventDefault()}} draggable="false" alt="{item.title} Background">
+									{/await}
+								{:else if item.id === 'genrec'}
+									{#await loadImage('assets/imgs/genrec-site.png') then src}
+										<img bind:this={images[i]} src="{src}" ondragstart={(e) => {e.preventDefault()}} draggable="false" alt="{item.title} Background">
+									{/await}
+								{:else}
+									<div class="project-placeholder" bind:this={images[i]}>
+										<div class="project-icon">{item.title.charAt(0)}</div>
+									</div>
+								{/if}
 							</div>
 							{#await inViewPromise then _}
 								<div class="text-top-wrapper" class:hidden={currentActive >= 0 || workScrollState.active}>
@@ -552,21 +562,35 @@
 				position: relative
 				width: 85%
 				margin-right: 15%
-				box-shadow: 3px 9px 18px rgba(0, 0, 0, 0.2)
-				background: linear-gradient(135deg, consts.$c_secondary_bg 0%, #2a3f5f 50%, consts.$c_primary_bg 100%)
+				box-shadow: 3px 9px 18px rgba(0, 0, 0, 0.3)
+				background: consts.$c_secondary_bg
 				border-radius: 1vh
 				
 				img
-					height: 110%
-					width: 110%
+					height: 100%
+					width: 100%
 					object-fit: cover
 					position: absolute
-					top: 50%
-					left: 50%
-					transform: translate(-50%, -50%)
-					-webkit-transform: translate(-50%, -50%)
-					opacity: 0.3
-					filter: brightness(0.7) contrast(1.2)
+					top: 0
+					left: 0
+					opacity: 1
+					filter: brightness(1) contrast(1)
+					border-radius: 1vh
+
+				.project-placeholder
+					width: 100%
+					height: 100%
+					background: linear-gradient(135deg, consts.$c_accent_gold 0%, consts.$c_accent_cyan 100%)
+					display: flex
+					align-items: center
+					justify-content: center
+					border-radius: 1vh
+
+					.project-icon
+						font-size: 8vh
+						font-weight: bold
+						color: consts.$c_primary_bg
+						font-family: consts.$titleFont
 
 			.text-top-wrapper
 				position: absolute

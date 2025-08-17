@@ -70,12 +70,13 @@ $font: "Questrial", sans-serif
 			width: 100% !important
 
 	.title
-		color: $c_text_primary
+		color: $c_text_primary !important
 		font-weight: 400
 		font-style: normal
-		font-family: $titleFont
+		font-family: $titleFont !important
 		text-transform: lowercase
 		line-height: 80%
+		font-size: clamp(8rem, 12vw, 16rem) !important
 
 	.subtitle, .subheader
 		color: $c_accent_gold
