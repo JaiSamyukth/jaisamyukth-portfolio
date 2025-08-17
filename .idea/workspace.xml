@@ -5,69 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb0e136-7922-44b2-8456-d7125f6d38ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.firebaserc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.npmrc" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/LICENSE" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/banner.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/firebase.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/animations.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/cursor-dot.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/footer.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/loader.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/components/nav.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/consts.sass" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/effects/defaults/image-mesh.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/effects/defaults/renderer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/effects/work-slider/item.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/effects/work-slider/renderer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/effects/work-slider/shaders.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/sections/about.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/sections/home.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/sections/work.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/state.svelte.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/store.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/utils.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/lib/wait-for-element-transition.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/+page.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/routes/+page.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/slickscroll.d.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/footer-logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/home-back.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/logo.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/profile-photo.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/scroll_arrow.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/signature-white.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/android.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/firebase.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/flutter.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/gcp.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/iOS.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/nodejs.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/php.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/react.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/svg-icons/svelte.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/work-back/grillzzy/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/work-back/kic/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/work-back/lcml/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/work-back/marymount/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/assets/imgs/work-back/v1/cover.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/data/data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/data/work-data.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/favicon.ico" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/robots.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/static/sitemap.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/svelte.config.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/vite.config.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DEPLOYMENT.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Signature.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/vercel.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,27 +31,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-OllamAssist&quot;: &quot;OllamAssist&quot;,
-    &quot;Notification.DoNotAsk-OllamAssist&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;terminal&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Notification.DisplayName-DoNotAsk-OllamAssist": "OllamAssist",
+    "Notification.DoNotAsk-OllamAssist": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "master",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/JaiSamyukth_Portolio_Site",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "configurable.group.junie",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\JaiSamyukth_Portolio_Site" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\JaiSamyukth_Portolio_Site" />
     </key>
@@ -129,7 +76,10 @@
       <updated>1755285119098</updated>
       <workItem from="1755285120192" duration="2583000" />
       <workItem from="1755311585922" duration="1683000" />
-      <workItem from="1755315435958" duration="2409000" />
+      <workItem from="1755315435958" duration="3833000" />
+      <workItem from="1755356865929" duration="618000" />
+      <workItem from="1755365397876" duration="1517000" />
+      <workItem from="1755429772246" duration="498000" />
     </task>
     <servers />
   </component>
