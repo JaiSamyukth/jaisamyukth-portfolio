@@ -97,7 +97,7 @@
 
 
 
-<div id="content-container" style="padding-top: 23vh" bind:this={homeContainerElement}>
+<div id="content-container" style="padding-top: 15vh" bind:this={homeContainerElement}>
 	<div class="content-wrapper">
 		<div class="flex">
 			<div class="flex-wrapper first">
@@ -171,8 +171,10 @@
 		display: flex
 		flex-direction: row
 		justify-content: space-between
+		align-items: flex-start
 		position: relative
 		box-sizing: border-box
+		padding-top: 8vh
 
 		.flex-wrapper
 			position: relative

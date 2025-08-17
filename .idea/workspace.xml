@@ -5,13 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="bbb0e136-7922-44b2-8456-d7125f6d38ed" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Genrec_Site.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tabble.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/sections/home.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/sections/home.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/lib/sections/work.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/src/lib/sections/work.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/data/work-data.json" beforeDir="false" afterPath="$PROJECT_DIR$/static/data/work-data.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +76,7 @@
       <workItem from="1755356865929" duration="618000" />
       <workItem from="1755365397876" duration="1517000" />
       <workItem from="1755429772246" duration="2654000" />
-      <workItem from="1755433447313" duration="369000" />
+      <workItem from="1755433447313" duration="1478000" />
     </task>
     <servers />
   </component>
