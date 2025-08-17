@@ -102,15 +102,15 @@
 		<div class="flex">
 			<div class="flex-wrapper first">
 
-				<img src="assets/imgs/signature.png" alt="Jai Samyukth Signature" class="h-signature" bind:this={signatureElement}>
+				<img src="assets/imgs/signature-white.png" alt="Jai Samyukth Signature" class="h-signature" bind:this={signatureElement}>
 
 			</div>
 			
 			<div class="flex-wrapper second">
-				<h1 class = "title">
+				<h1 class = "title" style="display: flex; flex-direction: column;">
 					<div class="title-mask">
 						<div class="word" bind:this={titleWord1Element}>Jai</div>
-					</div><br>
+					</div>
 					<div class="title-mask">
 						<div class="word" bind:this={titleWord2Element}>Samyukth</div>
 					</div>
@@ -124,7 +124,7 @@
 					<div class="action" bind:this={callToActionElement}>
 						<div class="mask">
 							{#await loadImage("assets/imgs/scroll_arrow.png") then src}
-								<img src="{src}" alt="">
+								<img src="{src}" alt="Scroll down arrow">
 							{/await}
 						</div>
 						<div>
@@ -153,7 +153,7 @@
 #content-container
 	height: 100vh
 	width: 100vw
-	padding: 12vh 7vw
+	padding: 8vh 7vw
 	box-sizing: border-box
 	position: relative
 	background-color: consts.$c_primary_bg
@@ -174,7 +174,7 @@
 		align-items: flex-start
 		position: relative
 		box-sizing: border-box
-		padding-top: 8vh
+		padding-top: 4vh
 
 		.flex-wrapper
 			position: relative
@@ -199,7 +199,6 @@
 			.word
 				color: consts.$c_text_primary !important
 				font-family: consts.$titleFont !important
-				font-size: 12vh !important
 				line-height: 0.9 !important
 
 			.mask
@@ -209,7 +208,7 @@
 				width: 35vh
 				margin-left: -6vh
 				opacity: 0
-				filter: brightness(0) saturate(100%) invert(77%) sepia(85%) saturate(1352%) hue-rotate(8deg) brightness(95%) contrast(89%)
+				filter: brightness(0) invert(1)
 
 			.occupation
 				position: relative
