@@ -36,7 +36,7 @@ export class SliderImageMesh extends ImageMesh {
 
     createMesh(): void {
         super.createMesh();
-        this.element.parentElement!.style.visibility = "hidden"; // Hide original image element
+        this.element.style.visibility = "hidden"; // Hide original image element
     }
 
     render(): void {

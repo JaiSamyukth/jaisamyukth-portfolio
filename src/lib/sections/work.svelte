@@ -108,7 +108,16 @@
 		listContainer.style.transform = "translate3d(0px, 0px, 0px)";
 
 		// ThreeJS warping effect if device can handle it
-		if (gpuTier.tier >= 2 && !gpuTier.isMobile && gpuTier.fps! >= 30) new ImageRenderer(container, images);
+		if (gpuTier.tier >= 2 && !gpuTier.isMobile && gpuTier.fps! >= 30) {
+			new ImageRenderer(container, images);
+		}
+		else {
+			images.forEach(image => {
+				if (image) {
+					image.style.visibility = "visible";
+				}
+			})
+		}
 	});
 
 	// Move slider to active item when it is active
@@ -122,6 +131,14 @@
 		title.anime({
 			onComplete: () => breakTitleWords=true
 		});
+	}
+
+	function getWorkImage(id: string) {
+		if (id === "tabble") {
+			return "assets/imgs/tabble.png";
+		}
+
+		return "assets/imgs/genrec-site.png";
 	}
 
 </script>
@@ -160,19 +177,9 @@
 							bind:this={ workItems[i] }>
 
 							<div class="img-wrapper">
-								{#if item.id === 'tabble'}
-									{#await loadImage('assets/imgs/tabble.png') then src}
-										<img bind:this={images[i]} src="{src}" ondragstart={(e) => {e.preventDefault()}} draggable="false" alt="{item.title} Background">
-									{/await}
-								{:else if item.id === 'genrec'}
-									{#await loadImage('assets/imgs/genrec-site.png') then src}
-										<img bind:this={images[i]} src="{src}" ondragstart={(e) => {e.preventDefault()}} draggable="false" alt="{item.title} Background">
-									{/await}
-								{:else}
-									<div class="project-placeholder" bind:this={images[i]}>
-										<div class="project-icon">{item.title.charAt(0)}</div>
-									</div>
-								{/if}
+								{#await loadImage(getWorkImage(item.id)) then src}
+									<img bind:this={images[i]} {src} ondragstart={(e) => {e.preventDefault()}} draggable="false" alt="{item.title} Background">
+								{/await}
 							</div>
 							{#await inViewPromise then _}
 								<div class="text-top-wrapper" class:hidden={currentActive >= 0 || workScrollState.active}>
@@ -424,13 +431,14 @@
 				align-items: center
 				gap: 5vh
 
-				*
-					flex-grow: 1
-					flex-basis: 0
+				& > div:first-child
+					flex: 2
+
+				& > div:not(:first-child)
+					flex: 1
 
 				p
 					font-size: 1.3vh
-					width: 65%
 
 				.roles 
 					display: flex
@@ -633,7 +641,6 @@
 					opacity: 1
 					letter-spacing: 0.1vw
 					line-height: 110%
-					word-spacing: 80vw
 					text-transform: lowercase
 					word-wrap: break-word
 					white-space: normal

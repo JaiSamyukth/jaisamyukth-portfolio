@@ -9,6 +9,7 @@
 	let section1Element: HTMLElement;
 	let section2Element: HTMLElement;
 	let profilePicContainer: HTMLElement;
+	let profileImageSrc: string | null = null;
 
 	// Promise which when resolved will trigger svelte animations
 	let sectionOneResolve: (value?: any) => void;
@@ -29,6 +30,7 @@
 
 		onScrolledIntoView(section1Element, () => sectionOneResolve(true));
 		onScrolledIntoView(section2Element, () => sectionTwoResolve(true));
+		profileImageSrc = await loadImage("assets/imgs/profile-photo.jpg");
 	});
 
 	function titleIn(node: HTMLElement) {
@@ -70,19 +72,11 @@
 			</div>
 		</div>
 		<div class="profile-image" use:addSlickScrollOffset bind:this={profilePicContainer}>
-			<div class="placeholder-profile"
-				in:maskSlideIn={{ duration: 1200,
-					delay: 100,
-					reverse: true,
-					maskStyles: [
-						{ property: "width", value: "100%"},
-						{ property: "height", value: "100%"}
-					]
-				}}>
-				<div class="profile-placeholder">
-					<div class="initials">JS</div>
+			{#if profileImageSrc}
+				<div class="placeholder-profile">
+					<img src={profileImageSrc} alt="Jai Samyukth Profile Photo" style="width: 100%; height: 100%; object-fit: cover;">
 				</div>
-			</div>
+			{/if}
 		</div>
 	{/await}
 </div>
@@ -181,7 +175,7 @@
 	background-color: consts.$c_primary_bg
 
 	.profile-image
-		width: 55%
+		flex: 0.8
 		overflow: hidden
 		margin-top: -40vh
 		position: relative
@@ -192,23 +186,12 @@
 			border-radius: 1.5vh
 			overflow: hidden
 
-			.profile-placeholder
-				width: 100%
-				height: 100%
-				background: linear-gradient(135deg, consts.$c_accent_gold 0%, consts.$c_accent_cyan 100%)
-				display: flex
-				align-items: center
-				justify-content: center
-
-				.initials
-					font-size: 15vh
-					font-weight: bold
-					color: consts.$c_primary_bg
-					font-family: consts.$titleFont
+			img
+				border-radius: 1.5vh
 
 	.content-wrapper
 		box-sizing: border-box
-		width: 50%
+		flex: 1
 		height: 100%
 		margin: 0 2vw
 		padding-right: 4vw
@@ -232,29 +215,29 @@
 
 		.paragraph
 			margin-top: 10vh
-			margin-left: 13vw
+			margin-left: 5vw
 			position: relative
-			width: 60%
+			width: 80%
 			line-height: 1.5rem
 
 			@media only screen and (max-width: 750px)
 				&
 					width: 100%
-					margin-left: 5vw
+					margin-left: 0
 
 			&::before
 				content: ""
 				position: absolute
 				height: 1px
-				width: 10vw
-				right: 115%
-				top: 15%
+				width: 8vw
+				right: 105%
+				top: 1rem
 				background-color: white
 				
 
 		.social-button-wrapper
 			font-size: 3vh
-			margin-left: 13vw
+			margin-left: 5vw
 			margin-top: 4vh
 			display: inline-block
 
