@@ -1,12 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="bbb0e136-7922-44b2-8456-d7125f6d38ed" name="Changes" comment="">
+    <list default="true" id="fa4a5d40-0b4e-4bd7-98c3-05260331df58" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.firebaserc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-merge.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/firebase-hosting-pull-request.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/AugmentWebviewStateStore.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.npmrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/DEPLOYMENT.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Genrec_Site.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/LICENSE" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Signature.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tabble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/banner.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/dev.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/firebase.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/animations.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/cursor-dot.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/footer.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/loader.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/components/nav.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/consts.sass" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/effects/defaults/image-mesh.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/effects/defaults/renderer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/effects/work-slider/item.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/effects/work-slider/renderer.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/effects/work-slider/shaders.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/sections/about.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/sections/home.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/sections/work.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/state.svelte.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/store.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/utils.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/lib/wait-for-element-transition.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.svelte" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes/+page.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/slickscroll.d.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/footer-logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/genrec-site.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/home-back.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/profile-photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/scroll_arrow.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/signature-white.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/signature.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/android.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/firebase.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/flutter.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/gcp.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/iOS.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/nodejs.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/php.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/react.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/svg-icons/svelte.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/tabble.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/work-back/grillzzy/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/work-back/kic/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/work-back/lcml/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/work-back/marymount/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/assets/imgs/work-back/v1/cover.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/data/work-data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/static/sitemap.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/svelte.config.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vercel.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/vite.config.ts" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,46 +86,32 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 4
-}</component>
-  <component name="ProjectId" id="31KuWg1sDUXlCJBT6dUGPNBDIW3" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 4
+}]]></component>
+  <component name="ProjectId" id="31xDTzHFUJjhr7FirAJ8MwMdv80" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
-    &quot;Notification.DisplayName-DoNotAsk-OllamAssist&quot;: &quot;OllamAssist&quot;,
-    &quot;Notification.DoNotAsk-OllamAssist&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/JaiSamyukth_Portolio_Site&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;configurable.group.junie&quot;,
-    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "fix/visual-bugs",
+    "junie.onboarding.icon.badge.shown": "true",
+    "last_opened_file_path": "D:/Files/JaiSamyukth_Portolio_Site",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
-  <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\JaiSamyukth_Portolio_Site" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\JaiSamyukth_Portolio_Site" />
-    </key>
-  </component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -65,18 +121,12 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="bbb0e136-7922-44b2-8456-d7125f6d38ed" name="Changes" comment="" />
-      <created>1755285119098</created>
+      <changelist id="fa4a5d40-0b4e-4bd7-98c3-05260331df58" name="Changes" comment="" />
+      <created>1756456841492</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1755285119098</updated>
-      <workItem from="1755285120192" duration="2583000" />
-      <workItem from="1755311585922" duration="1683000" />
-      <workItem from="1755315435958" duration="3833000" />
-      <workItem from="1755356865929" duration="618000" />
-      <workItem from="1755365397876" duration="1517000" />
-      <workItem from="1755429772246" duration="2654000" />
-      <workItem from="1755433447313" duration="1478000" />
+      <updated>1756456841492</updated>
+      <workItem from="1756456843087" duration="504000" />
     </task>
     <servers />
   </component>

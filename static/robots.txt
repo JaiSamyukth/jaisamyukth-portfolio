@@ -1,3 +1,0 @@
-Sitemap: https://jaisamyukth.vercel.app/sitemap.xml
-User-Agent: *
-Allow: /
