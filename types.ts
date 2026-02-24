@@ -16,6 +16,7 @@ export interface Project {
   gallery?: string[];
   liveLink?: string;
   repoLink?: string;
+  traction?: string[]; // Bullet points for progress/traction
 }
 
 export interface NavItem {

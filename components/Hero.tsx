@@ -24,23 +24,25 @@ export const Hero: React.FC = () => {
                         <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full border-2 border-black"></div>
                     </div>
 
-                    <h1 className="text-5xl md:text-7xl lg:text-8xl font-black uppercase leading-[0.9] mb-8">
-                        Building <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-2">Systems</span> <br />
-                        <span className="block mt-2">That Handle</span>
-                        <span className="text-transparent bg-clip-text bg-gradient-to-r from-black to-gray-800" style={{ WebkitTextStroke: '2px black' }}> Reality.</span>
+                    <h1 className="text-3xl md:text-4xl lg:text-5xl font-black uppercase leading-[1.1] mb-8">
+                        Yeah this guy is me, yeah he's amazing, yup he's a student, and definitely yes he's a <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">founder.</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl font-medium font-mono mb-10 max-w-lg leading-relaxed border-l-4 border-neo-purple pl-6">
-                        Jai Samyukth B U constructs applied software infrastructure for live environments.
-                        Focusing on synchronization, operational data, and stability over simulation.
+                    <p className="text-lg md:text-xl font-medium font-mono mb-6 max-w-lg leading-relaxed border-l-4 border-neo-purple pl-6">
+                        3rd-year CS student shipping complete systems end-to-end. One funds the others through paid client builds.
                     </p>
+
+                    <ul className="mb-8 space-y-2 text-base font-medium max-w-xl">
+
+                        <li className="flex items-start gap-2">
+                            <span className="text-neo-green font-bold">→</span>
+                            Lumina IQ in external user testing; Tabble end-to-end system built and locally validated
+                        </li>
+                    </ul>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto">
                         <NeoButton onClick={() => navigate('/work')}>
-                            Explore Systems <ArrowRight className="inline ml-2" />
-                        </NeoButton>
-                        <NeoButton variant="secondary" onClick={() => navigate('/approach')}>
-                            Read Philosophy
+                            View the systems <ArrowRight className="inline ml-2" />
                         </NeoButton>
                     </div>
                 </motion.div>

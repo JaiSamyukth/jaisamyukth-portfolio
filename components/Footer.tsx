@@ -8,11 +8,12 @@ export const Footer: React.FC = () => {
           <h2 className="text-3xl font-black uppercase mb-2">Jai Samyukth B U</h2>
           <p className="font-mono text-gray-400">Applied Software Systems.</p>
         </div>
-        
-        <div className="flex gap-4">
-          <a href="#" className="hover:text-neo-green transition-colors font-bold uppercase underline decoration-2">GitHub</a>
-          <a href="#" className="hover:text-neo-pink transition-colors font-bold uppercase underline decoration-2">LinkedIn</a>
-          <a href="#" className="hover:text-neo-yellow transition-colors font-bold uppercase underline decoration-2">Email</a>
+
+        <div className="flex flex-wrap gap-4 items-center justify-center">
+          <a href="https://github.com/JaiSamyukth" target="_blank" rel="noopener noreferrer" className="hover:text-neo-green transition-colors font-bold uppercase underline decoration-2">GitHub</a>
+          <a href="https://linkedin.com/in/jaisamyukth" target="_blank" rel="noopener noreferrer" className="hover:text-neo-pink transition-colors font-bold uppercase underline decoration-2">LinkedIn</a>
+          <a href="https://x.com/JaiSamyukth17" target="_blank" rel="noopener noreferrer" className="hover:text-neo-blue transition-colors font-bold uppercase underline decoration-2">X/Twitter</a>
+          <a href="mailto:jaisamyukth@gmail.com" className="hover:text-neo-yellow transition-colors font-bold uppercase underline decoration-2">Email</a>
         </div>
 
         <div className="text-right">

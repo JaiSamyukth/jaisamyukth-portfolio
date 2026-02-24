@@ -1,7 +1,6 @@
 import React from 'react';
 import { RevealCard } from '../components/RevealCard';
-import { Mail, Linkedin, Github, Send } from 'lucide-react';
-import { NeoButton } from '../components/NeoButton';
+import { Mail, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
 
 export const Contact: React.FC = () => {
     return (
@@ -18,37 +17,58 @@ export const Contact: React.FC = () => {
                 </div>
 
                 <h1 className="text-6xl md:text-8xl font-black uppercase text-center mb-8 leading-[0.9]">
-                    Initialize <br /> <span className="text-neo-blue">Handshake</span>
+                    Say <br /> <span className="text-neo-blue">Hi.</span>
                 </h1>
 
-                <p className="text-xl font-medium text-center mb-12 max-w-xl mx-auto">
-                    Ready to build systems that handle reality? Initiating communication protocol. Response latency: {'<'} 24h.
+                <p className="text-xl font-medium text-center mb-6 max-w-xl mx-auto">
+                    If you back student founders who ship before they fundraise — especially scrappy technical ones in India — say hi.
                 </p>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-                    <a href="mailto:hello@jaisamyukth.com" className="group">
-                        <div className="bg-neo-white border-4 border-black p-6 flex flex-col items-center hover:bg-black hover:text-white transition-colors cursor-pointer">
-                            <Mail size={48} className="mb-4 group-hover:animate-bounce" />
-                            <span className="font-mono font-bold uppercase">Email Transmission</span>
-                            <span className="text-sm opacity-60">hello@jaisamyukth.com</span>
+                <p className="text-lg font-mono text-center mb-12 max-w-xl mx-auto text-gray-700">
+                    Open to pre-seed conversations and accelerator programs for Lumina IQ, Tabble, and whatever comes next.
+                </p>
+
+                <div className="flex flex-wrap justify-center gap-4 mb-12">
+                    <a href="mailto:jaisamyukth@gmail.com" className="group flex-1 min-w-[140px] max-w-[200px]">
+                        <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-black hover:text-white transition-colors cursor-pointer w-full h-full">
+                            <Mail size={32} className="mb-2 group-hover:animate-bounce" />
+                            <span className="font-mono font-bold uppercase text-sm">Email</span>
                         </div>
                     </a>
 
-                    <a href="https://linkedin.com/in/jaisamyukth" target="_blank" rel="noopener noreferrer" className="group">
-                        <div className="bg-neo-white border-4 border-black p-6 flex flex-col items-center hover:bg-neo-blue hover:text-white transition-colors cursor-pointer">
-                            <Linkedin size={48} className="mb-4 group-hover:animate-pulse" />
-                            <span className="font-mono font-bold uppercase">Professional Link</span>
-                            <span className="text-sm opacity-60">/in/jaisamyukth</span>
+                    <a href="https://linkedin.com/in/jaisamyukth" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
+                        <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-blue hover:text-white transition-colors cursor-pointer w-full h-full">
+                            <Linkedin size={32} className="mb-2 group-hover:animate-pulse" />
+                            <span className="font-mono font-bold uppercase text-sm">LinkedIn</span>
+                        </div>
+                    </a>
+
+                    <a href="https://x.com/JaiSamyukth17" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
+                        <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-pink hover:text-white transition-colors cursor-pointer w-full h-full">
+                            <Twitter size={32} className="mb-2 group-hover:animate-bounce" />
+                            <span className="font-mono font-bold uppercase text-sm">X/Twitter</span>
+                        </div>
+                    </a>
+
+                    <a href="https://github.com/JaiSamyukth" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
+                        <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-green transition-colors cursor-pointer w-full h-full">
+                            <Github size={32} className="mb-2 group-hover:animate-pulse" />
+                            <span className="font-mono font-bold uppercase text-sm">GitHub</span>
+                        </div>
+                    </a>
+
+                    <a href="https://instagram.com/jaisamyukth17" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
+                        <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-yellow transition-colors cursor-pointer w-full h-full">
+                            <Instagram size={32} className="mb-2 group-hover:animate-bounce" />
+                            <span className="font-mono font-bold uppercase text-sm">Instagram</span>
                         </div>
                     </a>
                 </div>
 
                 <div className="text-center">
-                    <p className="font-mono font-bold mb-4 uppercase text-sm text-gray-500">Or find me in the code</p>
-                    <a href="https://github.com/jaisamyukth" target="_blank" rel="noopener noreferrer"
-                        className="inline-flex items-center gap-2 font-black uppercase text-2xl hover:underline decoration-4 decoration-neo-green">
-                        <Github size={32} /> github.com/jaisamyukth
-                    </a>
+                    <p className="font-mono font-bold text-sm text-gray-500 uppercase">
+                        Response latency: {'<'} 24h
+                    </p>
                 </div>
             </RevealCard>
 

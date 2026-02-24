@@ -125,6 +125,24 @@ export const ProjectDetail: React.FC = () => {
                             </RevealCard>
                         )}
 
+                        {/* Traction / Progress */}
+                        {project.traction && project.traction.length > 0 && (
+                            <RevealCard delay={0.5} className="bg-neo-yellow border-4 border-black p-8">
+                                <h2 className="text-2xl font-black uppercase mb-4 flex items-center gap-2">
+                                    <span className="w-4 h-4 bg-neo-green border-2 border-black"></span>
+                                    Progress / Traction
+                                </h2>
+                                <ul className="space-y-3">
+                                    {project.traction.map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-3 font-medium">
+                                            <span className="text-neo-green font-bold text-xl">✓</span>
+                                            <span>{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </RevealCard>
+                        )}
+
                         {/* Gallery */}
                         {project.gallery && project.gallery.length > 0 && (
                             <div className="space-y-8 mt-12">

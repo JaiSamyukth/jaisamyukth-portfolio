@@ -2,90 +2,71 @@ import { Project } from '../types';
 
 export const projects: Project[] = [
     {
-        id: 'lumina',
-        title: 'LuminaIQ',
-        category: 'AI / Education',
-        description: 'AI-assisted learning environment designed to structure interaction with knowledge rather than simulate conversation.',
-        longDescription: 'LuminaIQ represents a shift from "chatting with PDF" to "structuring knowledge from PDF". Unlike standard RAG implementations that focus on conversational retrieval, LuminaIQ builds a knowledge graph from ingested documents, allowing users to traverse concepts relationally. The system prioritizes citation accuracy and structural context over fluency.',
-        challenge: 'LLMs often hallucinate connections or lose context when processing large technical documents. Standard RAG (Retrieval-Augmented Generation) retrieves chunks but fails to understand the structural relationship between concepts.',
-        solution: 'Implemented a multi-stage ingestion pipeline that not only chunks text but also extracts hierarchical structure and entites. These are stored in a graph database (Neo4j) alongside vector embeddings. The query engine first resolves structural position before retrieving content, significantly reducing hallucination and improving answer relevance.',
+        id: 'genrec-ai',
+        title: 'Genrec AI',
+        category: 'Services / Revenue Engine',
+        description: 'Custom software builds that fund internal product work.',
+        longDescription: 'I take client projects end-to-end (full-stack websites + software). Revenue goes straight back into Lumina IQ and Tabble. No marketing budget — all work comes through direct network.',
+        challenge: 'Most student founders wait for funding or roles before shipping anything real. That delays learning how products actually behave with users, bugs, and bills. Waiting also kills momentum.',
+        solution: 'Cheap cloud + AI tools let one person ship production systems fast. Students who build real client software learn deployment, money, and iteration years ahead of peers who only do college projects.',
         gallery: [
             'https://picsum.photos/800/600?random=11',
-            'https://picsum.photos/800/600?random=12',
-            'https://picsum.photos/800/600?random=13'
+            'https://picsum.photos/800/600?random=12'
         ],
-        techStack: ['Python', 'JavaScript', 'LLM Integration', 'PDF Processing', 'Neo4j', 'Pinecone'],
-        status: 'Ongoing Development',
-        focus: 'Cognitive structuring & AI workflows',
+        techStack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'AWS'],
+        status: 'Revenue Active',
+        focus: 'software development and product building',
         imageUrl: 'https://picsum.photos/800/600?random=1',
         liveLink: '#',
-        repoLink: '#'
+        repoLink: '#',
+        traction: [
+            'Completed several products for clients and ongoing development',
+
+        ]
     },
     {
-        id: 'hrms',
-        title: 'Genrec-One',
-        category: 'Enterprise / HRMS',
-        description: 'Operational management system modeling administrative environments. Full-stack HRMS designed to simulate the complexity of institutional workflows.',
-        longDescription: 'Genrec-One is a monolithic approach to HR management, designed for organizations with complex, rigid hierarchies. It models the actual flow of approvals and document signing rather than just database state changes. The system includes a custom workflow engine that handles multi-party approvals with state rollback capabilities.',
-        challenge: 'Existing HR tools were either too flexible (lacking audit trails) or too rigid (unable to handle edge cases). The client needed a system that enforced protocol but allowed for authorized overrides.',
-        solution: 'Built a state-machine based workflow engine in FastAPI. Every action is an immutable event in the ledger. The frontend uses a "document-first" approach where UI elements mimic physical forms to reduce training time for legacy staff.',
+        id: 'lumina-iq',
+        title: 'Lumina IQ',
+        category: 'AI / Education',
+        description: 'AI-assisted path-building + revision + self-testing ',
+        longDescription: 'Working system that takes study content → structured explanations → revision outline → active recall questions. Students can note key points and re-test weak areas. Currently running with external testers.',
+        challenge: "Students cram 10 books in 2 days, reread notes, but rarely test recall under time pressure, they don't understand what to study or how to revise. Passive review creates illusion of understanding; real exams expose gaps.",
+        solution: 'Students already paste syllabus into ChatGPT informally. Purpose-built Path-building + revision + testing loops that enforce active recall are still rare and early — especially for dense board/college syllabi.',
         gallery: [
             'https://picsum.photos/800/600?random=21',
-            'https://picsum.photos/800/600?random=22'
+            'https://picsum.photos/800/600?random=22',
+            'https://picsum.photos/800/600?random=23'
         ],
-        techStack: ['Next.js', 'FastAPI', 'PostgreSQL', 'Docker'],
-        status: 'Modeled Environment',
-        focus: 'Translating organizational processes',
+        techStack: ['Python', 'TypeScript', 'LLM Integration', 'React', 'PostgreSQL'],
+        status: 'External Testing',
+        focus: 'AI personalized learning and revision',
         imageUrl: 'https://picsum.photos/800/600?random=2',
         liveLink: '#',
-        repoLink: '#'
+        repoLink: '#',
+        traction: [
+            'Functional product deployed',
+        ]
     },
     {
-        id: 'sync',
-        title: 'SyncStream',
-        category: 'Real-time / WebSocket',
-        description: 'Real-time synchronization experiment. Enables multiple clients to consume shared media in synchronized time.',
-        longDescription: 'SyncStream explores the constraints of latency in distributed consumption. It allows a "leader" to control the playback state of audio/video for n-number of "follower" clients. The system handles clock synchronization (NTP-style) to ensure playback is synchronized within <50ms variance across devices.',
-        challenge: 'Network jitter and varying device decoding speeds make "true" synchronization difficult on the web without specialized protocols.',
-        solution: 'Implemented a custom WebSocket protocol on top of Socket.io. The server acts as the source of truth for "time". Clients constantly ping for server-time offset. Playback commands are sent with a "future timestamp" to allow all clients to buffer and execute simultaneously.',
+        id: 'tabble',
+        title: 'Tabble',
+        category: 'Restaurant / Operations',
+        description: 'Table-to-kitchen ordering + service sync for small restaurants.',
+        longDescription: 'Three interfaces: customer (order + service requests from table), chef (incoming orders), admin (real-time overview). No manual typing. Full system implemented and tested locally end-to-end.',
+        challenge: 'Small restaurants rely on waiters shouting orders or one computer guy typing into Excel. That creates delays, mistakes, and high staffing cost even for 20–40 seat places.',
+        solution: 'Cheap Android tablets + cloud sync make this viable for restaurants that previously could never afford POS systems. India has millions of small eateries stuck in manual coordination.',
         gallery: [
             'https://picsum.photos/800/600?random=31',
             'https://picsum.photos/800/600?random=32'
         ],
-        techStack: ['WebSockets', 'Node.js', 'React', 'Redis'],
-        status: 'Experimental System',
-        focus: 'Shared-state coordination',
+        techStack: ['React', 'Node.js', 'WebSockets', 'PostgreSQL', 'PWA'],
+        status: 'Ready for Hardware',
+        focus: 'Order from where you are',
         imageUrl: 'https://picsum.photos/800/600?random=3',
-        repoLink: '#'
-    },
-    {
-        id: 'bus',
-        title: 'Bus Tracking',
-        category: 'IoT / Transport',
-        description: 'Lightweight web-based tracking interface. Emphasizes reliability and simplicity for live data representation of transport assets.',
-        techStack: ['Geolocation API', 'Maps Integration', 'PWA'],
-        status: 'Functional Prototype',
-        focus: 'Live data representation',
-        imageUrl: 'https://picsum.photos/800/600?random=4'
-    },
-    {
-        id: 'pdf',
-        title: 'PDF Suite',
-        category: 'Utility',
-        description: 'Utility toolkit for document manipulation workflows. Browser-based operations for merging, splitting, and processing files.',
-        techStack: ['WASM', 'JavaScript', 'File API'],
-        status: 'Utility System',
-        focus: 'Automating digital operations',
-        imageUrl: 'https://picsum.photos/800/600?random=5'
-    },
-    {
-        id: 'gen-eng',
-        title: 'Gen Engineering',
-        category: 'Web / Identity',
-        description: 'Technical web presence created for engineering-oriented services. A focused TypeScript implementation emphasizing clarity.',
-        techStack: ['TypeScript', 'React', 'Tailwind'],
-        status: 'Published Site',
-        focus: 'Technical identity',
-        imageUrl: 'https://picsum.photos/800/600?random=6'
+        repoLink: '#',
+        traction: [
+            'Complete multi-interface system built',
+
+        ]
     }
 ];

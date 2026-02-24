@@ -18,21 +18,21 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <Hero />
 
-      <Marquee text="LIVE ENVIRONMENTS • SHARED STATE • OPERATIONAL DATA •" bgColor="bg-neo-yellow" textColor="text-black" />
+      <Marquee text="SMALL TEAM • REAL BUILDS • CONSTANT ITERATION •" bgColor="bg-neo-yellow" textColor="text-black" />
 
       {/* Core Principles Grid */}
       <section className="py-20 px-4 bg-neo-black text-white">
         <div className="max-w-7xl mx-auto">
           <RevealCard className="mb-12 border-l-8 border-neo-green pl-6">
-            <h2 className="text-5xl font-black uppercase">Core Focus</h2>
-            <p className="font-mono text-neo-white mt-2">NOT ISOLATED TECHNOLOGIES. RECURRING STRUCTURAL PROBLEMS.</p>
+            <h2 className="text-5xl font-black uppercase">What I Build</h2>
+            <p className="font-mono text-neo-white mt-2">STUDENT FOUNDER SHIPPING REAL SYSTEMS. NOT WAITING FOR PERMISSION.</p>
           </RevealCard>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { icon: Network, title: "Synchronization", desc: "Reducing manual coordination between distributed users." },
-              { icon: Terminal, title: "Operational Data", desc: "Translating messy processes into stable software states." },
-              { icon: Cpu, title: "Infrastructure", desc: "Software that absorbs complexity rather than exposing it." }
+              { icon: Network, title: "Genrec AI", desc: "Client builds funding product development. Revenue engine for student founders." },
+              { icon: Terminal, title: "Lumina IQ", desc: "AI-assisted personalized and adaptive learning platform for students." },
+              { icon: Cpu, title: "Tabble", desc: "Restaurant ordering platform." }
             ].map((item, i) => (
               <RevealCard
                 key={i}
