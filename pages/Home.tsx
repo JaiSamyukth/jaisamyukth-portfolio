@@ -22,6 +22,20 @@ export const Home: React.FC = () => {
         <Marquee text="AVAILABLE FOR CLIENT WORK • SYSTEMS DESIGN • AI INTEGRATION • FULL-STACK BUILDS •" bgColor="bg-neo-yellow" textColor="text-black" />
       </div>
 
+      {/* Positioning Statement */}
+      <section className="py-16 px-4 bg-neo-black">
+        <div className="max-w-4xl mx-auto text-center">
+          <p className="text-2xl md:text-3xl font-black text-white uppercase leading-tight">
+            If you're expecting a 30-page proposal and 3 weeks of meetings,<br />
+            <span className="text-neo-yellow">I'm not your guy.</span>
+          </p>
+          <p className="text-xl md:text-2xl font-bold text-white mt-6">
+            If you want something built and working,<br />
+            <span className="text-neo-green">we'll get along.</span>
+          </p>
+        </div>
+      </section>
+
       {/* Core Principles Grid */}
       <section className="py-20 px-4 bg-neo-black text-white">
         <div className="max-w-7xl mx-auto">
@@ -60,17 +74,43 @@ export const Home: React.FC = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
-              { title: "Build your product from scratch", desc: "From idea to deployed system with real users" },
-              { title: "Fix or redesign broken systems", desc: "Slow apps, messy UX, unstable backend → cleaned and rebuilt" },
-              { title: "Integrate AI where it actually matters", desc: "Not hype. Real workflows using LLMs, automation, and data" },
-              { title: "Turn operations into software", desc: "If you're running something manually, I can systemize it" }
+              { 
+                title: "Build your product from scratch", 
+                desc: "From idea to deployed system with real users",
+                img: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=300&fit=crop"
+              },
+              { 
+                title: "Fix or redesign broken systems", 
+                desc: "Slow apps, messy UX, unstable backend → cleaned and rebuilt",
+                img: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop"
+              },
+              { 
+                title: "Integrate AI where it actually matters", 
+                desc: "Not hype. Real workflows using LLMs, automation, and data",
+                img: "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=300&fit=crop"
+              },
+              { 
+                title: "Turn operations into software", 
+                desc: "If you're running something manually, I can systemize it",
+                img: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=300&fit=crop"
+              }
             ].map((item, i) => (
-              <RevealCard key={i} delay={i * 0.1} className="bg-neo-yellow text-black border-4 border-black p-6 shadow-[6px_6px_0px_0px_#000]">
-                <div className="flex items-start gap-4">
-                  <div className="text-3xl font-black text-neo-blue">{i + 1}</div>
-                  <div>
-                    <h3 className="text-xl font-black uppercase mb-2">{item.title}</h3>
-                    <p className="font-medium">{item.desc}</p>
+              <RevealCard key={i} delay={i * 0.1} className="bg-neo-yellow text-black border-4 border-black p-0 shadow-[6px_6px_0px_0px_#000] overflow-hidden">
+                <div className="relative h-40 overflow-hidden">
+                  <img 
+                    src={item.img} 
+                    alt={item.title} 
+                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-300"
+                  />
+                  <div className="absolute inset-0 bg-black/20"></div>
+                </div>
+                <div className="p-6">
+                  <div className="flex items-start gap-4">
+                    <div className="text-3xl font-black text-neo-blue">{i + 1}</div>
+                    <div>
+                      <h3 className="text-xl font-black uppercase mb-2">{item.title}</h3>
+                      <p className="font-medium">{item.desc}</p>
+                    </div>
                   </div>
                 </div>
               </RevealCard>
