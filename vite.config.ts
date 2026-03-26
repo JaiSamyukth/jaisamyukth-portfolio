@@ -1,23 +1,44 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import path from 'path';
+import { defineConfig, loadEnv } from 'vite';
+import react from '@vitejs/plugin-react';
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    port: 3000,
-  },
-  build: {
-    outDir: 'dist',
-    sourcemap: true,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'],
-          gsap: ['gsap'],
-          audio: ['howler'],
-        },
+export default defineConfig(({ mode }) => {
+    const env = loadEnv(mode, '.', '');
+    return {
+      server: {
+        port: 3000,
+        host: '0.0.0.0',
       },
-    },
-  },
-})
+      plugins: [react()],
+      define: {
+        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
+        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
+      },
+      resolve: {
+        alias: {
+          '@': path.resolve(__dirname, '.'),
+        }
+      },
+      build: {
+        // Generate source maps for debugging
+        sourcemap: mode !== 'production',
+        // Optimize chunk size
+        rollupOptions: {
+          output: {
+            manualChunks: {
+              'react-vendor': ['react', 'react-dom'],
+              'router': ['react-router-dom'],
+              'animation': ['framer-motion'],
+              'icons': ['lucide-react'],
+            },
+          },
+        },
+        // Minify options (using esbuild which is built-in)
+        minify: 'esbuild',
+      },
+      // Optimize dependency pre-bundling
+      optimizeDeps: {
+        include: ['react', 'react-dom', 'react-router-dom', 'framer-motion', 'lucide-react'],
+      },
+    };
+});

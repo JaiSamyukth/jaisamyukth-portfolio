@@ -1,0 +1,11 @@
+# Robots.txt for Jai Samyukth Portfolio
+# https://jaisamyukth.com
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://jaisamyukth.com/sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1

@@ -2,48 +2,40 @@
 export default {
   content: [
     "./index.html",
-    "./src/**/*.{js,ts,jsx,tsx}",
+    "./**/*.{js,ts,jsx,tsx}",
+    "!./node_modules/**",
   ],
   theme: {
     extend: {
-      fontFamily: {
-        'serif': ['Playfair Display', 'serif'],
-        'sans': ['Inter', 'sans-serif'],
-      },
       colors: {
-        parchment: {
-          light: '#F4E4BC',
-          dark: '#1B1712',
-          darker: '#221D16',
-        },
-        dust: {
-          light: '#C6A779',
-          dark: '#9B7E51',
-        },
-        twilight: {
-          light: '#1B263B',
-          dark: '#0D1B2A',
-        },
-        glow: {
-          gold: '#E2C275',
-          blue: '#7FD1FF',
-        },
+        'neo-white': '#fdfbf7', // slightly off-white parchment
+        'neo-black': '#0a0a0a',
+        'neo-green': '#ccff00', // Acid green
+        'neo-purple': '#b983ff', // Electric purple
+        'neo-pink': '#ff0099',  // Hot pink
+        'neo-blue': '#2b59ff',  // Electric Blue
+        'neo-yellow': '#fff500', // Intense Yellow
+      },
+      fontFamily: {
+        sans: ['"Space Grotesk"', 'sans-serif'],
+        mono: ['"Space Mono"', 'monospace'],
+      },
+      boxShadow: {
+        'neo': '6px 6px 0px 0px #000000',
+        'neo-lg': '10px 10px 0px 0px #000000',
+        'neo-sm': '4px 4px 0px 0px #000000',
+        'neo-hover': '12px 12px 0px 0px #000000',
       },
       animation: {
-        'pulse-glow': 'pulse-glow 2s ease-in-out infinite alternate',
-        'typewriter': 'typewriter 3s steps(40) 1s 1 normal both',
+        'marquee': 'marquee 25s linear infinite',
       },
       keyframes: {
-        'pulse-glow': {
-          '0%': { opacity: '0.6', transform: 'scale(1)' },
-          '100%': { opacity: '1', transform: 'scale(1.05)' },
-        },
-        'typewriter': {
-          'from': { width: '0' },
-          'to': { width: '100%' },
-        },
-      },
-    },
+        marquee: {
+          '0%': { transform: 'translateX(0%)' },
+          '100%': { transform: 'translateX(-100%)' },
+        }
+      }
+    }
   },
   plugins: [],
 }
