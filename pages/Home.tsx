@@ -19,6 +19,7 @@ export const Home: React.FC = () => {
       <Hero />
 
       <div className="mt-8">
+<<<<<<< HEAD
         <Marquee text="AVAILABLE FOR CLIENT WORK • SYSTEMS DESIGN • AI INTEGRATION • FULL-STACK BUILDS •" bgColor="bg-neo-yellow" textColor="text-black" />
       </div>
 
@@ -36,6 +37,11 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+=======
+        <Marquee text="SMALL TEAM • REAL BUILDS • CONSTANT ITERATION •" bgColor="bg-neo-yellow" textColor="text-black" />
+      </div>
+
+>>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
       {/* Core Principles Grid */}
       <section className="py-20 px-4 bg-neo-black text-white">
         <div className="max-w-7xl mx-auto">
@@ -64,6 +70,7 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+<<<<<<< HEAD
       {/* What I Can Do For You Section */}
       <section className="py-20 px-4 bg-neo-white border-t-4 border-black">
         <div className="max-w-7xl mx-auto">
@@ -121,6 +128,8 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+=======
+>>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
       {/* Selected Work Section */}
       <section className="py-20 px-4 bg-neo-white border-t-4 border-black">
         <div className="max-w-7xl mx-auto">

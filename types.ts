@@ -17,8 +17,11 @@ export interface Project {
   liveLink?: string;
   repoLink?: string;
   traction?: string[]; // Bullet points for progress/traction
+<<<<<<< HEAD
   problem?: string;
   outcome?: string;
+=======
+>>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
 }
 
 export interface NavItem {

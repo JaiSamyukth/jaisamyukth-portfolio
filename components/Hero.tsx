@@ -29,6 +29,7 @@ export const Hero: React.FC = () => {
                         Yep, that’s me. A CS student who somehow ended up building full systems and calling himself a  <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">founder.</span>
                     </h1>
 
+<<<<<<< HEAD
                     <p className="text-lg md:text-xl font-medium font-mono mb-6 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
                         If you have a software problem, I probably want to solve it. To know me, feel free to reach out.
                     </p>
@@ -62,6 +63,13 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <div className="mb-10 mt-8 text-base font-medium max-w-xl">
+=======
+                    <p className="text-lg md:text-xl font-medium font-mono mb-10 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
+                        If you have a software problem, I probably want to solve it. To know me, feel free to reach out.
+                    </p>
+
+                    <div className="mb-10 mt-5 text-base font-medium max-w-xl">
+>>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
                         <div className="flex items-start gap-2">
                             <span className="text-neo-green font-bold">→</span>
                             <div>
@@ -71,6 +79,15 @@ export const Hero: React.FC = () => {
                             </div>
                         </div>
                     </div>
+<<<<<<< HEAD
+=======
+
+                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-9">
+                        <NeoButton onClick={() => navigate('/work')}>
+                            View the systems <ArrowRight className="inline ml-2" />
+                        </NeoButton>
+                    </div>
+>>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
                 </motion.div>
 
                 {/* Right Side: Image */}

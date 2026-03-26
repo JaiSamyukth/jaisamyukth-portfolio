@@ -21,6 +21,7 @@ export const Contact: React.FC = () => {
                 </h1>
 
                 <p className="text-xl font-medium text-center mb-6 max-w-xl mx-auto">
+<<<<<<< HEAD
                     If you're building something and need it done right — reach out.
                 </p>
 
@@ -33,6 +34,13 @@ export const Contact: React.FC = () => {
 
                 <p className="text-base font-medium text-center mb-8 max-w-xl mx-auto text-gray-600">
                     Also open to pre-seed conversations for Lumina IQ and Tabble.
+=======
+                    If you back student founders who ship before they fundraise — especially scrappy technical ones in India — say hi.
+                </p>
+
+                <p className="text-lg font-mono text-center mb-12 max-w-xl mx-auto text-gray-700">
+                    Open to pre-seed conversations and accelerator programs for Lumina IQ, Tabble, and whatever comes next.
+>>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
