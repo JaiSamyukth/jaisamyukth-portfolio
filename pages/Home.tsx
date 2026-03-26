@@ -18,7 +18,9 @@ export const Home: React.FC = () => {
       {/* Hero Section */}
       <Hero />
 
-      <Marquee text="SMALL TEAM • REAL BUILDS • CONSTANT ITERATION •" bgColor="bg-neo-yellow" textColor="text-black" />
+      <div className="mt-8">
+        <Marquee text="SMALL TEAM • REAL BUILDS • CONSTANT ITERATION •" bgColor="bg-neo-yellow" textColor="text-black" />
+      </div>
 
       {/* Core Principles Grid */}
       <section className="py-20 px-4 bg-neo-black text-white">

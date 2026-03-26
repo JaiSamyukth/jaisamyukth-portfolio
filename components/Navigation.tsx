@@ -15,10 +15,10 @@ export const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="sticky top-0 z-50 w-full bg-neo-white border-b-4 border-black px-4 py-3 md:py-4">
+    <nav className="sticky top-0 z-50 w-full bg-neo-white border-b-4 border-black px-4 py-5 md:py-7">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         <NavLink to="/" className="text-2xl md:text-3xl font-black uppercase tracking-tighter hover:text-neo-blue transition-colors">
-          JAI.SAMYUKTH<span className="text-neo-pink">_B_U</span>
+          JAI SAMYUKTH
         </NavLink>
 
         {/* Desktop Menu */}
@@ -28,7 +28,7 @@ export const Navigation: React.FC = () => {
               key={item.path}
               to={item.path}
               className={({ isActive }) =>
-                `text-lg font-bold font-mono uppercase hover:bg-black hover:text-white px-2 transition-all ${isActive ? 'bg-neo-green border-2 border-black shadow-[4px_4px_0px_0px_#000]' : ''
+                `text-lg font-bold font-mono uppercase hover:bg-black hover:text-white px-2 py-1 inline-flex items-center transition-all ${isActive ? 'bg-neo-green border-2 border-black shadow-[4px_4px_0px_0px_#000]' : ''
                 }`
               }
             >

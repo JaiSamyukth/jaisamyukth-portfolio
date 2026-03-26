@@ -6,7 +6,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
           <h2 className="text-3xl font-black uppercase mb-2">Jai Samyukth B U</h2>
-          <p className="font-mono text-gray-400">Applied Software Systems.</p>
+          <p className="font-mono text-gray-400">The name is copyrighted from 2005</p>
         </div>
 
         <div className="flex flex-wrap gap-4 items-center justify-center">
@@ -17,8 +17,7 @@ export const Footer: React.FC = () => {
         </div>
 
         <div className="text-right">
-          <p className="font-mono text-xs text-gray-500">© {new Date().getFullYear()} / NEO-BRUTALISM V1</p>
-          <p className="font-mono text-xs text-gray-500">DEPLOYED TO PROD</p>
+          <p className="font-mono text-xs text-gray-500">© {new Date().getFullYear()} | JAI SAMYUKTH</p>
         </div>
       </div>
     </footer>
