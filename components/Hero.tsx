@@ -29,11 +29,39 @@ export const Hero: React.FC = () => {
                         Yep, that’s me. A CS student who somehow ended up building full systems and calling himself a  <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">founder.</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl font-medium font-mono mb-10 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
+                    <p className="text-lg md:text-xl font-medium font-mono mb-6 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
                         If you have a software problem, I probably want to solve it. To know me, feel free to reach out.
                     </p>
 
-                    <div className="mb-10 mt-5 text-base font-medium max-w-xl">
+                    <div className="mb-8 mt-5 text-base font-medium max-w-xl">
+                        <div className="flex items-start gap-2">
+                            <span className="text-neo-green font-bold">→</span>
+                            <div>
+                                <div>I build production-ready systems for startups and businesses.</div>
+                                <div>From idea → deployment → real users.</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="mb-6 text-base font-medium max-w-xl">
+                        <div className="flex flex-col gap-1">
+                            <span className="font-bold uppercase text-sm text-gray-500 mb-1">Currently taking on:</span>
+                            <span>• Full-stack product builds</span>
+                            <span>• AI integrations (LLMs, automation, internal tools)</span>
+                            <span>• System redesigns for speed, scale, and clarity</span>
+                        </div>
+                    </div>
+
+                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-6">
+                        <NeoButton onClick={() => navigate('/work')}>
+                            View Systems <ArrowRight className="inline ml-2" />
+                        </NeoButton>
+                        <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
+                            Work With Me
+                        </NeoButton>
+                    </div>
+
+                    <div className="mb-10 mt-8 text-base font-medium max-w-xl">
                         <div className="flex items-start gap-2">
                             <span className="text-neo-green font-bold">→</span>
                             <div>
@@ -42,12 +70,6 @@ export const Hero: React.FC = () => {
                                 <div>• Tabble — full-stack restaurant system (validated locally)</div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-9">
-                        <NeoButton onClick={() => navigate('/work')}>
-                            View the systems <ArrowRight className="inline ml-2" />
-                        </NeoButton>
                     </div>
                 </motion.div>
 

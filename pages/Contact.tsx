@@ -21,11 +21,18 @@ export const Contact: React.FC = () => {
                 </h1>
 
                 <p className="text-xl font-medium text-center mb-6 max-w-xl mx-auto">
-                    If you back student founders who ship before they fundraise — especially scrappy technical ones in India — say hi.
+                    If you're building something and need it done right — reach out.
                 </p>
 
-                <p className="text-lg font-mono text-center mb-12 max-w-xl mx-auto text-gray-700">
-                    Open to pre-seed conversations and accelerator programs for Lumina IQ, Tabble, and whatever comes next.
+                <p className="text-lg font-mono text-center mb-8 max-w-xl mx-auto text-gray-700">
+                    <span className="font-bold text-black">Available for:</span><br />
+                    • Client work (systems, AI, full-stack)<br />
+                    • Early-stage product builds<br />
+                    • Select collaborations
+                </p>
+
+                <p className="text-base font-medium text-center mb-8 max-w-xl mx-auto text-gray-600">
+                    Also open to pre-seed conversations for Lumina IQ and Tabble.
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">

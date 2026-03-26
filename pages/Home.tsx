@@ -19,7 +19,7 @@ export const Home: React.FC = () => {
       <Hero />
 
       <div className="mt-8">
-        <Marquee text="SMALL TEAM • REAL BUILDS • CONSTANT ITERATION •" bgColor="bg-neo-yellow" textColor="text-black" />
+        <Marquee text="AVAILABLE FOR CLIENT WORK • SYSTEMS DESIGN • AI INTEGRATION • FULL-STACK BUILDS •" bgColor="bg-neo-yellow" textColor="text-black" />
       </div>
 
       {/* Core Principles Grid */}
@@ -47,6 +47,37 @@ export const Home: React.FC = () => {
               </RevealCard>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* What I Can Do For You Section */}
+      <section className="py-20 px-4 bg-neo-white border-t-4 border-black">
+        <div className="max-w-7xl mx-auto">
+          <RevealCard className="mb-12 border-l-8 border-neo-yellow pl-6">
+            <h2 className="text-5xl font-black uppercase">What I Can Do For You</h2>
+            <p className="font-mono text-gray-600 mt-2">If you're building something or already running into chaos, I step in and structure it.</p>
+          </RevealCard>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            {[
+              { title: "Build your product from scratch", desc: "From idea to deployed system with real users" },
+              { title: "Fix or redesign broken systems", desc: "Slow apps, messy UX, unstable backend → cleaned and rebuilt" },
+              { title: "Integrate AI where it actually matters", desc: "Not hype. Real workflows using LLMs, automation, and data" },
+              { title: "Turn operations into software", desc: "If you're running something manually, I can systemize it" }
+            ].map((item, i) => (
+              <RevealCard key={i} delay={i * 0.1} className="bg-neo-yellow text-black border-4 border-black p-6 shadow-[6px_6px_0px_0px_#000]">
+                <div className="flex items-start gap-4">
+                  <div className="text-3xl font-black text-neo-blue">{i + 1}</div>
+                  <div>
+                    <h3 className="text-xl font-black uppercase mb-2">{item.title}</h3>
+                    <p className="font-medium">{item.desc}</p>
+                  </div>
+                </div>
+              </RevealCard>
+            ))}
+          </div>
+
+          
         </div>
       </section>
 
