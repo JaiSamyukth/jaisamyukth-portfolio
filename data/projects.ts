@@ -18,11 +18,7 @@ export const projects: Project[] = [
         gallery: [
             genrecAIImg,
         ],
-<<<<<<< HEAD
-        techStack: ['TypeScript', 'React', 'Next.js', 'Node.js', '+2'],
-=======
         techStack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'AWS'],
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
         status: 'Revenue Active',
         focus: 'software development and product building',
         imageUrl: genrecAIImg,
@@ -30,14 +26,8 @@ export const projects: Project[] = [
         repoLink: '#',
         traction: [
             'Completed several products for clients and ongoing development',
-<<<<<<< HEAD
-        ],
-        problem: 'Early-stage founders and businesses need custom software but lack in-house technical execution.',
-        outcome: 'Delivered multiple working systems for clients while generating revenue to support product R&D.'
-=======
 
         ]
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
     },
     {
         id: 'lumina-iq',
@@ -51,11 +41,7 @@ export const projects: Project[] = [
             luminaIntro,
             luminaScreenshot,
         ],
-<<<<<<< HEAD
-        techStack: ['Python', 'TypeScript', 'LLM Integration', 'React', '+1'],
-=======
         techStack: ['Python', 'TypeScript', 'LLM Integration', 'React', 'PostgreSQL'],
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
         status: 'External Testing',
         focus: 'AI personalized learning and revision',
         imageUrl: luminaIntro,
@@ -63,13 +49,7 @@ export const projects: Project[] = [
         repoLink: '#',
         traction: [
             'Functional product deployed',
-<<<<<<< HEAD
-        ],
-        problem: 'Students study reactively and forget quickly due to lack of structured revision systems.',
-        outcome: 'Functional system deployed with external testers using it for structured exam preparation.'
-=======
         ]
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
     },
     {
         id: 'tabble',
@@ -84,24 +64,14 @@ export const projects: Project[] = [
             tabbleImage2,
             tabbleUnnamed,
         ],
-<<<<<<< HEAD
-        techStack: ['React', 'Node.js', 'WebSockets', 'PostgreSQL', '+1'],
-=======
         techStack: ['React', 'Node.js', 'WebSockets', 'PostgreSQL', 'PWA'],
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
         status: 'Ready for Hardware',
         focus: 'Order from where you are',
         imageUrl: tabbleIntro,
         repoLink: '#',
         traction: [
             'Complete multi-interface system built',
-<<<<<<< HEAD
-        ],
-        problem: 'Restaurant operations break due to miscommunication between tables, kitchen, and staff.',
-        outcome: 'End-to-end system tested locally, reducing friction in ordering and improving service flow.'
-=======
 
         ]
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
     }
 ];

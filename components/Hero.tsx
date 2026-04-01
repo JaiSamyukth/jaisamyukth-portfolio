@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useRef, useState, useEffect } from 'react';
 import portfolioFace from '../images/Portfolio-Face.jpg';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router-dom';
@@ -7,6 +7,30 @@ import { ArrowRight } from 'lucide-react';
 
 export const Hero: React.FC = () => {
     const navigate = useNavigate();
+    const imgRef = useRef<HTMLDivElement>(null);
+    const [isColored, setIsColored] = useState(false);
+
+    useEffect(() => {
+        // Only hook up IntersectionObserver for touch devices —
+        // desktop gets the CSS hover effect via group-hover.
+        const isTouchDevice = window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+        if (!isTouchDevice) return;
+
+        const observer = new IntersectionObserver(
+            ([entry]) => {
+                // Reveal color once the image is at least 50% in the viewport
+                if (entry.isIntersecting) {
+                    setIsColored(true);
+                } else {
+                    setIsColored(false);
+                }
+            },
+            { threshold: 0.75 }
+        );
+
+        if (imgRef.current) observer.observe(imgRef.current);
+        return () => observer.disconnect();
+    }, []);
 
     return (
         <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-center px-4 py-12 md:py-20 bg-neo-white overflow-hidden">
@@ -26,10 +50,9 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-16">
-                        Yep, that’s me. A CS student who somehow ended up building full systems and calling himself a  <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">founder.</span>
+                        Yep, that's me. A CS student who somehow ended up building full systems and calling himself a  <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">founder.</span>
                     </h1>
 
-<<<<<<< HEAD
                     <p className="text-lg md:text-xl font-medium font-mono mb-6 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
                         If you have a software problem, I probably want to solve it. To know me, feel free to reach out.
                     </p>
@@ -63,13 +86,6 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <div className="mb-10 mt-8 text-base font-medium max-w-xl">
-=======
-                    <p className="text-lg md:text-xl font-medium font-mono mb-10 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
-                        If you have a software problem, I probably want to solve it. To know me, feel free to reach out.
-                    </p>
-
-                    <div className="mb-10 mt-5 text-base font-medium max-w-xl">
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
                         <div className="flex items-start gap-2">
                             <span className="text-neo-green font-bold">→</span>
                             <div>
@@ -79,19 +95,11 @@ export const Hero: React.FC = () => {
                             </div>
                         </div>
                     </div>
-<<<<<<< HEAD
-=======
-
-                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-9">
-                        <NeoButton onClick={() => navigate('/work')}>
-                            View the systems <ArrowRight className="inline ml-2" />
-                        </NeoButton>
-                    </div>
->>>>>>> e732b1aca2721fa1271ae34bbb321414175e9dd4
                 </motion.div>
 
                 {/* Right Side: Image */}
                 <motion.div
+                    ref={imgRef}
                     initial={{ opacity: 0, x: 50, rotate: 5 }}
                     animate={{ opacity: 1, x: 0, rotate: 3 }}
                     transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
@@ -104,7 +112,15 @@ export const Hero: React.FC = () => {
                         <img
                             src={portfolioFace}
                             alt="Jai Samyukth B U"
-                            className="w-full h-auto object-cover grayscale contrast-125 transition-all duration-300 group-hover:grayscale-0 group-hover:contrast-100"
+                            className={[
+                                "w-full h-auto object-cover transition-all duration-700",
+                                // Touch devices: state-driven color reveal on scroll
+                                isColored
+                                    ? "grayscale-0 contrast-100"
+                                    : "grayscale contrast-125",
+                                // Desktop: CSS hover via parent group (overrides state)
+                                "group-hover:grayscale-0 group-hover:contrast-100",
+                            ].join(" ")}
                         />
                     </div>
 
