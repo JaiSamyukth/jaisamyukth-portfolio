@@ -3,7 +3,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { projects } from '../data/projects';
 import { RevealCard } from '../components/RevealCard';
 import { NeoButton } from '../components/NeoButton';
-import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 import { ScrollToTop } from '../components/ScrollToTop';
 import { useSEO } from '../src/hooks/useSEO';
 
@@ -57,17 +57,15 @@ export const ProjectDetail: React.FC = () => {
                             </div>
 
                             <div className="flex gap-4">
-                                {project.liveLink && (
+                                {project.liveLink ? (
                                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer"
                                         className="bg-neo-blue text-white font-bold uppercase px-4 py-2 border-2 border-white hover:bg-white hover:text-black transition-colors flex items-center gap-2">
                                         <ExternalLink size={18} /> Live System
                                     </a>
-                                )}
-                                {project.repoLink && (
-                                    <a href={project.repoLink} target="_blank" rel="noopener noreferrer"
-                                        className="bg-neo-purple text-black font-bold uppercase px-4 py-2 border-2 border-white hover:bg-white hover:text-black transition-colors flex items-center gap-2">
-                                        <Github size={18} /> Source
-                                    </a>
+                                ) : (
+                                    <span className="bg-white text-black font-bold uppercase px-4 py-2 border-2 border-white font-mono text-sm flex items-center">
+                                        Demo available on request
+                                    </span>
                                 )}
                             </div>
                         </div>
@@ -134,6 +132,23 @@ export const ProjectDetail: React.FC = () => {
                             </RevealCard>
                         )}
 
+                        {/* Outcomes */}
+                        {project.outcomes && project.outcomes.length > 0 && (
+                            <RevealCard delay={0.45} className="bg-neo-blue border-4 border-black p-8 relative">
+                                <div className="absolute -top-4 -left-2 bg-black text-white font-black px-4 py-1 border-2 border-neo-blue transform -rotate-1">
+                                    OUTCOMES
+                                </div>
+                                <ul className="space-y-3 mt-2">
+                                    {project.outcomes.map((item, idx) => (
+                                        <li key={idx} className="flex items-start gap-3 font-medium">
+                                            <span className="text-neo-yellow font-black text-xl leading-none">→</span>
+                                            <span className="text-white">{item}</span>
+                                        </li>
+                                    ))}
+                                </ul>
+                            </RevealCard>
+                        )}
+
                         {/* Traction / Progress */}
                         {project.traction && project.traction.length > 0 && (
                             <RevealCard delay={0.5} className="bg-neo-yellow border-4 border-black p-8">
@@ -165,6 +180,11 @@ export const ProjectDetail: React.FC = () => {
                                 ))}
                             </div>
                         )}
+
+                        {/* Built-independently micro-detail */}
+                        <p className="font-mono text-xs text-gray-400 border-t border-dashed border-gray-200 pt-4 mt-4">
+                            Built and deployed independently, handling real-world usage constraints.
+                        </p>
                     </div>
                 </div>
             </div>

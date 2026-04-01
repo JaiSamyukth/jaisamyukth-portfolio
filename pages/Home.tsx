@@ -42,6 +42,19 @@ export const Home: React.FC = () => {
         </div>
       </section>
 
+      {/* Buyer CTA — speaks to clients, not just builders */}
+      <section className="py-16 px-4 bg-neo-white border-t-4 border-b-4 border-black">
+        <div className="max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
+            If you're building something that needs to work in the real world — not just look good in a demo — I can step in and build it properly.
+          </p>
+          <p className="text-lg md:text-xl font-bold font-mono border-l-4 border-neo-blue pl-6">
+            I take systems end-to-end:<br />
+            <span className="text-neo-blue">from idea → architecture → deployment → real users.</span>
+          </p>
+        </div>
+      </section>
+
 
       {/* Core Principles Grid */}
       <section className="py-20 px-4 bg-neo-black text-white">

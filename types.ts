@@ -7,16 +7,16 @@ export interface Project {
   status: string;
   focus: string;
   imageUrl?: string;
-  itemLink?: string; // Optional link to specific item if needed
+  itemLink?: string;
 
-  // New fields for Detail Page
+  // Detail Page
   longDescription?: string;
   challenge?: string;
   solution?: string;
+  outcomes?: string[];    // Buyer-facing result bullets
   gallery?: string[];
   liveLink?: string;
-  repoLink?: string;
-  traction?: string[]; // Bullet points for progress/traction
+  traction?: string[];
 }
 
 export interface NavItem {
