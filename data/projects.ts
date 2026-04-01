@@ -13,8 +13,8 @@ export const projects: Project[] = [
         category: 'Services / Revenue Engine',
         description: 'Custom software builds that fund internal product work.',
         longDescription: 'I take client projects end-to-end — full-stack websites and software systems. Revenue feeds directly back into Lumina IQ and Tabble. No marketing budget — all work comes through direct network and referrals.',
-        challenge: 'Most student founders wait for funding or roles before shipping anything real. That delays learning how products actually behave with users, bugs, and bills.',
-        solution: 'Cheap cloud + AI tools let one person ship production systems fast. Students who build real client software learn deployment, money, and iteration years ahead of peers who only do college projects.',
+        challenge: 'Most founders wait for funding or roles before shipping anything real. That delays learning how products actually behave with users, bugs, and bills.',
+        solution: 'Cheap cloud + AI tools let one person ship production systems fast.  who build real client software learn deployment, money, and iteration years ahead of peers who only do college projects.',
         outcomes: [
             'Multiple client products delivered and currently live in production',
             'Each project handled end-to-end: no handoffs, no delays from miscommunication',
