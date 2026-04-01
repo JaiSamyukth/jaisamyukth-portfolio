@@ -1,8 +1,14 @@
 import React from 'react';
 import { RevealCard } from '../components/RevealCard';
 import { Mail, Linkedin, Github, Twitter, Instagram } from 'lucide-react';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const Contact: React.FC = () => {
+    useSEO({
+        title: 'Contact | Jai Samyukth B U',
+        description: 'Get in touch with Jai Samyukth for client builds, AI integrations, full-stack systems, or early-stage product collaborations. Response within 24 hours.',
+        canonical: '#/contact',
+    });
     return (
         <div className="min-h-screen bg-neo-yellow flex flex-col items-center justify-center p-4 relative overflow-hidden">
 

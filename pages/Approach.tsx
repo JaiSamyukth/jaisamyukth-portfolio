@@ -1,7 +1,13 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const Approach: React.FC = () => {
+  useSEO({
+    title: 'Approach | Jai Samyukth B U',
+    description: 'How Jai Samyukth approaches software: observe real friction, structure systems that absorb complexity, refine through deployment feedback — not presentation cycles.',
+    canonical: '#/approach',
+  });
   const steps = [
     { title: "Observe", text: "How people actually interact with processes in the wild." },
     { title: "Identify", text: "Friction created by repetition, fragmentation, or bad tools." },

@@ -1,8 +1,14 @@
 import React from 'react';
 import { RevealCard } from '../components/RevealCard';
 import { Marquee } from '../components/Marquee';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const About: React.FC = () => {
+    useSEO({
+        title: 'About | Jai Samyukth B U',
+        description: 'Learn about Jai Samyukth — CS student, founder, and builder of full-stack systems, AI tools, and operational software. Background, philosophy, and technical stack.',
+        canonical: '#/about',
+    });
     return (
         <div className="min-h-screen bg-neo-white">
             {/* Hero */}

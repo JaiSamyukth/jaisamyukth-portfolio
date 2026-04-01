@@ -1,8 +1,14 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Layers, Archive } from 'lucide-react';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const Experimental: React.FC = () => {
+  useSEO({
+    title: 'Playground | Jai Samyukth B U',
+    description: 'Experimental and supporting projects by Jai Samyukth — technical studies informing larger systems: Tabble iterations, AI experiments, CRM tools, and more.',
+    canonical: '#/experimental',
+  });
   const experiments = [
     { title: "Tabble Versions", desc: "Interface-driven ordering and coordination environments." },
     { title: "Revolvo AI", desc: "Librarian systems focused on retrieval and knowledge access." },

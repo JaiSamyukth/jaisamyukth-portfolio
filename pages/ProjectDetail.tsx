@@ -5,11 +5,20 @@ import { RevealCard } from '../components/RevealCard';
 import { NeoButton } from '../components/NeoButton';
 import { ArrowLeft, Github, ExternalLink } from 'lucide-react';
 import { ScrollToTop } from '../components/ScrollToTop';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const ProjectDetail: React.FC = () => {
     const { id } = useParams<{ id: string }>();
     const navigate = useNavigate();
     const project = projects.find(p => p.id === id);
+
+    useSEO({
+        title: project ? `${project.title} | Jai Samyukth B U` : 'Project | Jai Samyukth B U',
+        description: project
+            ? (project.description || `${project.title} — a system built by Jai Samyukth. ${project.category || ''}`).slice(0, 160)
+            : 'Project details by Jai Samyukth B U.',
+        canonical: project ? `#/work/${project.id}` : '#/work',
+    });
 
     useEffect(() => {
         window.scrollTo(0, 0);

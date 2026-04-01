@@ -8,10 +8,16 @@ import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
 import { useNavigate } from 'react-router-dom';
 import { ArrowRight, Terminal, Cpu, Network } from 'lucide-react';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
   const featuredProjects = projects.slice(0, 3);
+  useSEO({
+    title: 'Jai Samyukth B U | Full-Stack Builder & Founder',
+    description: 'CS student and founder building production-ready full-stack systems, AI integrations, and operational tools from idea to deployment. Available for client work.',
+    canonical: '',
+  });
 
   return (
     <div className="min-h-screen flex flex-col">

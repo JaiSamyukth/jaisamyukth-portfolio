@@ -3,8 +3,14 @@ import { ProjectCard } from '../components/ProjectCard';
 import { RevealCard } from '../components/RevealCard';
 import { projects } from '../data/projects';
 import { motion } from 'framer-motion';
+import { useSEO } from '../src/hooks/useSEO';
 
 export const Work: React.FC = () => {
+  useSEO({
+    title: 'Selected Systems | Jai Samyukth B U',
+    description: 'Engineering projects built and shipped by Jai Samyukth — full-stack systems, AI platforms, and operational tools built from scratch to production.',
+    canonical: '#/work',
+  });
   return (
     <div className="min-h-screen bg-neo-white py-12 px-4">
       <div className="max-w-7xl mx-auto">
