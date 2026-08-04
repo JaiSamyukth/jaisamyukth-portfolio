@@ -8,6 +8,7 @@ const navItems = [
   { label: 'Survivors', path: '/work' },
   { label: 'The Idiot', path: '/about' },
   { label: 'My Method', path: '/approach' },
+  { label: 'Scars', path: '/learnings' },
   { label: 'Complain', path: '/contact' },
 ];
 

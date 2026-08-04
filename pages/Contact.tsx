@@ -35,7 +35,7 @@ export const Contact: React.FC = () => {
                     <span className="font-bold text-black">What I respond to:</span><br />
                     → "My dev abandoned this and it's on fire"<br />
                     → "I need this MVP built yesterday"<br />
-                    → "How do I make my AWS bill stop looking like a phone number?"
+                    → "Need help reducing your AWS bill? I build software. Not miracles."
                 </p>
 
                 <p className="text-base font-medium text-center mb-8 max-w-xl mx-auto text-gray-600">

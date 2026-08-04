@@ -50,25 +50,25 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
-                        Yep, that's me.<br />
-                        The idiot with 30+ repositories<br />
-                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">who can't stop building.</span>
+                        Co-founder of <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">Genrec AI.</span><br />
+                        I build things.<br />
+                        Sometimes they survive.
                     </h1>
 
                     <p className="text-lg md:text-xl font-medium font-mono mb-4 max-w-lg leading-relaxed">
-                        I write code until it works. Sometimes it breaks production at 2 AM. Most of the time it actually solves someone's problem. I build things for paying clients, and use the money to fund my own terrible ideas.
+                        Most of my client work happens there. Most of my product ideas escape from there. I notice problems, I get annoyed, and I write code until they go away.
                     </p>
 
                     <p className="text-base md:text-lg font-bold font-mono mb-8 text-gray-700">
-                        I have a suspiciously personal grudge against AWS invoices.
+                        The first AWS invoice politely informed me that curiosity isn't free.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
                         <NeoButton onClick={() => navigate('/work')}>
-                            See My Messes <ArrowRight className="inline ml-2" />
+                            See What Survived <ArrowRight className="inline ml-2" />
                         </NeoButton>
                         <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
-                            Let Me Break Your Code
+                            Reach Out
                         </NeoButton>
                     </div>
 
@@ -76,9 +76,9 @@ export const Hero: React.FC = () => {
                         <div className="flex items-start gap-2">
                             <span className="text-neo-green font-bold">→</span>
                             <div>
-                                <div className="font-bold uppercase text-sm text-gray-500 mb-1">Currently taking on:</div>
-                                <div>• Fixing whatever your previous dev abandoned</div>
-                                <div>• Full-stack builds that actually need to ship</div>
+                                <div className="font-bold uppercase text-sm text-gray-500 mb-1">Current Focus:</div>
+                                <div>• Shipping real software</div>
+                                <div>• Building systems that solve actual problems</div>
                                 <div>• Arguing with cloud infrastructure on your behalf</div>
                             </div>
                         </div>

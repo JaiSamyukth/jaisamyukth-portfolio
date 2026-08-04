@@ -24,7 +24,7 @@ export const About: React.FC = () => {
                             Jai <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-neo-yellow to-neo-green" style={{ WebkitTextStroke: '2px white' }}>Samyukth</span> B U.
                         </h1>
                         <p className="text-xl md:text-2xl font-medium font-mono text-gray-300 max-w-2xl">
-                            3rd year B.Tech. I write code until it works. Sometimes it survives production. Sometimes I spend all night fixing it.
+                            Co-founder of Genrec AI. I write code until it works. Sometimes it survives production. Sometimes I spend all night fixing it.
                         </p>
                     </RevealCard>
                 </div>
@@ -71,7 +71,7 @@ export const About: React.FC = () => {
                                     { cat: "Core", items: ["TypeScript (Annoyingly correct)", "Python", "Java", "C#", "C", "C++"] },
                                     { cat: "Frontend", items: ["React", "Next.js", "Tailwind"] },
                                     { cat: "Backend", items: ["FastAPI", "Node.js", "PostgreSQL", "MySQL"] },
-                                    { cat: "Infra", items: ["Docker (Works on attempt #17)", "AWS", "Azure", "Supabase"] }
+                                    { cat: "Infra", items: ["Docker (Works on attempt #17)", "AWS", "Azure (The rebound carrying startup credits)", "Supabase"] }
                                 ].map((skill, i) => (
                                     <div key={i} className="border-2 border-black bg-neo-white p-4">
                                         <h4 className="font-mono font-bold uppercase mb-2 bg-black text-white px-2 inline-block text-sm">{skill.cat}</h4>
@@ -117,7 +117,7 @@ export const About: React.FC = () => {
                                 {
                                     period: "2024",
                                     title: "THE CLOUD INCIDENTS",
-                                    desc: "AWS charged me for experimenting. Azure later handed me startup credits like an apology from the cloud industry. Git has faithfully recorded all my terrible decisions."
+                                    desc: "AWS charged me for experimenting. Azure showed up carrying $1000 in startup credits. That's an unusually good first impression. Git has faithfully recorded all my terrible decisions."
                                 },
                                 {
                                     period: "Late 2024",

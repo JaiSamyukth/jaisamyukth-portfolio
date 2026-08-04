@@ -7,6 +7,7 @@ import { Home } from './pages/Home';
 import { Work } from './pages/Work';
 import { Approach } from './pages/Approach';
 import { Experimental } from './pages/Experimental';
+import { Learnings } from './pages/Learnings';
 import { ScrollToTop } from './components/ScrollToTop';
 
 // Helper component to handle scrolling
@@ -32,6 +33,7 @@ const AnimatedRoutes = () => {
         <Route path="/contact" element={<Contact />} />
         <Route path="/approach" element={<Approach />} />
         <Route path="/experimental" element={<Experimental />} />
+        <Route path="/learnings" element={<Learnings />} />
       </Routes>
     </AnimatePresence>
   );
