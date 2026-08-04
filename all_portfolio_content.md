@@ -9,28 +9,34 @@
 * Complain
 
 ## Hero & Home Page
-STATUS: CHRONICALLY ONLINE
-SYS.STATUS: OPERATIONAL
-Jai Samyukth B U
+STATUS: ONLINE · AVOIDING TERMINAL WARNINGS
+
+This wasn't supposed to happen.
+A CS student who accidentally became a founder by refusing to stop building things.
+
 Co-founder of Genrec AI.
-I build things.
-Sometimes they survive.
+I build products, client software and internal systems.
+Most of them started because I got annoyed by the way something worked.
 
-Most of my client work happens there. Most of my product ideas escape from there. I notice problems, I get annoyed, and I write code until they go away.
-The first AWS invoice politely informed me that curiosity isn't free.
+Need an MVP? Replacing spreadsheets? Building AI into an existing product? Let's talk.
 
-Current Focus:
-• Shipping real software
-• Building systems that solve actual problems
-• Arguing with cloud infrastructure on your behalf
+See My Work
+Start a Conversation
 
-See What Survived
-Reach Out
+Things I've Built:
+→ Lumina IQ
+→ Tabble
+→ CRM Platform
+
+47 repositories.
+3 products survived.
+30 experiments taught me something.
+Probably.
 
 ## About Page (The Idiot)
 SERIAL_BUILDER_V1.0
 Jai Samyukth B U.
-Co-founder of Genrec AI. I write code until it works. Sometimes it survives production. Sometimes I spend all night fixing it.
+I notice inefficient systems. I become obsessed with them. I build software until they stop being inefficient.
 
 ### Background
 I started building things because I couldn't stop. Eventually, someone paid me for it. Then the first AWS invoice arrived, politely informing me that curiosity isn't free. I learned infrastructure the only way that works: by breaking it at 1 AM and frantically trying to fix it before anyone noticed.
@@ -40,7 +46,7 @@ My projects usually start because I watch people do something stupid. Lumina IQ 
 I write code until it solves the problem. Sometimes it's messy, but messy code running in production beats clean code sitting in a private repo forever.
 
 ### Why I Build
-I don't like software that needs training manuals. There's always a gap between how people actually do things and how the software assumes they do them. I just try to close that gap before the user gives up.
+I can't ignore inefficient systems. I watch people do things manually, panic slightly at how much time they are burning, and then disappear to write code until the problem goes away. Everything I build starts exactly like that.
 
 ### Things I Argue With
 * Core: TypeScript (Annoyingly correct), Python, Java, C#, C, C++

@@ -24,7 +24,7 @@ export const About: React.FC = () => {
                             Jai <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-neo-yellow to-neo-green" style={{ WebkitTextStroke: '2px white' }}>Samyukth</span> B U.
                         </h1>
                         <p className="text-xl md:text-2xl font-medium font-mono text-gray-300 max-w-2xl">
-                            Co-founder of Genrec AI. I write code until it works. Sometimes it survives production. Sometimes I spend all night fixing it.
+                            I notice inefficient systems. I become obsessed with them. I build software until they stop being inefficient.
                         </p>
                     </RevealCard>
                 </div>
@@ -55,7 +55,7 @@ export const About: React.FC = () => {
                         <RevealCard delay={0.2} className="bg-neo-yellow border-4 border-black p-8 shadow-neo">
                             <h2 className="text-2xl font-black uppercase mb-4">Why I Build</h2>
                             <p className="font-medium text-lg leading-relaxed">
-                                I don't like software that needs training manuals. There's always a gap between how people actually do things and how the software assumes they do them. I just try to close that gap before the user gives up.
+                                I can't ignore inefficient systems. I watch people do things manually, panic slightly at how much time they are burning, and then disappear to write code until the problem goes away. Everything I build starts exactly like that.
                             </p>
                         </RevealCard>
 
