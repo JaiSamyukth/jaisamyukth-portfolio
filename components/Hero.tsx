@@ -51,17 +51,17 @@ export const Hero: React.FC = () => {
 
                     <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
                         This wasn't supposed to happen.<br />
-                        A CS student who accidentally became a founder by <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">refusing to stop building things.</span>
+                        I kept getting annoyed by inefficient systems.<br />
+                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">Now people pay me to replace them with software.</span>
                     </h1>
 
                     <p className="text-lg md:text-xl font-medium font-mono mb-8 max-w-lg leading-relaxed">
                         Co-founder of Genrec AI.<br /><br />
-                        I build products, client software and internal systems.<br /><br />
-                        Most of them started because I got annoyed by the way something worked.
+                        I build MVPs, internal software, AI products and systems that people actually use.
                     </p>
 
                     <div className="mb-8 text-base font-medium max-w-xl">
-                        <p className="font-bold text-gray-700">Need an MVP? Replacing spreadsheets? Building AI into an existing product? Let's talk.</p>
+                        <p className="font-bold text-gray-700">Most visitors come here for one of three reasons.<br />They're building. They're stuck. Or they're curious.</p>
                     </div>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
@@ -117,8 +117,22 @@ export const Hero: React.FC = () => {
 
             </div>
 
+            {/* Things I Usually Help Build Block */}
+            <div className="max-w-7xl mx-auto w-full mt-24 border-t-4 border-black pt-12 mb-12">
+                <div className="bg-neo-black text-white p-8 md:p-12 border-4 border-black shadow-neo">
+                    <h2 className="text-3xl font-black uppercase mb-6 text-neo-yellow">Things I Usually Help Build</h2>
+                    <ul className="font-mono text-lg space-y-4 mb-8">
+                        <li>• MVPs people can actually demo</li>
+                        <li>• Internal software that replaces spreadsheets</li>
+                        <li>• AI features that solve boring work</li>
+                        <li>• Systems that survive real users</li>
+                    </ul>
+                    <p className="text-xl font-bold italic text-neo-green">If that sounds familiar... Keep scrolling.</p>
+                </div>
+            </div>
+
             {/* Things I've Built / Stats Block */}
-            <div className="max-w-7xl mx-auto w-full mt-24 border-t-4 border-black pt-12">
+            <div className="max-w-7xl mx-auto w-full pb-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-neo-yellow border-4 border-black p-8 md:p-12 shadow-neo">
                     <div>
                         <h2 className="text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2 inline-block">Things I've Built</h2>
@@ -128,11 +142,11 @@ export const Hero: React.FC = () => {
                             <p className="hover:translate-x-2 transition-transform cursor-pointer" onClick={() => navigate('/work')}>→ CRM Platform</p>
                         </div>
                     </div>
-                    <div className="font-mono text-xl font-medium space-y-4 md:border-l-4 md:border-black md:pl-8 flex flex-col justify-center">
-                        <p><span className="font-black text-3xl">47</span> repositories.</p>
-                        <p><span className="font-black text-3xl">3</span> products survived.</p>
-                        <p><span className="font-black text-3xl">30</span> experiments taught me something.</p>
-                        <p className="text-gray-600 italic mt-4 font-bold">Probably.</p>
+                    <div className="font-mono text-lg font-medium space-y-4 md:border-l-4 md:border-black md:pl-8 flex flex-col justify-center">
+                        <p>Dozens of repositories.</p>
+                        <p>A handful became products.</p>
+                        <p>A few became client software.</p>
+                        <p className="text-gray-800 font-bold italic mt-2">The rest taught me something expensive.</p>
                     </div>
                 </div>
             </div>

@@ -22,7 +22,8 @@ export const Learnings: React.FC = () => {
         "Future Me rarely reads it.",
         "AWS was my ex.",
         "Azure arrived with startup credits.",
-        "We're in a much healthier relationship now."
+        "We're in a much healthier relationship now.",
+        "Production doesn't care that it worked locally."
     ];
 
     return (

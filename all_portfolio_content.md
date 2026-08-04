@@ -12,26 +12,34 @@
 STATUS: ONLINE · AVOIDING TERMINAL WARNINGS
 
 This wasn't supposed to happen.
-A CS student who accidentally became a founder by refusing to stop building things.
+I kept getting annoyed by inefficient systems.
+Now people pay me to replace them with software.
 
 Co-founder of Genrec AI.
-I build products, client software and internal systems.
-Most of them started because I got annoyed by the way something worked.
+I build MVPs, internal software, AI products and systems that people actually use.
 
-Need an MVP? Replacing spreadsheets? Building AI into an existing product? Let's talk.
+Most visitors come here for one of three reasons.
+They're building. They're stuck. Or they're curious.
 
 See My Work
 Start a Conversation
+
+Things I Usually Help Build
+• MVPs people can actually demo
+• Internal software that replaces spreadsheets
+• AI features that solve boring work
+• Systems that survive real users
+If that sounds familiar... Keep scrolling.
 
 Things I've Built:
 → Lumina IQ
 → Tabble
 → CRM Platform
 
-47 repositories.
-3 products survived.
-30 experiments taught me something.
-Probably.
+Dozens of repositories.
+A handful became products.
+A few became client software.
+The rest taught me something expensive.
 
 ## About Page (The Idiot)
 SERIAL_BUILDER_V1.0
@@ -95,6 +103,7 @@ BACK TO SURVIVORS
   * Client actually uses it every day
   * I got paid
   * Database hasn't corrupted itself yet
+  * The best software disappears. People stop talking about it because it quietly does its job. That's exactly what happened here.
 * Current State:
   * Live in production
   * Handles daily client operations
@@ -149,6 +158,7 @@ A RUNNING TALLY
 11. AWS was my ex.
 12. Azure arrived with startup credits.
 13. We're in a much healthier relationship now.
+14. Production doesn't care that it worked locally.
 
 ## Approach Page (My Method)
 Objective: Stop doing boring things manually.

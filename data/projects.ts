@@ -19,6 +19,7 @@ export const projects: Project[] = [
             'Client actually uses it every day',
             'I got paid',
             'Database hasn\'t corrupted itself yet',
+            'The best software disappears. People stop talking about it because it quietly does its job. That\'s exactly what happened here.',
         ],
         gallery: [
             // Assuming no specific image, we can just use a placeholder or omit
