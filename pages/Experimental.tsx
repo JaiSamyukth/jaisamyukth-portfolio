@@ -5,7 +5,7 @@ import { useSEO } from '../src/hooks/useSEO';
 
 export const Experimental: React.FC = () => {
   useSEO({
-    title: 'The Graveyard | Jai Samyukth B U',
+    title: 'Unfinished Business | Jai Samyukth B U',
     description: 'Half-finished ideas, things that almost worked, and repos I pretend don\'t exist.',
     canonical: '#/experimental',
   });
@@ -21,7 +21,7 @@ export const Experimental: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b-4 border-black pb-4">
             <div>
-                <h1 className="text-5xl md:text-8xl font-black uppercase mb-2">Graveyard</h1>
+                <h1 className="text-5xl md:text-8xl font-black uppercase mb-2">Unfinished Business</h1>
                 <p className="font-mono text-lg font-bold">The 90% that didn't make it</p>
             </div>
             <div className="mt-4 md:mt-0 bg-white border-2 border-black px-4 py-2 font-mono text-sm">

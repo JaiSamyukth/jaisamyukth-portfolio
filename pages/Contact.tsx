@@ -26,21 +26,21 @@ export const Contact: React.FC = () => {
                     Say <br /> <span className="text-neo-blue">Hi.</span>
                 </h1>
 
-                <p className="text-xl font-medium text-center mb-6 max-w-xl mx-auto">
-                    If you have a broken workflow, a messy codebase, or just need something built so you can actually start selling it — reach out.<br />
-                    I read everything and usually reply before the next deployment finishes.
-                </p>
+                <div className="text-xl font-medium text-center mb-6 max-w-2xl mx-auto">
+                    Most people who email me fall into one of these categories.
+                </div>
 
-                <p className="text-lg font-mono text-center mb-8 max-w-xl mx-auto text-gray-700">
-                    <span className="font-bold text-black">What I respond to:</span><br />
-                    → "My dev abandoned this and it's on fire"<br />
-                    → "I need this MVP built yesterday"<br />
-                    → "Need help reducing your AWS bill? I build software. Not miracles."
-                </p>
+                <div className="text-lg font-mono text-center mb-8 max-w-xl mx-auto text-gray-800 space-y-4">
+                    <p>Your software is growing faster than your processes.</p>
+                    <p>You're still living inside spreadsheets.</p>
+                    <p>You need an MVP.</p>
+                    <p>Your previous developer disappeared.</p>
+                    <p>Or you've spent six months discussing an idea and zero weeks building it.</p>
+                </div>
 
-                <p className="text-base font-medium text-center mb-8 max-w-xl mx-auto text-gray-600">
-                    (Also happy to talk if you want to put Tabble hardware in an actual restaurant)
-                </p>
+                <div className="text-2xl font-black uppercase text-center mb-12 max-w-xl mx-auto text-neo-blue">
+                    If any of that sounds familiar...<br/>Let's fix it.
+                </div>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     <a href="mailto:jaisamyukth@gmail.com" className="group flex-1 min-w-[140px] max-w-[200px]">

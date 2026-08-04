@@ -11,18 +11,19 @@
 ## Hero & Home Page
 STATUS: ONLINE · AVOIDING TERMINAL WARNINGS
 
-This wasn't supposed to happen.
 I kept getting annoyed by inefficient systems.
 Now people pay me to replace them with software.
+This wasn't supposed to happen.
 
 Co-founder of Genrec AI.
+Most of my client work lives there. Most of my product ideas escape from there.
 I build MVPs, internal software, AI products and systems that people actually use.
 
 Most visitors come here for one of three reasons.
 They're building. They're stuck. Or they're curious.
 
 See My Work
-Start a Conversation
+Tell Me What You're Building
 
 Things I Usually Help Build
 • MVPs people can actually demo
@@ -31,7 +32,7 @@ Things I Usually Help Build
 • Systems that survive real users
 If that sounds familiar... Keep scrolling.
 
-Things I've Built:
+Currently Escaped From My GitHub:
 → Lumina IQ
 → Tabble
 → CRM Platform
@@ -40,6 +41,14 @@ Dozens of repositories.
 A handful became products.
 A few became client software.
 The rest taught me something expensive.
+
+Current Obsessions:
+→ Making software disappear into people's workflow.
+→ Replacing spreadsheets.
+→ Restaurant operations.
+→ Knowledge systems.
+→ Cloud architecture.
+→ Finding out why humans insist on doing repetitive things manually.
 
 ## About Page (The Idiot)
 SERIAL_BUILDER_V1.0
@@ -169,8 +178,8 @@ Objective: Stop doing boring things manually.
 THE RESULT: Software that you forget exists because it actually works. That's the only compliment I care about.
 This is also why I don't do "3-week discovery phases." The fastest way to test whether an idea works is to write the code and find out.
 
-## Experimental Page (The Graveyard)
-The Graveyard
+## Experimental Page (Unfinished Business)
+Unfinished Business
 The 90% that didn't make it
 STATUS: MOSTLY BROKEN
 Failed Experiments: If you build enough things, most of them will be terrible. These are the projects that taught me what not to do.
@@ -188,15 +197,14 @@ I will undoubtedly break more things soon.
 ## Contact Page (Complain)
 OPEN FREQUENCY
 Say Hi.
-If you have a broken workflow, a messy codebase, or just need something built so you can actually start selling it — reach out.
-I read everything and usually reply before the next deployment finishes.
+Most people who email me fall into one of these categories.
+Your software is growing faster than your processes.
+You're still living inside spreadsheets.
+You need an MVP.
+Your previous developer disappeared.
+Or you've spent six months discussing an idea and zero weeks building it.
 
-What I respond to:
-→ "My dev abandoned this and it's on fire"
-→ "I need this MVP built yesterday"
-→ "Need help reducing your AWS bill? I build software. Not miracles."
-
-(Also happy to talk if you want to put Tabble hardware in an actual restaurant)
+If any of that sounds familiar... Let's fix it.
 
 * [EMAIL]: for actual work
 * [LINKEDIN]: for the recruiter bots

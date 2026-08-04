@@ -50,13 +50,14 @@ export const Hero: React.FC = () => {
                     </div>
 
                     <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
-                        This wasn't supposed to happen.<br />
                         I kept getting annoyed by inefficient systems.<br />
-                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">Now people pay me to replace them with software.</span>
+                        Now people pay me to replace them with software.<br />
+                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">This wasn't supposed to happen.</span>
                     </h1>
 
                     <p className="text-lg md:text-xl font-medium font-mono mb-8 max-w-lg leading-relaxed">
                         Co-founder of Genrec AI.<br /><br />
+                        Most of my client work lives there. Most of my product ideas escape from there.<br /><br />
                         I build MVPs, internal software, AI products and systems that people actually use.
                     </p>
 
@@ -69,7 +70,7 @@ export const Hero: React.FC = () => {
                             See My Work <ArrowRight className="inline ml-2" />
                         </NeoButton>
                         <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
-                            Start a Conversation
+                            Tell Me What You're Building
                         </NeoButton>
                     </div>
 
@@ -135,7 +136,7 @@ export const Hero: React.FC = () => {
             <div className="max-w-7xl mx-auto w-full pb-20">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-8 bg-neo-yellow border-4 border-black p-8 md:p-12 shadow-neo">
                     <div>
-                        <h2 className="text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2 inline-block">Things I've Built</h2>
+                        <h2 className="text-2xl md:text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2 inline-block">Currently Escaped From My GitHub</h2>
                         <div className="font-mono text-xl font-bold space-y-3">
                             <p className="hover:translate-x-2 transition-transform cursor-pointer" onClick={() => navigate('/work')}>→ Lumina IQ</p>
                             <p className="hover:translate-x-2 transition-transform cursor-pointer" onClick={() => navigate('/work')}>→ Tabble</p>
@@ -148,6 +149,21 @@ export const Hero: React.FC = () => {
                         <p>A few became client software.</p>
                         <p className="text-gray-800 font-bold italic mt-2">The rest taught me something expensive.</p>
                     </div>
+                </div>
+            </div>
+
+            {/* Current Obsessions Block */}
+            <div className="max-w-7xl mx-auto w-full pb-20">
+                <div className="bg-neo-blue text-white border-4 border-black p-8 md:p-12 shadow-neo">
+                    <h2 className="text-3xl font-black uppercase mb-6 text-neo-yellow">Current Obsessions</h2>
+                    <ul className="font-mono text-lg md:text-xl space-y-4">
+                        <li>→ Making software disappear into people's workflow.</li>
+                        <li>→ Replacing spreadsheets.</li>
+                        <li>→ Restaurant operations.</li>
+                        <li>→ Knowledge systems.</li>
+                        <li>→ Cloud architecture.</li>
+                        <li>→ Finding out why humans insist on doing repetitive things manually.</li>
+                    </ul>
                 </div>
             </div>
         </section>
