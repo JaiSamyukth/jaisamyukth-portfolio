@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Project } from '../types';
 import { ArrowUpRight } from 'lucide-react';
 
@@ -53,43 +52,12 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
             {project.description}
           </p>
 
-          <div className="space-y-4">
-            {/* Traction bullets */}
-            {project.traction && project.traction.length > 0 && (
-              <div className="p-3 bg-neo-green border-2 border-black">
-                <p className="font-mono text-xs font-bold text-gray-700 mb-2 uppercase">Progress</p>
-                <ul className="space-y-1">
-                  {project.traction.slice(0, 3).map((item, idx) => (
-                    <li key={idx} className="text-xs font-medium flex items-start gap-1">
-                      <span className="text-black font-bold">✓</span>
-                      <span>{item}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )}
-
-            <div className="p-3 bg-neo-white border-2 border-black">
-              <p className="font-mono text-xs font-bold text-gray-500 mb-1 uppercase">Tech Stack</p>
-              <div className="flex flex-wrap gap-2">
-                {project.techStack.slice(0, 4).map(tech => (
-                  <span key={tech} className="bg-neo-purple text-black text-xs font-bold px-1 border border-black">
-                    {tech}
-                  </span>
-                ))}
-                {project.techStack.length > 4 && (
-                  <span className="text-xs font-bold text-gray-500">+{project.techStack.length - 4}</span>
-                )}
-              </div>
+          <div className="flex justify-between items-end border-t-2 border-dashed border-black pt-4">
+            <div className="w-3/4">
+              <p className="font-mono text-xs text-gray-600 uppercase">What It Does</p>
+              <p className="font-bold text-sm leading-tight">{project.focus}</p>
             </div>
-
-            <div className="flex justify-between items-end border-t-2 border-dashed border-black pt-4">
-              <div className="w-3/4">
-                <p className="font-mono text-xs text-gray-600 uppercase">Focus Area</p>
-                <p className="font-bold text-sm leading-tight">{project.focus}</p>
-              </div>
-              <ArrowUpRight size={32} className="text-black group-hover:text-neo-pink transition-colors" />
-            </div>
+            <ArrowUpRight size={32} className="text-black group-hover:text-neo-pink transition-colors" />
           </div>
         </div>
       </div>

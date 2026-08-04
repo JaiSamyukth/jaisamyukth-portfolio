@@ -49,51 +49,43 @@ export const Hero: React.FC = () => {
                         <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full border-2 border-black"></div>
                     </div>
 
-                    <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-16">
-                        Yep, that's me. A CS student who somehow ended up building full systems and calling himself a  <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">founder.</span>
+                    <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
+                        Yep, that's me.<br />
+                        The idiot with 30+ repositories<br />
+                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">who can't stop building.</span>
                     </h1>
 
-                    <p className="text-lg md:text-xl font-medium font-mono mb-6 max-w-lg leading-relaxed border-l-[3px] border-neo-purple pl-6 pt-1">
-                        If you have a software problem, I probably want to solve it. To know me, feel free to reach out.
+                    <p className="text-lg md:text-xl font-medium font-mono mb-4 max-w-lg leading-relaxed">
+                        I write code until it works. Sometimes it breaks production at 2 AM. Most of the time it actually solves someone's problem. I build things for paying clients, and use the money to fund my own terrible ideas.
                     </p>
 
-                    <div className="mb-8 mt-5 text-base font-medium max-w-xl">
-                        <div className="flex items-start gap-2">
-                            <span className="text-neo-green font-bold">→</span>
-                            <div>
-                                <div>I build production-ready systems for startups and businesses.</div>
-                                <div>From idea → deployment → real users.</div>
-                            </div>
-                        </div>
+                    <p className="text-base md:text-lg font-bold font-mono mb-8 text-gray-700">
+                        I have a suspiciously personal grudge against AWS invoices.
+                    </p>
+
+                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
+                        <NeoButton onClick={() => navigate('/work')}>
+                            See My Messes <ArrowRight className="inline ml-2" />
+                        </NeoButton>
+                        <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
+                            Let Me Break Your Code
+                        </NeoButton>
                     </div>
 
                     <div className="mb-6 text-base font-medium max-w-xl">
-                        <div className="flex flex-col gap-1">
-                            <span className="font-bold uppercase text-sm text-gray-500 mb-1">Currently taking on:</span>
-                            <span>• Full-stack product builds</span>
-                            <span>• AI integrations (LLMs, automation, internal tools)</span>
-                            <span>• System redesigns for speed, scale, and clarity</span>
-                        </div>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mt-6">
-                        <NeoButton onClick={() => navigate('/work')}>
-                            View Systems <ArrowRight className="inline ml-2" />
-                        </NeoButton>
-                        <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
-                            Work With Me
-                        </NeoButton>
-                    </div>
-
-                    <div className="mb-10 mt-8 text-base font-medium max-w-xl">
                         <div className="flex items-start gap-2">
                             <span className="text-neo-green font-bold">→</span>
                             <div>
-                                <div>Currently building:</div>
-                                <div>• Lumina IQ — AI learning platform (external testing)</div>
-                                <div>• Tabble — full-stack restaurant system (validated locally)</div>
+                                <div className="font-bold uppercase text-sm text-gray-500 mb-1">Currently taking on:</div>
+                                <div>• Fixing whatever your previous dev abandoned</div>
+                                <div>• Full-stack builds that actually need to ship</div>
+                                <div>• Arguing with cloud infrastructure on your behalf</div>
                             </div>
                         </div>
+                    </div>
+
+                    <div className="text-sm font-mono text-gray-600">
+                        STATUS: <span className="text-neo-blue font-bold">ONLINE</span> · <span className="text-neo-blue font-bold">AVOIDING TERMINAL WARNINGS</span>
                     </div>
                 </motion.div>
 
@@ -130,7 +122,7 @@ export const Hero: React.FC = () => {
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                         className="absolute -bottom-12 -left-10 bg-neo-purple border-4 border-black p-4 shadow-neo z-20 hidden md:block"
                     >
-                        <p className="font-mono font-bold text-sm">STATUS: ONLINE</p>
+                        <p className="font-mono font-bold text-sm">STATUS: DEBUGGING</p>
                     </motion.div>
                 </motion.div>
 

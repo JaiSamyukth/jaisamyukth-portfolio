@@ -6,7 +6,7 @@ import { useSEO } from '../src/hooks/useSEO';
 export const Contact: React.FC = () => {
     useSEO({
         title: 'Contact | Jai Samyukth B U',
-        description: 'Get in touch with Jai Samyukth for client builds, AI integrations, full-stack systems, or early-stage product collaborations. Response within 24 hours.',
+        description: 'Send me broken code, angry AWS bills, or something you need built before Friday.',
         canonical: '#/contact',
     });
     return (
@@ -27,60 +27,64 @@ export const Contact: React.FC = () => {
                 </h1>
 
                 <p className="text-xl font-medium text-center mb-6 max-w-xl mx-auto">
-                    If you're building something and need it done right — reach out.
+                    If you have a broken workflow, a messy codebase, or just need something built so you can actually start selling it — reach out.<br />
+                    I read everything and usually reply before the next deployment finishes.
                 </p>
 
                 <p className="text-lg font-mono text-center mb-8 max-w-xl mx-auto text-gray-700">
-                    <span className="font-bold text-black">Available for:</span><br />
-                    • Client work (systems, AI, full-stack)<br />
-                    • Early-stage product builds<br />
-                    • Select collaborations
+                    <span className="font-bold text-black">What I respond to:</span><br />
+                    → "My dev abandoned this and it's on fire"<br />
+                    → "I need this MVP built yesterday"<br />
+                    → "How do I make my AWS bill stop looking like a phone number?"
                 </p>
 
                 <p className="text-base font-medium text-center mb-8 max-w-xl mx-auto text-gray-600">
-                    Also open to pre-seed conversations for Lumina IQ and Tabble.
+                    (Also happy to talk if you want to put Tabble hardware in an actual restaurant)
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
                     <a href="mailto:jaisamyukth@gmail.com" className="group flex-1 min-w-[140px] max-w-[200px]">
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-black hover:text-white transition-colors cursor-pointer w-full h-full">
                             <Mail size={32} className="mb-2 group-hover:animate-bounce" />
-                            <span className="font-mono font-bold uppercase text-sm">Email</span>
+                            <span className="font-mono font-bold uppercase text-sm">[EMAIL]</span>
+                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-400">for actual work</span>
                         </div>
                     </a>
 
                     <a href="https://linkedin.com/in/jaisamyukth" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-blue hover:text-white transition-colors cursor-pointer w-full h-full">
                             <Linkedin size={32} className="mb-2 group-hover:animate-pulse" />
-                            <span className="font-mono font-bold uppercase text-sm">LinkedIn</span>
+                            <span className="font-mono font-bold uppercase text-sm">[LINKEDIN]</span>
+                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-400">for the recruiter bots</span>
                         </div>
                     </a>
 
                     <a href="https://x.com/JaiSamyukth17" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-pink hover:text-white transition-colors cursor-pointer w-full h-full">
                             <Twitter size={32} className="mb-2 group-hover:animate-bounce" />
-                            <span className="font-mono font-bold uppercase text-sm">X/Twitter</span>
+                            <span className="font-mono font-bold uppercase text-sm">[X/TWITTER]</span>
                         </div>
                     </a>
 
                     <a href="https://github.com/JaiSamyukth" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-green transition-colors cursor-pointer w-full h-full">
                             <Github size={32} className="mb-2 group-hover:animate-pulse" />
-                            <span className="font-mono font-bold uppercase text-sm">GitHub</span>
+                            <span className="font-mono font-bold uppercase text-sm">[GITHUB]</span>
+                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-800">my graveyard of repos</span>
                         </div>
                     </a>
 
                     <a href="https://instagram.com/jaisamyukth17" target="_blank" rel="noopener noreferrer" className="group flex-1 min-w-[140px] max-w-[200px]">
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-yellow transition-colors cursor-pointer w-full h-full">
                             <Instagram size={32} className="mb-2 group-hover:animate-bounce" />
-                            <span className="font-mono font-bold uppercase text-sm">Instagram</span>
+                            <span className="font-mono font-bold uppercase text-sm">[INSTAGRAM]</span>
                         </div>
                     </a>
                 </div>
 
                 <div className="text-center">
                     <p className="font-mono font-bold text-sm text-gray-500 uppercase">
-                        Response latency: {'<'} 24h
+                        RESPONSE LATENCY: {'<'} 24H
                     </p>
                 </div>
             </RevealCard>

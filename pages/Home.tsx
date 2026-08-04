@@ -1,5 +1,4 @@
 import React from 'react';
-import { motion } from 'framer-motion';
 import { Marquee } from '../components/Marquee';
 import { Hero } from '../components/Hero';
 import { NeoButton } from '../components/NeoButton';
@@ -7,16 +6,16 @@ import { RevealCard } from '../components/RevealCard';
 import { ProjectCard } from '../components/ProjectCard';
 import { projects } from '../data/projects';
 import { useNavigate } from 'react-router-dom';
-import { ArrowRight, Terminal, Cpu, Network } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import { useSEO } from '../src/hooks/useSEO';
 
 export const Home: React.FC = () => {
   const navigate = useNavigate();
   const featuredProjects = projects.slice(0, 3);
   useSEO({
-    title: 'Jai Samyukth B U | Full-Stack Builder & Founder',
-    description: 'CS student and founder building production-ready full-stack systems, AI integrations, and operational tools from idea to deployment. Available for client work.',
-    canonical: '',
+    title: 'Jai Samyukth B U | Serial Builder',
+    description: 'I build software until it works. Mostly client projects to pay for AWS, occasionally my own bad ideas.',
+    canonical: 'https://jaisamyukth.genrecai.com/',
   });
 
   return (
@@ -25,65 +24,39 @@ export const Home: React.FC = () => {
       <Hero />
 
       <div className="mt-8">
-        <Marquee text="AVAILABLE FOR CLIENT WORK • SYSTEMS DESIGN • AI INTEGRATION • FULL-STACK BUILDS •" bgColor="bg-neo-yellow" textColor="text-black" />
+        <Marquee text="CURRENTLY TAKING ON: → FIXING BROKEN PRODUCTIONS → WRITING CODE PEOPLE PAY FOR → IGNORING AWS BILLS •" bgColor="bg-neo-yellow" textColor="text-black" />
       </div>
 
       {/* Positioning Statement */}
       <section className="py-16 px-4 bg-neo-black">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-black text-white uppercase leading-tight">
-            If you're expecting a 30-page proposal and 3 weeks of meetings,<br />
+            If you want a 30-page proposal and 3 weeks of meetings,<br />
             <span className="text-neo-yellow">I'm not your guy.</span>
           </p>
           <p className="text-xl md:text-2xl font-bold text-white mt-6">
-            If you want something built and working,<br />
-            <span className="text-neo-green">we'll get along.</span>
+            If you want something built, broken, fixed, and shipped before Friday,<br />
+            <span className="text-neo-green">we'll get along fine.</span>
           </p>
         </div>
       </section>
 
-      {/* Buyer CTA — speaks to clients, not just builders */}
-      <section className="py-16 px-4 bg-neo-white border-t-4 border-b-4 border-black">
-        <div className="max-w-3xl mx-auto">
-          <p className="text-xl md:text-2xl font-medium leading-relaxed mb-6">
-            If you're building something that needs to work in the real world — not just look good in a demo — I can step in and build it properly.
-          </p>
-          <p className="text-lg md:text-xl font-bold font-mono border-l-4 border-neo-blue pl-6">
-            I take systems end-to-end:<br />
-            <span className="text-neo-blue">from idea → architecture → deployment → real users.</span>
-          </p>
-        </div>
-      </section>
-
-
-      {/* Core Principles Grid */}
-      <section className="py-20 px-4 bg-neo-black text-white">
+      {/* Validation / Social Proof Strip */}
+      <section className="py-8 px-4 bg-neo-black border-b-4 border-black">
         <div className="max-w-7xl mx-auto">
-          <RevealCard className="mb-12 border-l-8 border-neo-green pl-6">
-            <h2 className="text-5xl font-black uppercase">What I Build</h2>
-            <p className="font-mono text-neo-white mt-2">STUDENT FOUNDER SHIPPING REAL SYSTEMS. NOT WAITING FOR PERMISSION.</p>
-          </RevealCard>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { icon: Network, title: "Genrec AI", desc: "Client builds funding product development. Revenue engine for student founders." },
-              { icon: Terminal, title: "Lumina IQ", desc: "AI-assisted personalized and adaptive learning platform for students." },
-              { icon: Cpu, title: "Tabble", desc: "Restaurant ordering platform." }
-            ].map((item, i) => (
-              <RevealCard
-                key={i}
-                delay={i * 0.2}
-                className="bg-neo-purple text-black border-4 border-white p-6 shadow-[8px_8px_0px_0px_#fff] h-full"
-              >
-                <item.icon size={48} className="mb-4" />
-                <h3 className="text-2xl font-black uppercase mb-2">{item.title}</h3>
-                <p className="font-medium border-t-2 border-black pt-2">{item.desc}</p>
-              </RevealCard>
-            ))}
-          </div>
+          <p className="font-mono text-lg text-white">
+            <span className="text-neo-yellow">// TRACK RECORD</span>
+            <span className="mx-4">→</span>
+            <span>30+ repos. Most are terrible. The rest are paying for servers.</span>
+            <span className="mx-4">•</span>
+            <span>Lumina IQ: Actually used by real students right now</span>
+            <span className="mx-4">•</span>
+            <span>Tabble: Survived local testing, waiting for hardware</span>
+            <span className="mx-4">•</span>
+            <span>Built entirely without permission or adult supervision</span>
+          </p>
         </div>
       </section>
-
 
 
       {/* Selected Work Section */}
@@ -91,11 +64,11 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <RevealCard className="mb-12 flex flex-col md:flex-row justify-between items-end gap-4 border-b-8 border-black pb-8">
             <div>
-              <h2 className="text-5xl font-black uppercase mb-2">Selected Systems</h2>
-              <p className="font-mono text-gray-600">Featured engineering artifacts and deployments.</p>
+              <h2 className="text-5xl font-black uppercase mb-2">Things That Survived</h2>
+              <p className="font-mono text-gray-600">The projects that didn't get abandoned after 48 hours.</p>
             </div>
             <NeoButton variant="secondary" onClick={() => navigate('/work')}>
-              View All Systems <ArrowRight className="inline ml-2" />
+              View All The Messes <ArrowRight className="inline ml-2" />
             </NeoButton>
           </RevealCard>
 

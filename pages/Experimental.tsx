@@ -5,15 +5,15 @@ import { useSEO } from '../src/hooks/useSEO';
 
 export const Experimental: React.FC = () => {
   useSEO({
-    title: 'Playground | Jai Samyukth B U',
-    description: 'Experimental and supporting projects by Jai Samyukth — technical studies informing larger systems: Tabble iterations, AI experiments, CRM tools, and more.',
+    title: 'The Graveyard | Jai Samyukth B U',
+    description: 'Half-finished ideas, things that almost worked, and repos I pretend don\'t exist.',
     canonical: '#/experimental',
   });
   const experiments = [
-    { title: "Tabble Versions", desc: "Interface-driven ordering and coordination environments." },
-    { title: "Revolvo AI", desc: "Librarian systems focused on retrieval and knowledge access." },
-    { title: "CRM Experiments", desc: "Organizational data management platforms." },
-    { title: "Feedback Tools", desc: "Supporting institutional workflows." },
+    { title: "Tabble V1 & V2", desc: "Before I realized WebSockets were the actual problem." },
+    { title: "Revolvo AI", desc: "A knowledge retrieval bot that hallucinated with extreme confidence." },
+    { title: "CRM Clones", desc: "Because everyone tries to build Jira once before giving up." },
+    { title: "Feedback Forms", desc: "Built for college. Mostly used to submit blank responses." },
   ];
 
   return (
@@ -21,11 +21,11 @@ export const Experimental: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b-4 border-black pb-4">
             <div>
-                <h1 className="text-5xl md:text-8xl font-black uppercase mb-2">Playground</h1>
-                <p className="font-mono text-lg font-bold">Experimental & Supporting Work</p>
+                <h1 className="text-5xl md:text-8xl font-black uppercase mb-2">Graveyard</h1>
+                <p className="font-mono text-lg font-bold">The 90% that didn't make it</p>
             </div>
             <div className="mt-4 md:mt-0 bg-white border-2 border-black px-4 py-2 font-mono text-sm">
-                STATUS: ITERATIVE
+                STATUS: MOSTLY BROKEN
             </div>
         </div>
 
@@ -34,11 +34,11 @@ export const Experimental: React.FC = () => {
             <div className="bg-white border-4 border-black shadow-neo-lg p-8">
                 <h2 className="text-3xl font-black uppercase mb-6 flex items-center gap-3">
                     <Archive className="w-8 h-8" />
-                    Broader Ecosystem
+                    Failed Experiments
                 </h2>
                 <p className="mb-8 text-lg">
-                    These projects serve as technical studies that inform larger systems. 
-                    They are attempts to solve shared problem spaces rather than isolated releases.
+                    If you build enough things, most of them will be terrible. 
+                    These are the projects that taught me what not to do.
                 </p>
 
                 <ul className="space-y-4">
@@ -61,21 +61,21 @@ export const Experimental: React.FC = () => {
             {/* Side Panel */}
             <div className="space-y-8">
                 <div className="bg-black text-white border-4 border-white p-8 shadow-neo-lg">
-                    <h3 className="text-2xl font-bold uppercase mb-4 text-neo-pink">Additional Repos</h3>
+                    <h3 className="text-2xl font-bold uppercase mb-4 text-neo-pink">Other Repos</h3>
                     <ul className="list-disc pl-5 font-mono space-y-2 mb-6">
-                        <li>Portfolio implementations</li>
-                        <li>Data collection systems</li>
-                        <li>Learning experiments</li>
-                        <li>File-handling utilities</li>
+                        <li>This exact portfolio, rewritten 4 times</li>
+                        <li>Random python scripts to automate boring tasks</li>
+                        <li>Abandoned hackathon code</li>
+                        <li>Proof of concepts that proved I was wrong</li>
                     </ul>
-                    <a href="#" className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 font-bold border-2 border-gray-400 hover:bg-neo-green hover:border-black transition-colors">
-                        <Github size={18} /> View on GitHub
+                    <a href="https://github.com/JaiSamyukth" className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 font-bold border-2 border-gray-400 hover:bg-neo-green hover:border-black transition-colors">
+                        <Github size={18} /> Enter at your own risk
                     </a>
                 </div>
 
                 <div className="bg-neo-purple border-4 border-black p-8 shadow-neo text-center flex flex-col items-center justify-center min-h-[200px]">
                     <h3 className="text-4xl font-black uppercase mb-2">?</h3>
-                    <p className="font-bold">More experiments incoming.</p>
+                    <p className="font-bold">I will undoubtedly break more things soon.</p>
                 </div>
             </div>
         </div>

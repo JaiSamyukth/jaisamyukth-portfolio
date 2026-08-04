@@ -5,10 +5,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'Work', path: '/work' },
-  { label: 'About', path: '/about' },
-  { label: 'Approach', path: '/approach' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Survivors', path: '/work' },
+  { label: 'The Idiot', path: '/about' },
+  { label: 'My Method', path: '/approach' },
+  { label: 'Complain', path: '/contact' },
 ];
 
 export const Navigation: React.FC = () => {

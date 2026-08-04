@@ -5,14 +5,14 @@ import { useSEO } from '../src/hooks/useSEO';
 export const Approach: React.FC = () => {
   useSEO({
     title: 'Approach | Jai Samyukth B U',
-    description: 'How Jai Samyukth approaches software: observe real friction, structure systems that absorb complexity, refine through deployment feedback — not presentation cycles.',
+    description: 'My highly technical process: watch people do stupid things, build a tool to stop them, try to keep the servers running.',
     canonical: '#/approach',
   });
   const steps = [
-    { title: "Observe", text: "How people actually interact with processes in the wild." },
-    { title: "Identify", text: "Friction created by repetition, fragmentation, or bad tools." },
-    { title: "Structure", text: "Software that absorbs complexity rather than exposing it to the user." },
-    { title: "Refine", text: "Improvement through deployment feedback, not presentation cycles." }
+    { title: "Observe", text: "Watch how humans actually use things, which is rarely how the documentation says they should." },
+    { title: "Panic", text: "Realize how much time and money is being burned by manual copy-pasting." },
+    { title: "Build", text: "Write code that absorbs the chaos instead of just putting a nice UI on top of it." },
+    { title: "Break & Fix", text: "Deploy it. Watch users break it in ways you never imagined. Fix it at 2 AM." }
   ];
 
   return (
@@ -30,7 +30,7 @@ export const Approach: React.FC = () => {
         <div className="mb-12">
             <h2 className="text-3xl font-bold uppercase mb-4 bg-black text-white inline-block px-2">Objective</h2>
             <p className="text-2xl font-medium leading-relaxed border-l-4 border-neo-green pl-6 py-2">
-                Design systems that handle reality without requiring constant supervision.
+                Stop doing boring things manually.
             </p>
         </div>
 
@@ -51,9 +51,12 @@ export const Approach: React.FC = () => {
         </div>
 
         <div className="bg-black text-white p-8 border-4 border-dashed border-gray-500">
-            <h3 className="text-2xl font-bold uppercase mb-4 text-neo-green">Result</h3>
+            <h3 className="text-2xl font-bold uppercase mb-4 text-neo-green">// THE RESULT:</h3>
             <p className="text-xl font-mono">
-                "The result is software that behaves as infrastructure rather than interface."
+                Software that you forget exists because it actually works. That's the only compliment I care about.
+            </p>
+            <p className="text-lg font-mono text-gray-400 mt-4">
+                This is also why I don't do "3-week discovery phases." The fastest way to test whether an idea works is to write the code and find out.
             </p>
         </div>
       </div>

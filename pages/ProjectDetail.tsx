@@ -27,8 +27,8 @@ export const ProjectDetail: React.FC = () => {
     if (!project) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-neo-white">
-                <h1 className="text-4xl font-black mb-4">SYSTEM NOT FOUND</h1>
-                <NeoButton onClick={() => navigate('/work')}>Return to Index</NeoButton>
+                <h1 className="text-4xl font-black mb-4">REPO DELETED (OR NEVER EXISTED)</h1>
+                <NeoButton onClick={() => navigate('/work')}>Go look at things that actually exist</NeoButton>
             </div>
         );
     }
@@ -44,7 +44,7 @@ export const ProjectDetail: React.FC = () => {
                         onClick={() => navigate('/work')}
                         className="flex items-center gap-2 font-mono text-neo-yellow mb-8 hover:underline"
                     >
-                        <ArrowLeft size={16} /> BACK TO INDEX
+                        <ArrowLeft size={16} /> BACK TO SURVIVORS
                     </button>
 
                     <RevealCard>
@@ -60,11 +60,11 @@ export const ProjectDetail: React.FC = () => {
                                 {project.liveLink ? (
                                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer"
                                         className="bg-neo-blue text-white font-bold uppercase px-4 py-2 border-2 border-white hover:bg-white hover:text-black transition-colors flex items-center gap-2">
-                                        <ExternalLink size={18} /> Live System
+                                        <ExternalLink size={18} /> See It Broken In Prod
                                     </a>
                                 ) : (
                                     <span className="bg-white text-black font-bold uppercase px-4 py-2 border-2 border-white font-mono text-sm flex items-center">
-                                        Demo available on request
+                                        Only works on my machine
                                     </span>
                                 )}
                             </div>
@@ -107,7 +107,7 @@ export const ProjectDetail: React.FC = () => {
                         <RevealCard delay={0.2}>
                             <h2 className="text-3xl font-black uppercase mb-4 flex items-center gap-2">
                                 <span className="w-4 h-4 bg-neo-pink border-2 border-black"></span>
-                                System Overview
+                                What Is This Mess?
                             </h2>
                             <p className="text-xl font-medium leading-relaxed border-l-4 border-black pl-6">
                                 {project.longDescription || project.description}
@@ -117,7 +117,7 @@ export const ProjectDetail: React.FC = () => {
                         {project.challenge && (
                             <RevealCard delay={0.3} className="bg-red-50 border-4 border-black p-8 relative">
                                 <div className="absolute -top-4 -left-2 bg-red-500 text-white font-black px-4 py-1 border-2 border-black transform -rotate-2">
-                                    THE PROBLEM
+                                    THE FRUSTRATION
                                 </div>
                                 <p className="text-lg font-medium mt-2">{project.challenge}</p>
                             </RevealCard>
@@ -126,7 +126,7 @@ export const ProjectDetail: React.FC = () => {
                         {project.solution && (
                             <RevealCard delay={0.4} className="bg-green-50 border-4 border-black p-8 relative">
                                 <div className="absolute -top-4 -right-2 bg-neo-green text-black font-black px-4 py-1 border-2 border-black transform rotate-2">
-                                    THE SOLUTION
+                                    THE CODE
                                 </div>
                                 <p className="text-lg font-medium mt-2">{project.solution}</p>
                             </RevealCard>
@@ -136,7 +136,7 @@ export const ProjectDetail: React.FC = () => {
                         {project.outcomes && project.outcomes.length > 0 && (
                             <RevealCard delay={0.45} className="bg-neo-blue border-4 border-black p-8 relative">
                                 <div className="absolute -top-4 -left-2 bg-black text-white font-black px-4 py-1 border-2 border-neo-blue transform -rotate-1">
-                                    OUTCOMES
+                                    DID IT WORK?
                                 </div>
                                 <ul className="space-y-3 mt-2">
                                     {project.outcomes.map((item, idx) => (
@@ -154,7 +154,7 @@ export const ProjectDetail: React.FC = () => {
                             <RevealCard delay={0.5} className="bg-neo-yellow border-4 border-black p-8">
                                 <h2 className="text-2xl font-black uppercase mb-4 flex items-center gap-2">
                                     <span className="w-4 h-4 bg-neo-green border-2 border-black"></span>
-                                    Progress / Traction
+                                    Current State of Chaos
                                 </h2>
                                 <ul className="space-y-3">
                                     {project.traction.map((item, idx) => (
@@ -170,7 +170,7 @@ export const ProjectDetail: React.FC = () => {
                         {/* Gallery */}
                         {project.gallery && project.gallery.length > 0 && (
                             <div className="space-y-8 mt-12">
-                                <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black inline-block">Visual Artifacts</h2>
+                                <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black inline-block">Proof It Exists</h2>
                                 {project.gallery.map((img, idx) => (
                                     <RevealCard key={idx} delay={0.2 + (idx * 0.1)}>
                                         <div className="border-4 border-black p-2 bg-white shadow-neo">
@@ -183,7 +183,7 @@ export const ProjectDetail: React.FC = () => {
 
                         {/* Built-independently micro-detail */}
                         <p className="font-mono text-xs text-gray-400 border-t border-dashed border-gray-200 pt-4 mt-4">
-                            Built and deployed independently, handling real-world usage constraints.
+                            Built independently. Has survived at least one catastrophic failure.
                         </p>
                     </div>
                 </div>
