@@ -72,7 +72,7 @@ export const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-8">
         <div>
           <h2 className="text-3xl font-black uppercase mb-2">Jai Samyukth B U</h2>
-          <p className="font-mono text-gray-400">The name is copyrighted from 2005</p>
+          <p className="font-mono text-gray-400">Built with React and sheer stubbornness.</p>
         </div>
 
         <div className="flex flex-wrap gap-4 items-center justify-center">
@@ -150,26 +150,24 @@ export const Hero: React.FC = () => {
 
                     <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
                         Yep, that's me.<br />
-                        A CS student who somehow ended up building full systems<br />
-                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">and calling himself a founder.</span>
+                        The idiot with 30+ repositories<br />
+                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1">who can't stop building.</span>
                     </h1>
 
                     <p className="text-lg md:text-xl font-medium font-mono mb-4 max-w-lg leading-relaxed">
-                        Co-founder of Genrec AI. I build things that actually get used —<br />
-                        AI backends, full-stack products, the kind of stuff that breaks<br />
-                        at 2am and you fix it because real people are depending on it.
+                        I write code until it works. Sometimes it breaks production at 2 AM. Most of the time it actually solves someone's problem. I build things for paying clients, and use the money to fund my own terrible ideas.
                     </p>
 
                     <p className="text-base md:text-lg font-bold font-mono mb-8 text-gray-700">
-                        I didn't plan any of this. I just kept building.
+                        I have a suspiciously personal grudge against AWS invoices.
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
                         <NeoButton onClick={() => navigate('/work')}>
-                            See What I've Shipped <ArrowRight className="inline ml-2" />
+                            See My Messes <ArrowRight className="inline ml-2" />
                         </NeoButton>
                         <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
-                            Let's Build Something
+                            Let Me Break Your Code
                         </NeoButton>
                     </div>
 
@@ -178,15 +176,15 @@ export const Hero: React.FC = () => {
                             <span className="text-neo-green font-bold">→</span>
                             <div>
                                 <div className="font-bold uppercase text-sm text-gray-500 mb-1">Currently taking on:</div>
-                                <div>• Full-stack product builds (idea to deployed)</div>
-                                <div>• AI integrations — LLMs, automation, internal tooling</div>
-                                <div>• System redesigns for speed, scale, and clarity</div>
+                                <div>• Fixing whatever your previous dev abandoned</div>
+                                <div>• Full-stack builds that actually need to ship</div>
+                                <div>• Arguing with cloud infrastructure on your behalf</div>
                             </div>
                         </div>
                     </div>
 
                     <div className="text-sm font-mono text-gray-600">
-                        STATUS: <span className="text-neo-blue font-bold">ONLINE</span> · <span className="text-neo-blue font-bold">AVAILABLE</span> · <span className="text-neo-blue font-bold">OPEN TO WORK</span>
+                        STATUS: <span className="text-neo-blue font-bold">ONLINE</span> · <span className="text-neo-blue font-bold">AVOIDING TERMINAL WARNINGS</span>
                     </div>
                 </motion.div>
 
@@ -223,7 +221,7 @@ export const Hero: React.FC = () => {
                         transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
                         className="absolute -bottom-12 -left-10 bg-neo-purple border-4 border-black p-4 shadow-neo z-20 hidden md:block"
                     >
-                        <p className="font-mono font-bold text-sm">STATUS: ONLINE</p>
+                        <p className="font-mono font-bold text-sm">STATUS: DEBUGGING</p>
                     </motion.div>
                 </motion.div>
 
@@ -278,10 +276,10 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const navItems = [
   { label: 'Home', path: '/' },
-  { label: 'Work', path: '/work' },
-  { label: 'About', path: '/about' },
-  { label: 'Approach', path: '/approach' },
-  { label: 'Contact', path: '/contact' },
+  { label: 'Survivors', path: '/work' },
+  { label: 'The Idiot', path: '/about' },
+  { label: 'My Method', path: '/approach' },
+  { label: 'Complain', path: '/contact' },
 ];
 
 export const Navigation: React.FC = () => {
@@ -449,7 +447,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project }) => {
 
           <div className="flex justify-between items-end border-t-2 border-dashed border-black pt-4">
             <div className="w-3/4">
-              <p className="font-mono text-xs text-gray-600 uppercase">Focus Area</p>
+              <p className="font-mono text-xs text-gray-600 uppercase">What It Does</p>
               <p className="font-bold text-sm leading-tight">{project.focus}</p>
             </div>
             <ArrowUpRight size={32} className="text-black group-hover:text-neo-pink transition-colors" />
@@ -527,70 +525,70 @@ export const projects: Project[] = [
     {
         id: 'genrec-ai',
         title: 'Genrec AI',
-        category: 'Services / Revenue Engine',
-        description: 'Custom software builds that fund internal product work.',
-        longDescription: 'Simple loop — clients pay me to build their software, that money funds Lumina IQ and Tabble. No investors, no grants. Every project has to be good enough to generate the next referral, which honestly keeps the quality honest in a way no process document ever could.',
-        challenge: 'Most student founders wait. For funding, for the right moment, for someone to give them permission. Waiting mostly just means you never find out if your idea was any good.',
-        solution: "Cloud is cheap now. AI tools are everywhere. One person can ship what used to take a whole team — and if you do it for paying clients first, you learn deployment, client pressure, and real user feedback before you ever need to raise a rupee.",
+        category: 'Services / Cloud Bills Funder',
+        description: 'Building software for people who pay me, so I can afford to build software for myself.',
+        longDescription: 'This is the engine. Clients need software, they pay me, and I use that money to keep Lumina IQ and Tabble running. I don\'t have investors or a rich uncle. If I build something terrible, I don\'t get a referral, which is a far better motivator than any agile sprint planning meeting.',
+        challenge: 'Most students wait until they feel "ready" to build for clients. Waiting usually just means reading tutorials until you give up. I decided to learn on the job.',
+        solution: 'I just started saying yes to things I didn\'t fully know how to build yet, and then stayed up until 4 AM figuring out how to build them. Turns out, real client pressure teaches you full-stack development much faster than a YouTube playlist.',
         outcomes: [
-            'Multiple full-stack products delivered for paying clients',
-            'All revenue reinvested directly into Lumina IQ and Tabble',
-            'Zero external marketing — all work from direct network',
+            'Actually shipped things people use instead of just making GitHub repos',
+            'Made enough money to ignore AWS invoices for a while',
+            'Learned how to tell clients "no" politely',
         ],
         gallery: [
             genrecAIImg,
         ],
-        techStack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'AWS'],
-        status: 'REVENUE ACTIVE',
-        focus: 'Software development and product building',
+        techStack: ['TypeScript', 'React', 'Next.js', 'Node.js', 'PostgreSQL', 'AWS (The ex. We don\'t talk about the invoices.)'],
+        status: 'PAYING FOR SERVERS',
+        focus: 'Writing code that people pay for',
         imageUrl: genrecAIImg,
         liveLink: 'https://genrecai.com',
         traction: [
-            'Multiple full-stack products delivered for paying clients',
-            'All revenue reinvested directly into Lumina IQ and Tabble',
-            'Zero external marketing — all work from direct network',
+            'Built real things for real people',
+            'Zero marketing budget',
+            'Surviving entirely on referrals',
         ],
     },
     {
         id: 'lumina-iq',
         title: 'Lumina IQ',
         category: 'AI / Education',
-        description: 'AI-assisted path-building, revision, and self-testing for students.',
-        longDescription: 'You paste in what you need to study. It turns that into an actual revision plan — structured explanations, what to prioritize, then questions that force you to recall it. Not highlight-and-hope. Active recall with a feedback loop. Currently out with real testers who are using it before actual exams, which is the only honest way to find out what\'s broken.',
-        challenge: "Students reread notes the night before and feel like they're studying. They're not. They're just creating the feeling of familiarity without actually testing whether it's in their head. The exam then disagrees.",
-        solution: "Students already paste syllabus content into ChatGPT and ask it to explain things. That's basically Lumina IQ but without structure, without a revision loop, and without anything that makes you actually prove you retained it. We just built the thing they were doing informally into something that works properly.",
+        description: 'Forcing students to actually remember things instead of just highlighting PDFs.',
+        longDescription: 'I watched people highlight entire PDFs and somehow expect their brain to cooperate. So I built this. You paste your syllabus in, it creates a structured path, and then violently forces you to recall the information. It\'s currently being tested by real students right before their exams, which is terrifying but useful.',
+        challenge: 'Rereading notes the night before an exam feels like studying, but it\'s just creating a false sense of familiarity. The exam usually disagrees with your confidence level.',
+        solution: 'People were already pasting their notes into ChatGPT, but without any structure. I built a proper loop: explanation, prioritization, and active recall. It doesn\'t let you pretend you know the answer.',
         outcomes: [
-            'Functional product deployed and accessible',
-            'External testers actively using the revision and recall system',
-            'Feedback loop running — improving from real usage, not assumptions',
+            'Deployed and somewhat stable',
+            'Real students are using it to pass exams (I hope)',
+            'Constantly fixing edge cases because students paste weird things',
         ],
         gallery: [
             luminaIntro,
             luminaScreenshot,
         ],
-        techStack: ['Python', 'TypeScript', 'LLM Integration', 'React', 'PostgreSQL'],
-        status: 'EXTERNAL TESTING',
-        focus: 'AI-personalised learning and revision',
+        techStack: ['Python', 'TypeScript', 'LLMs', 'React', 'PostgreSQL (Has survived every terrible schema I\'ve invented.)'],
+        status: 'BREAKING IN PRODUCTION',
+        focus: 'Forced active recall',
         imageUrl: luminaIntro,
         liveLink: 'https://luminaiq.fun',
         traction: [
-            'Functional product deployed and accessible',
-            'External testers actively using the revision and recall system',
-            'Feedback loop running — improving from real usage, not assumptions',
+            'Actual humans are logging in',
+            'Getting angry feedback when a question is too hard (which means it\'s working)',
+            'Iterating based on reality, not assumptions',
         ],
     },
     {
         id: 'tabble',
         title: 'Tabble',
-        category: 'Restaurant / Operations',
-        description: 'Table-to-kitchen ordering and service sync for small restaurants.',
-        longDescription: 'Three screens. Customer sees the menu and taps their order. Chef sees it come in immediately. Admin watches the whole floor in real time. Nobody shouts, nobody retypes anything, nobody loses an order because they were handling two tables at once. Built it, wired it together with WebSockets, tested the full flow end to end. Works. Now it needs hardware in an actual restaurant.',
-        challenge: "Go sit in any small restaurant in India and watch how orders actually move from a table to the kitchen. It's a person writing on paper, or shouting, or typing into a phone they share with two other people. For a 25-seat place that can't justify a ₹2 lakh POS system, that's just... what they do. Every day.",
-        solution: "A cheap Android tablet per table and a ₹500/month cloud subscription is genuinely all this needs. The infrastructure problem is basically solved. Nobody built the simple software layer for the small guys because the market looked too messy. It's not. It's just unglamorous.",
+        category: 'Restaurant / Chaos Reduction',
+        description: 'Stopping waiters from having to memorize 14 things at once.',
+        longDescription: 'Three interfaces: Customer taps what they want. Chef sees it instantly. Admin watches the chaos. No shouting, no illegible handwritten notes, no forgotten extra-spicy requests. I wired the whole thing together with WebSockets and tested the entire flow. Now I just need to convince a restaurant to let me put cheap Android tablets on their tables.',
+        challenge: 'Go to a small restaurant and watch how orders happen. It\'s usually a guy trying to write on a tiny pad while balancing plates, or shouting across the room. Small places can\'t drop ₹2 lakh on a fancy POS system.',
+        solution: 'Turns out a ₹5,000 tablet and a basic cloud setup solves the entire problem. Nobody built it because the small restaurant market isn\'t glamorous enough for VC money. I built it because I hate watching bad workflows.',
         outcomes: [
-            'Complete three-interface system built (customer, chef, admin)',
-            'Full flow tested locally end-to-end',
-            'Architecture ready for hardware deployment on cheap Android tablets',
+            'The WebSockets actually stay connected most of the time',
+            'Three different UIs talking to each other without catching fire',
+            'Ready for a real restaurant to break it',
         ],
         gallery: [
             tabbleIntro,
@@ -598,14 +596,14 @@ export const projects: Project[] = [
             tabbleUnnamed,
         ],
         techStack: ['React', 'Node.js', 'WebSockets', 'PostgreSQL', 'PWA'],
-        status: 'HARDWARE READY',
-        focus: 'Order from where you are',
+        status: 'WAITING FOR HARDWARE',
+        focus: 'Making restaurants slightly less loud',
         imageUrl: tabbleIntro,
         liveLink: 'https://tabble.in',
         traction: [
-            'Complete three-interface system built (customer, chef, admin)',
-            'Full flow tested locally end-to-end',
-            'Architecture ready for hardware deployment on cheap Android tablets',
+            'Works perfectly on my machine',
+            'Architecture is solid',
+            'Looking for a brave restaurant owner',
         ],
     },
 ];
@@ -663,7 +661,7 @@ import { ArrowRight } from 'lucide-react';
 export const About: React.FC = () => {
     useSEO({
         title: 'About | Jai Samyukth B U',
-        description: 'Learn about Jai Samyukth — CS student, founder, and builder of full-stack systems, AI tools, and operational software. Background, philosophy, and technical stack.',
+        description: 'The guy with 30+ repositories, a grudge against AWS, and a compulsion to build.',
         canonical: '#/about',
     });
     return (
@@ -674,14 +672,13 @@ export const About: React.FC = () => {
                     <RevealCard>
                         <div className="flex items-center gap-4 mb-6">
                             <div className="w-20 h-2 bg-neo-yellow"></div>
-                            <span className="font-mono text-neo-yellow uppercase">FOUNDER_V1.0</span>
+                            <span className="font-mono text-neo-yellow uppercase">SERIAL_BUILDER_V1.0</span>
                         </div>
                         <h1 className="text-6xl md:text-8xl font-black uppercase leading-none mb-8">
                             Jai <br /> <span className="text-transparent bg-clip-text bg-gradient-to-r from-neo-yellow to-neo-green" style={{ WebkitTextStroke: '2px white' }}>Samyukth</span> B U.
                         </h1>
                         <p className="text-xl md:text-2xl font-medium font-mono text-gray-300 max-w-2xl">
-                            3rd year B.Tech. India. I build AI systems and software that's<br />
-                            supposed to survive actual use — not just a demo to a panel.
+                            3rd year B.Tech. I write code until it works. Sometimes it survives production. Sometimes I spend all night fixing it.
                         </p>
                     </RevealCard>
                 </div>
@@ -696,19 +693,14 @@ export const About: React.FC = () => {
                             <h2 className="text-3xl font-black uppercase mb-6 border-b-4 border-black pb-2">Background</h2>
                             <div className="space-y-4 font-medium text-lg leading-relaxed">
                                 <p>
-                                    Started with whatever seemed useful to build. Then someone paid me for it.
-                                    Then the AWS bill arrived and I learned infrastructure the way everyone learns infrastructure — 
-                                    painfully, at 1am, with something half-broken in production.
+                                    I started building things because I couldn't stop. Eventually, someone paid me for it.
+                                    Then the first AWS invoice arrived, politely informing me that curiosity isn't free. I learned infrastructure the only way that works: by breaking it at 1 AM and frantically trying to fix it before anyone noticed.
                                 </p>
                                 <p>
-                                    That loop turned into Genrec AI. Lumina IQ came from watching how my batchmates actually 
-                                    studied for exams (not how they said they studied). Tabble came from sitting in a restaurant, 
-                                    watching the chaos, and thinking — this is a software problem with a solved answer that nobody 
-                                    bothered to build cheaply enough.
+                                    My projects usually start because I watch people do something stupid. Lumina IQ exists because I watched students highlight entire PDFs and somehow expect their brains to cooperate. Tabble exists because every waiter eventually develops superhero-level memory because the software doesn't.
                                 </p>
                                 <p>
-                                    I build complete systems with my team. Frontend, backend, deployed, initial users.
-                                    I'd rather ship something messy that gets used than something clean that lives in a private repo forever.
+                                    I write code until it solves the problem. Sometimes it's messy, but messy code running in production beats clean code sitting in a private repo forever.
                                 </p>
                             </div>
                         </RevealCard>
@@ -717,8 +709,7 @@ export const About: React.FC = () => {
                         <RevealCard delay={0.2} className="bg-neo-yellow border-4 border-black p-8 shadow-neo">
                             <h2 className="text-2xl font-black uppercase mb-4">Why I Build</h2>
                             <p className="font-medium text-lg leading-relaxed">
-                                There's always a gap between how people actually do something and how the software assumes they do it.
-                                Every project I've built came from noticing that gap. Probably where the next ones will come from too.
+                                I don't like software that needs training manuals. There's always a gap between how people actually do things and how the software assumes they do them. I just try to close that gap before the user gives up.
                             </p>
                         </RevealCard>
 
@@ -726,15 +717,15 @@ export const About: React.FC = () => {
                         <RevealCard delay={0.3}>
                             <h2 className="text-3xl font-black uppercase mb-6 flex items-center gap-2">
                                 <div className="w-4 h-4 bg-neo-blue rounded-full"></div>
-                                Technical Arsenal
+                                Things I Argue With
                             </h2>
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {[
-                                    { cat: "Core", items: ["TypeScript", "Python", "Rust", "Go"] },
-                                    { cat: "Frontend", items: ["React", "Next.js", "Tailwind", "Framer Motion"] },
-                                    { cat: "Backend", items: ["FastAPI", "Node.js", "PostgreSQL", "Redis"] },
-                                    { cat: "Infra", items: ["Docker", "AWS", "Terraform", "CI/CD"] }
+                                    { cat: "Core", items: ["TypeScript (Annoyingly correct)", "Python", "Java", "C#", "C", "C++"] },
+                                    { cat: "Frontend", items: ["React", "Next.js", "Tailwind"] },
+                                    { cat: "Backend", items: ["FastAPI", "Node.js", "PostgreSQL", "MySQL"] },
+                                    { cat: "Infra", items: ["Docker (Works on attempt #17)", "AWS", "Azure", "Supabase"] }
                                 ].map((skill, i) => (
                                     <div key={i} className="border-2 border-black bg-neo-white p-4">
                                         <h4 className="font-mono font-bold uppercase mb-2 bg-black text-white px-2 inline-block text-sm">{skill.cat}</h4>
@@ -755,47 +746,47 @@ export const About: React.FC = () => {
                             <h2 className="text-2xl font-black uppercase mb-4 text-neo-green">// WHAT OTHERS SAY</h2>
                             <div className="border-l-4 border-neo-yellow pl-6">
                                 <p className="text-lg font-medium italic text-gray-300 mb-4">
-                                    "He leads by example. Working alongside him at Genrec, I've seen him bring the team together, make honest decisions under pressure, and push us to build things that actually matter. That's rare."
+                                    "He leads by example. Working alongside him, I've seen him bring the team together, make honest decisions under pressure, and push us to build things that actually matter. That's rare."
                                 </p>
-                                <p className="font-mono text-sm text-gray-500">— <a href="https://linkedin.com/in/shyamnath-sankar" target="_blank" rel="noopener noreferrer" className="hover:text-neo-yellow transition-colors">Shyamnath Sankar</a>, Co-founder, Genrec AI</p>
+                                <p className="font-mono text-sm text-gray-500">— <a href="https://linkedin.com/in/shyamnath-sankar" target="_blank" rel="noopener noreferrer" className="hover:text-neo-yellow transition-colors">Shyamnath Sankar</a>, Fellow Builder</p>
                             </div>
                         </RevealCard>
                     </div>
 
                     {/* Experience Timeline */}
                     <div>
-                        <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black pb-2">Timeline</h2>
+                        <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black pb-2">Timeline of Mistakes & Fixes</h2>
                         <div className="border-l-4 border-black ml-4 space-y-12 pl-8 relative">
                             {[
                                 {
                                     period: "May 2023",
-                                    title: "TOOK DEV WORK SERIOUSLY",
-                                    desc: "Formed a small build group. Got college lab access by offering to build tools they'd actually use. First time building under real constraints with real stakes."
+                                    title: "STARTED BUILDING",
+                                    desc: "Got college lab access by offering to build tools they'd actually use. Turns out if you automate someone's boring job, they let you use their computers."
                                 },
                                 {
                                     period: "2024",
-                                    title: "FIRST PAID CLIENT BUILDS",
-                                    desc: "Delivered 3 full projects through personal network. Still in college. No agency, no platform. Just people who needed something built and trusted me to build it."
+                                    title: "PEOPLE PAID ME",
+                                    desc: "Shipped 3 full projects. Learned that clients don't care about your clean architecture, they care if the button works."
                                 },
                                 {
                                     period: "2024",
-                                    title: "LEARNED INFRA THE PAINFUL WAY",
-                                    desc: "Deployed on AWS. Made expensive mistakes. Now I know exactly what survives production traffic and what only survives a demo. The money was a fair price for that knowledge."
+                                    title: "THE CLOUD INCIDENTS",
+                                    desc: "AWS charged me for experimenting. Azure later handed me startup credits like an apology from the cloud industry. Git has faithfully recorded all my terrible decisions."
                                 },
                                 {
                                     period: "Late 2024",
-                                    title: "BUILT & SHIPPED LUMINA IQ MVP",
-                                    desc: "Turned exam-cram frustration into a testable product. Got first external testers. Feedback started coming in. Some of it was uncomfortable. All of it was useful."
+                                    title: "LUMINA IQ MVP",
+                                    desc: "Turned exam-cram frustration into a product. Got first external testers. Some feedback was angry, which meant it was actually forcing them to think."
                                 },
                                 {
                                     period: "2025",
-                                    title: "BUILT TABBLE END-TO-END",
-                                    desc: "Complete restaurant sync system. Customer, chef, admin — all three interfaces, all wired together. Tested locally. Now it needs hardware in an actual restaurant."
+                                    title: "TABBLE ARCHITECTURE",
+                                    desc: "Complete restaurant sync system. Wired it all together. Tested locally. Now I just need to find a restaurant owner brave enough to let me install it."
                                 },
                                 {
                                     period: "Now",
-                                    title: "PARALLEL ITERATION",
-                                    desc: "Client builds fund the products. Products improve from real feedback. The loop continues. No roadmap, just problems that need fixing."
+                                    title: "THE CURRENT LOOP",
+                                    desc: "Client builds pay for the servers. Products break and get fixed. I still have 30 abandoned repos I pretend don't exist."
                                 }
                             ].map((job, idx) => (
                                 <RevealCard key={idx} delay={idx * 0.1} className="relative">
@@ -813,9 +804,9 @@ export const About: React.FC = () => {
 
                         {/* Writing Section */}
                         <div className="mt-16">
-                            <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black pb-2">// WRITING</h2>
+                            <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black pb-2">// NOTES TO SELF</h2>
                             <div className="space-y-4">
-                                <p className="font-mono text-gray-600 mb-4">Occasional pieces on AI, systems, and building in public.</p>
+                                <p className="font-mono text-gray-600 mb-4">Occasional rants about broken workflows and things I built.</p>
                                 <a href="https://dev.to/jaisamyukth" target="_blank" rel="noopener noreferrer" className="flex items-center justify-between p-4 border-4 border-black bg-neo-white hover:bg-neo-yellow transition-colors group">
                                     <span className="font-bold">READ ON DEV.TO</span>
                                     <ArrowRight className="group-hover:translate-x-2 transition-transform" />
@@ -825,7 +816,7 @@ export const About: React.FC = () => {
                     </div>
                 </div>
             </div>
-            <Marquee text="AVAILABLE FOR CONTRACTS • SYSTEMS DESIGN • TECHNICAL AUDITS •" bgColor="bg-neo-blue" textColor="text-white" />
+            <Marquee text="AVAILABLE FOR CONTRACTS • FIXING BROKEN CODE • IGNORING BEST PRACTICES TO GET THINGS DONE •" bgColor="bg-neo-blue" textColor="text-white" />
         </div>
     );
 };
@@ -842,14 +833,14 @@ import { useSEO } from '../src/hooks/useSEO';
 export const Approach: React.FC = () => {
   useSEO({
     title: 'Approach | Jai Samyukth B U',
-    description: 'How Jai Samyukth approaches software: observe real friction, structure systems that absorb complexity, refine through deployment feedback — not presentation cycles.',
+    description: 'My highly technical process: watch people do stupid things, build a tool to stop them, try to keep the servers running.',
     canonical: '#/approach',
   });
   const steps = [
-    { title: "Observe", text: "How people actually interact with processes in the wild." },
-    { title: "Identify", text: "Friction created by repetition, fragmentation, or bad tools." },
-    { title: "Structure", text: "Software that absorbs complexity rather than exposing it to the user." },
-    { title: "Refine", text: "Improvement through deployment feedback, not presentation cycles." }
+    { title: "Observe", text: "Watch how humans actually use things, which is rarely how the documentation says they should." },
+    { title: "Panic", text: "Realize how much time and money is being burned by manual copy-pasting." },
+    { title: "Build", text: "Write code that absorbs the chaos instead of just putting a nice UI on top of it." },
+    { title: "Break & Fix", text: "Deploy it. Watch users break it in ways you never imagined. Fix it at 2 AM." }
   ];
 
   return (
@@ -867,7 +858,7 @@ export const Approach: React.FC = () => {
         <div className="mb-12">
             <h2 className="text-3xl font-bold uppercase mb-4 bg-black text-white inline-block px-2">Objective</h2>
             <p className="text-2xl font-medium leading-relaxed border-l-4 border-neo-green pl-6 py-2">
-                Design systems that handle reality without requiring constant supervision.
+                Stop doing boring things manually.
             </p>
         </div>
 
@@ -890,11 +881,10 @@ export const Approach: React.FC = () => {
         <div className="bg-black text-white p-8 border-4 border-dashed border-gray-500">
             <h3 className="text-2xl font-bold uppercase mb-4 text-neo-green">// THE RESULT:</h3>
             <p className="text-xl font-mono">
-                Software that behaves like infrastructure. The kind you stop thinking about because it just works — 
-                which is the only real compliment software can receive.
+                Software that you forget exists because it actually works. That's the only compliment I care about.
             </p>
             <p className="text-lg font-mono text-gray-400 mt-4">
-                This is also why there's no 3-week discovery phase. The fastest way to test whether something works is to build a version of it and find out.
+                This is also why I don't do "3-week discovery phases." The fastest way to test whether an idea works is to write the code and find out.
             </p>
         </div>
       </div>
@@ -915,7 +905,7 @@ import { useSEO } from '../src/hooks/useSEO';
 export const Contact: React.FC = () => {
     useSEO({
         title: 'Contact | Jai Samyukth B U',
-        description: 'Get in touch with Jai Samyukth for client builds, AI integrations, full-stack systems, or early-stage product collaborations. Response within 24 hours.',
+        description: 'Send me broken code, angry AWS bills, or something you need built before Friday.',
         canonical: '#/contact',
     });
     return (
@@ -936,20 +926,19 @@ export const Contact: React.FC = () => {
                 </h1>
 
                 <p className="text-xl font-medium text-center mb-6 max-w-xl mx-auto">
-                    If you're building something and need it done right — reach out.<br />
-                    I read everything and reply within 24 hours. No pitch decks needed.<br />
-                    Just tell me what you're trying to build.
+                    If you have a broken workflow, a messy codebase, or just need something built so you can actually start selling it — reach out.<br />
+                    I read everything and usually reply before the next deployment finishes.
                 </p>
 
                 <p className="text-lg font-mono text-center mb-8 max-w-xl mx-auto text-gray-700">
-                    <span className="font-bold text-black">Available for:</span><br />
-                    → Client work (systems, AI, full-stack)<br />
-                    → Early-stage product builds<br />
-                    → Select collaborations
+                    <span className="font-bold text-black">What I respond to:</span><br />
+                    → "My dev abandoned this and it's on fire"<br />
+                    → "I need this MVP built yesterday"<br />
+                    → "How do I make my AWS bill stop looking like a phone number?"
                 </p>
 
                 <p className="text-base font-medium text-center mb-8 max-w-xl mx-auto text-gray-600">
-                    Also open to pre-seed conversations for Lumina IQ and Tabble.
+                    (Also happy to talk if you want to put Tabble hardware in an actual restaurant)
                 </p>
 
                 <div className="flex flex-wrap justify-center gap-4 mb-12">
@@ -957,7 +946,7 @@ export const Contact: React.FC = () => {
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-black hover:text-white transition-colors cursor-pointer w-full h-full">
                             <Mail size={32} className="mb-2 group-hover:animate-bounce" />
                             <span className="font-mono font-bold uppercase text-sm">[EMAIL]</span>
-                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-400">best for project stuff</span>
+                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-400">for actual work</span>
                         </div>
                     </a>
 
@@ -965,7 +954,7 @@ export const Contact: React.FC = () => {
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-blue hover:text-white transition-colors cursor-pointer w-full h-full">
                             <Linkedin size={32} className="mb-2 group-hover:animate-pulse" />
                             <span className="font-mono font-bold uppercase text-sm">[LINKEDIN]</span>
-                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-400">if you want context first</span>
+                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-400">for the recruiter bots</span>
                         </div>
                     </a>
 
@@ -980,6 +969,7 @@ export const Contact: React.FC = () => {
                         <div className="bg-neo-white border-4 border-black p-4 flex flex-col items-center hover:bg-neo-green transition-colors cursor-pointer w-full h-full">
                             <Github size={32} className="mb-2 group-hover:animate-pulse" />
                             <span className="font-mono font-bold uppercase text-sm">[GITHUB]</span>
+                            <span className="text-xs text-gray-500 mt-1 group-hover:text-gray-800">my graveyard of repos</span>
                         </div>
                     </a>
 
@@ -1017,15 +1007,15 @@ import { useSEO } from '../src/hooks/useSEO';
 
 export const Experimental: React.FC = () => {
   useSEO({
-    title: 'Playground | Jai Samyukth B U',
-    description: 'Experimental and supporting projects by Jai Samyukth — technical studies informing larger systems: Tabble iterations, AI experiments, CRM tools, and more.',
+    title: 'The Graveyard | Jai Samyukth B U',
+    description: 'Half-finished ideas, things that almost worked, and repos I pretend don\'t exist.',
     canonical: '#/experimental',
   });
   const experiments = [
-    { title: "Tabble Versions", desc: "Interface-driven ordering and coordination environments." },
-    { title: "Revolvo AI", desc: "Librarian systems focused on retrieval and knowledge access." },
-    { title: "CRM Experiments", desc: "Organizational data management platforms." },
-    { title: "Feedback Tools", desc: "Supporting institutional workflows." },
+    { title: "Tabble V1 & V2", desc: "Before I realized WebSockets were the actual problem." },
+    { title: "Revolvo AI", desc: "A knowledge retrieval bot that hallucinated with extreme confidence." },
+    { title: "CRM Clones", desc: "Because everyone tries to build Jira once before giving up." },
+    { title: "Feedback Forms", desc: "Built for college. Mostly used to submit blank responses." },
   ];
 
   return (
@@ -1033,11 +1023,11 @@ export const Experimental: React.FC = () => {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 border-b-4 border-black pb-4">
             <div>
-                <h1 className="text-5xl md:text-8xl font-black uppercase mb-2">Playground</h1>
-                <p className="font-mono text-lg font-bold">Experimental & Supporting Work</p>
+                <h1 className="text-5xl md:text-8xl font-black uppercase mb-2">Graveyard</h1>
+                <p className="font-mono text-lg font-bold">The 90% that didn't make it</p>
             </div>
             <div className="mt-4 md:mt-0 bg-white border-2 border-black px-4 py-2 font-mono text-sm">
-                STATUS: ITERATIVE
+                STATUS: MOSTLY BROKEN
             </div>
         </div>
 
@@ -1046,11 +1036,11 @@ export const Experimental: React.FC = () => {
             <div className="bg-white border-4 border-black shadow-neo-lg p-8">
                 <h2 className="text-3xl font-black uppercase mb-6 flex items-center gap-3">
                     <Archive className="w-8 h-8" />
-                    Broader Ecosystem
+                    Failed Experiments
                 </h2>
                 <p className="mb-8 text-lg">
-                    These projects serve as technical studies that inform larger systems. 
-                    They are attempts to solve shared problem spaces rather than isolated releases.
+                    If you build enough things, most of them will be terrible. 
+                    These are the projects that taught me what not to do.
                 </p>
 
                 <ul className="space-y-4">
@@ -1073,21 +1063,21 @@ export const Experimental: React.FC = () => {
             {/* Side Panel */}
             <div className="space-y-8">
                 <div className="bg-black text-white border-4 border-white p-8 shadow-neo-lg">
-                    <h3 className="text-2xl font-bold uppercase mb-4 text-neo-pink">Additional Repos</h3>
+                    <h3 className="text-2xl font-bold uppercase mb-4 text-neo-pink">Other Repos</h3>
                     <ul className="list-disc pl-5 font-mono space-y-2 mb-6">
-                        <li>Portfolio implementations</li>
-                        <li>Data collection systems</li>
-                        <li>Learning experiments</li>
-                        <li>File-handling utilities</li>
+                        <li>This exact portfolio, rewritten 4 times</li>
+                        <li>Random python scripts to automate boring tasks</li>
+                        <li>Abandoned hackathon code</li>
+                        <li>Proof of concepts that proved I was wrong</li>
                     </ul>
-                    <a href="#" className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 font-bold border-2 border-gray-400 hover:bg-neo-green hover:border-black transition-colors">
-                        <Github size={18} /> View on GitHub
+                    <a href="https://github.com/JaiSamyukth" className="inline-flex items-center gap-2 bg-white text-black px-4 py-2 font-bold border-2 border-gray-400 hover:bg-neo-green hover:border-black transition-colors">
+                        <Github size={18} /> Enter at your own risk
                     </a>
                 </div>
 
                 <div className="bg-neo-purple border-4 border-black p-8 shadow-neo text-center flex flex-col items-center justify-center min-h-[200px]">
                     <h3 className="text-4xl font-black uppercase mb-2">?</h3>
-                    <p className="font-bold">More experiments incoming.</p>
+                    <p className="font-bold">I will undoubtedly break more things soon.</p>
                 </div>
             </div>
         </div>
@@ -1116,8 +1106,8 @@ export const Home: React.FC = () => {
   const navigate = useNavigate();
   const featuredProjects = projects.slice(0, 3);
   useSEO({
-    title: 'Jai Samyukth B U | Systems Builder & AI Founder',
-    description: 'Co-founder of Genrec AI. I build production-grade AI systems, full-stack products, and LLM integrations for startups. Based in Coimbatore, India.',
+    title: 'Jai Samyukth B U | Serial Builder',
+    description: 'I build software until it works. Mostly client projects to pay for AWS, occasionally my own bad ideas.',
     canonical: 'https://jaisamyukth.genrecai.com/',
   });
 
@@ -1127,19 +1117,19 @@ export const Home: React.FC = () => {
       <Hero />
 
       <div className="mt-8">
-        <Marquee text="CURRENTLY TAKING ON: → FULL-STACK PRODUCT BUILDS → AI INTEGRATIONS → SYSTEM REDESIGNS •" bgColor="bg-neo-yellow" textColor="text-black" />
+        <Marquee text="CURRENTLY TAKING ON: → FIXING BROKEN PRODUCTIONS → WRITING CODE PEOPLE PAY FOR → IGNORING AWS BILLS •" bgColor="bg-neo-yellow" textColor="text-black" />
       </div>
 
       {/* Positioning Statement */}
       <section className="py-16 px-4 bg-neo-black">
         <div className="max-w-4xl mx-auto text-center">
           <p className="text-2xl md:text-3xl font-black text-white uppercase leading-tight">
-            If you're expecting a 30-page proposal and 3 weeks of meetings,<br />
+            If you want a 30-page proposal and 3 weeks of meetings,<br />
             <span className="text-neo-yellow">I'm not your guy.</span>
           </p>
           <p className="text-xl md:text-2xl font-bold text-white mt-6">
-            If you want a working system in your hands fast,<br />
-            <span className="text-neo-green">we'll get along.</span>
+            If you want something built, broken, fixed, and shipped before Friday,<br />
+            <span className="text-neo-green">we'll get along fine.</span>
           </p>
         </div>
       </section>
@@ -1148,15 +1138,15 @@ export const Home: React.FC = () => {
       <section className="py-8 px-4 bg-neo-black border-b-4 border-black">
         <div className="max-w-7xl mx-auto">
           <p className="font-mono text-lg text-white">
-            <span className="text-neo-yellow">// VALIDATION</span>
+            <span className="text-neo-yellow">// TRACK RECORD</span>
             <span className="mx-4">→</span>
-            <span>3 client projects delivered while still in college</span>
+            <span>30+ repos. Most are terrible. The rest are paying for servers.</span>
             <span className="mx-4">•</span>
-            <span>Lumina IQ: functional AI product with external testers</span>
+            <span>Lumina IQ: Actually used by real students right now</span>
             <span className="mx-4">•</span>
-            <span>Tabble: complete multi-interface system, hardware-ready</span>
+            <span>Tabble: Survived local testing, waiting for hardware</span>
             <span className="mx-4">•</span>
-            <span>All built without a funding round, a co-working space, or permission</span>
+            <span>Built entirely without permission or adult supervision</span>
           </p>
         </div>
       </section>
@@ -1167,11 +1157,11 @@ export const Home: React.FC = () => {
         <div className="max-w-7xl mx-auto">
           <RevealCard className="mb-12 flex flex-col md:flex-row justify-between items-end gap-4 border-b-8 border-black pb-8">
             <div>
-              <h2 className="text-5xl font-black uppercase mb-2">Selected Systems</h2>
-              <p className="font-mono text-gray-600">Featured engineering artifacts and deployments.</p>
+              <h2 className="text-5xl font-black uppercase mb-2">Things That Survived</h2>
+              <p className="font-mono text-gray-600">The projects that didn't get abandoned after 48 hours.</p>
             </div>
             <NeoButton variant="secondary" onClick={() => navigate('/work')}>
-              View All Systems <ArrowRight className="inline ml-2" />
+              View All The Messes <ArrowRight className="inline ml-2" />
             </NeoButton>
           </RevealCard>
 
@@ -1222,8 +1212,8 @@ export const ProjectDetail: React.FC = () => {
     if (!project) {
         return (
             <div className="min-h-screen flex flex-col items-center justify-center bg-neo-white">
-                <h1 className="text-4xl font-black mb-4">SYSTEM NOT FOUND</h1>
-                <NeoButton onClick={() => navigate('/work')}>Return to Index</NeoButton>
+                <h1 className="text-4xl font-black mb-4">REPO DELETED (OR NEVER EXISTED)</h1>
+                <NeoButton onClick={() => navigate('/work')}>Go look at things that actually exist</NeoButton>
             </div>
         );
     }
@@ -1239,7 +1229,7 @@ export const ProjectDetail: React.FC = () => {
                         onClick={() => navigate('/work')}
                         className="flex items-center gap-2 font-mono text-neo-yellow mb-8 hover:underline"
                     >
-                        <ArrowLeft size={16} /> BACK TO INDEX
+                        <ArrowLeft size={16} /> BACK TO SURVIVORS
                     </button>
 
                     <RevealCard>
@@ -1255,11 +1245,11 @@ export const ProjectDetail: React.FC = () => {
                                 {project.liveLink ? (
                                     <a href={project.liveLink} target="_blank" rel="noopener noreferrer"
                                         className="bg-neo-blue text-white font-bold uppercase px-4 py-2 border-2 border-white hover:bg-white hover:text-black transition-colors flex items-center gap-2">
-                                        <ExternalLink size={18} /> Live System
+                                        <ExternalLink size={18} /> See It Broken In Prod
                                     </a>
                                 ) : (
                                     <span className="bg-white text-black font-bold uppercase px-4 py-2 border-2 border-white font-mono text-sm flex items-center">
-                                        Demo available on request
+                                        Only works on my machine
                                     </span>
                                 )}
                             </div>
@@ -1302,7 +1292,7 @@ export const ProjectDetail: React.FC = () => {
                         <RevealCard delay={0.2}>
                             <h2 className="text-3xl font-black uppercase mb-4 flex items-center gap-2">
                                 <span className="w-4 h-4 bg-neo-pink border-2 border-black"></span>
-                                System Overview
+                                What Is This Mess?
                             </h2>
                             <p className="text-xl font-medium leading-relaxed border-l-4 border-black pl-6">
                                 {project.longDescription || project.description}
@@ -1312,7 +1302,7 @@ export const ProjectDetail: React.FC = () => {
                         {project.challenge && (
                             <RevealCard delay={0.3} className="bg-red-50 border-4 border-black p-8 relative">
                                 <div className="absolute -top-4 -left-2 bg-red-500 text-white font-black px-4 py-1 border-2 border-black transform -rotate-2">
-                                    THE PROBLEM
+                                    THE FRUSTRATION
                                 </div>
                                 <p className="text-lg font-medium mt-2">{project.challenge}</p>
                             </RevealCard>
@@ -1321,7 +1311,7 @@ export const ProjectDetail: React.FC = () => {
                         {project.solution && (
                             <RevealCard delay={0.4} className="bg-green-50 border-4 border-black p-8 relative">
                                 <div className="absolute -top-4 -right-2 bg-neo-green text-black font-black px-4 py-1 border-2 border-black transform rotate-2">
-                                    THE SOLUTION
+                                    THE CODE
                                 </div>
                                 <p className="text-lg font-medium mt-2">{project.solution}</p>
                             </RevealCard>
@@ -1331,7 +1321,7 @@ export const ProjectDetail: React.FC = () => {
                         {project.outcomes && project.outcomes.length > 0 && (
                             <RevealCard delay={0.45} className="bg-neo-blue border-4 border-black p-8 relative">
                                 <div className="absolute -top-4 -left-2 bg-black text-white font-black px-4 py-1 border-2 border-neo-blue transform -rotate-1">
-                                    OUTCOMES
+                                    DID IT WORK?
                                 </div>
                                 <ul className="space-y-3 mt-2">
                                     {project.outcomes.map((item, idx) => (
@@ -1349,7 +1339,7 @@ export const ProjectDetail: React.FC = () => {
                             <RevealCard delay={0.5} className="bg-neo-yellow border-4 border-black p-8">
                                 <h2 className="text-2xl font-black uppercase mb-4 flex items-center gap-2">
                                     <span className="w-4 h-4 bg-neo-green border-2 border-black"></span>
-                                    Progress / Traction
+                                    Current State of Chaos
                                 </h2>
                                 <ul className="space-y-3">
                                     {project.traction.map((item, idx) => (
@@ -1365,7 +1355,7 @@ export const ProjectDetail: React.FC = () => {
                         {/* Gallery */}
                         {project.gallery && project.gallery.length > 0 && (
                             <div className="space-y-8 mt-12">
-                                <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black inline-block">Visual Artifacts</h2>
+                                <h2 className="text-3xl font-black uppercase mb-8 border-b-4 border-black inline-block">Proof It Exists</h2>
                                 {project.gallery.map((img, idx) => (
                                     <RevealCard key={idx} delay={0.2 + (idx * 0.1)}>
                                         <div className="border-4 border-black p-2 bg-white shadow-neo">
@@ -1378,7 +1368,7 @@ export const ProjectDetail: React.FC = () => {
 
                         {/* Built-independently micro-detail */}
                         <p className="font-mono text-xs text-gray-400 border-t border-dashed border-gray-200 pt-4 mt-4">
-                            Built and deployed independently, handling real-world usage constraints.
+                            Built independently. Has survived at least one catastrophic failure.
                         </p>
                     </div>
                 </div>
@@ -1401,8 +1391,8 @@ import { useSEO } from '../src/hooks/useSEO';
 
 export const Work: React.FC = () => {
   useSEO({
-    title: 'Selected Systems | Jai Samyukth B U',
-    description: 'Engineering projects built and shipped by Jai Samyukth — full-stack systems, AI platforms, and operational tools built from scratch to production.',
+    title: 'Things That Survived | Jai Samyukth B U',
+    description: 'The projects that actually made it to production without me deleting the repo.',
     canonical: '#/work',
   });
   return (
@@ -1411,12 +1401,11 @@ export const Work: React.FC = () => {
         <RevealCard>
           <div className="mb-16 border-b-8 border-black pb-8">
             <h1 className="text-6xl md:text-8xl font-black uppercase tracking-tighter mb-4">
-              Selected <span className="text-neo-pink stroke-black" style={{ WebkitTextStroke: '3px black', color: '#ff0099' }}>Systems</span>
+              Things That <span className="text-neo-pink stroke-black" style={{ WebkitTextStroke: '3px black', color: '#ff0099' }}>Survived</span>
             </h1>
             <p className="text-xl font-mono max-w-2xl bg-neo-yellow inline-block px-2 border-2 border-black">
-              Not side projects. Not demos.
-              Systems built to be deployed, used, and improved from real feedback.
-              Each one started because something was genuinely broken.
+              I have dozens of abandoned repositories. These are the ones that actually made it. 
+              Mostly because someone paid me, or because I got annoyed enough to finish them.
             </p>
           </div>
         </RevealCard>

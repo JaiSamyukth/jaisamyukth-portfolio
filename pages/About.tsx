@@ -68,10 +68,10 @@ export const About: React.FC = () => {
 
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                                 {[
-                                    { cat: "Core", items: ["TypeScript (Annoyingly correct)", "Python", "Rust", "Go"] },
+                                    { cat: "Core", items: ["TypeScript (Annoyingly correct)", "Python", "Java", "C#", "C", "C++"] },
                                     { cat: "Frontend", items: ["React", "Next.js", "Tailwind"] },
-                                    { cat: "Backend", items: ["FastAPI", "Node.js", "PostgreSQL", "Redis"] },
-                                    { cat: "Infra", items: ["Docker (Works on attempt #17)", "AWS", "Terraform"] }
+                                    { cat: "Backend", items: ["FastAPI", "Node.js", "PostgreSQL", "MySQL"] },
+                                    { cat: "Infra", items: ["Docker (Works on attempt #17)", "AWS", "Azure", "Supabase"] }
                                 ].map((skill, i) => (
                                     <div key={i} className="border-2 border-black bg-neo-white p-4">
                                         <h4 className="font-mono font-bold uppercase mb-2 bg-black text-white px-2 inline-block text-sm">{skill.cat}</h4>
