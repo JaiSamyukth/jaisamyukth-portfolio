@@ -33,90 +33,92 @@ export const Hero: React.FC = () => {
     }, []);
 
     return (
-        <section className="min-h-[90vh] flex flex-col md:flex-row items-center justify-center px-4 py-12 md:py-20 bg-neo-white overflow-hidden">
-            <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
+        <div className="flex flex-col w-full bg-neo-white px-4">
+            <section className="min-h-[90vh] flex flex-col items-center justify-center py-12 md:py-20 overflow-hidden">
+                <div className="max-w-7xl mx-auto w-full grid grid-cols-1 md:grid-cols-2 gap-20 items-center">
 
-                {/* Left Side: Text Content */}
-                <motion.div
-                    initial={{ opacity: 0, x: -50 }}
-                    animate={{ opacity: 1, x: 0 }}
-                    transition={{ duration: 0.8, ease: "easeOut" }}
-                    className="flex flex-col items-start z-10"
-                >
-                    <div className="flex items-center gap-2 mb-6 border-b-4 border-black pb-2 w-fit">
-                        <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full border-2 border-black"></div>
-                        <div className="w-3 h-3 md:w-4 md:h-4 bg-yellow-500 rounded-full border-2 border-black"></div>
-                        <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full border-2 border-black"></div>
-                    </div>
-
-                    <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
-                        I kept getting annoyed by inefficient systems.<br />
-                        Now people pay me to replace them with software.<br />
-                        <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">This wasn't supposed to happen.</span>
-                    </h1>
-
-                    <p className="text-lg md:text-xl font-medium font-mono mb-8 max-w-lg leading-relaxed">
-                        Co-founder of Genrec AI.<br /><br />
-                        Most of my client work lives there. Most of my product ideas escape from there.<br /><br />
-                        I build MVPs, internal software, AI products and systems that people actually use.
-                    </p>
-
-                    <div className="mb-8 text-base font-medium max-w-xl">
-                        <p className="font-bold text-gray-700">Most visitors come here for one of three reasons.<br />They're building. They're stuck. Or they're curious.</p>
-                    </div>
-
-                    <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
-                        <NeoButton onClick={() => navigate('/work')}>
-                            See My Work <ArrowRight className="inline ml-2" />
-                        </NeoButton>
-                        <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
-                            Tell Me What You're Building
-                        </NeoButton>
-                    </div>
-
-                    <div className="text-sm font-mono text-gray-600">
-                        STATUS: <span className="text-neo-blue font-bold">ONLINE</span> · <span className="text-neo-blue font-bold">AVOIDING TERMINAL WARNINGS</span>
-                    </div>
-                </motion.div>
-
-                {/* Right Side: Image */}
-                <motion.div
-                    ref={imgRef}
-                    initial={{ opacity: 0, x: 50, rotate: 5 }}
-                    animate={{ opacity: 1, x: 0, rotate: 3 }}
-                    transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
-                    className="relative group"
-                >
-                    {/* Decorative Elements behind image */}
-                    <div className="absolute -top-2.5 right-0 w-full h-full bg-neo-green border-4 border-black box-shadow-neo z-0" />
-
-                    <div className="relative z-10 bg-white overflow-hidden transform transition-transform duration-300 hover:scale-[1.01] hover:rotate-0">
-                        <img
-                            src={portfolioFace}
-                            alt="Jai Samyukth B U"
-                            className={[
-                                "w-full h-auto object-cover transition-all duration-700",
-                                // Touch devices: state-driven color reveal on scroll
-                                isColored
-                                    ? "grayscale-0 contrast-100"
-                                    : "grayscale contrast-125",
-                                // Desktop: CSS hover via parent group (overrides state)
-                                "group-hover:grayscale-0 group-hover:contrast-100",
-                            ].join(" ")}
-                        />
-                    </div>
-
-                    {/* Floater decoration */}
+                    {/* Left Side: Text Content */}
                     <motion.div
-                        animate={{ y: [0, -10, 0] }}
-                        transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
-                        className="absolute -bottom-12 -left-10 bg-neo-purple border-4 border-black p-4 shadow-neo z-20 hidden md:block"
+                        initial={{ opacity: 0, x: -50 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8, ease: "easeOut" }}
+                        className="flex flex-col items-start z-10"
                     >
-                        <p className="font-mono font-bold text-sm">STATUS: DEBUGGING</p>
-                    </motion.div>
-                </motion.div>
+                        <div className="flex items-center gap-2 mb-6 border-b-4 border-black pb-2 w-fit">
+                            <div className="w-3 h-3 md:w-4 md:h-4 bg-red-500 rounded-full border-2 border-black"></div>
+                            <div className="w-3 h-3 md:w-4 md:h-4 bg-yellow-500 rounded-full border-2 border-black"></div>
+                            <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full border-2 border-black"></div>
+                        </div>
 
-            </div>
+                        <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
+                            I kept getting annoyed by inefficient systems.<br />
+                            Now people pay me to replace them with software.<br />
+                            <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">This wasn't supposed to happen.</span>
+                        </h1>
+
+                        <p className="text-lg md:text-xl font-medium font-mono mb-8 max-w-lg leading-relaxed">
+                            Co-founder of Genrec AI.<br /><br />
+                            Most of my client work lives there. Most of my product ideas escape from there.<br /><br />
+                            I build MVPs, internal software, AI products and systems that people actually use.
+                        </p>
+
+                        <div className="mb-8 text-base font-medium max-w-xl">
+                            <p className="font-bold text-gray-700">Most visitors come here for one of three reasons.<br />They're building. They're stuck. Or they're curious.</p>
+                        </div>
+
+                        <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
+                            <NeoButton onClick={() => navigate('/work')}>
+                                See My Work <ArrowRight className="inline ml-2" />
+                            </NeoButton>
+                            <NeoButton variant="secondary" onClick={() => navigate('/contact')}>
+                                Tell Me What You're Building
+                            </NeoButton>
+                        </div>
+
+                        <div className="text-sm font-mono text-gray-600">
+                            STATUS: <span className="text-neo-blue font-bold">ONLINE</span> · <span className="text-neo-blue font-bold">AVOIDING TERMINAL WARNINGS</span>
+                        </div>
+                    </motion.div>
+
+                    {/* Right Side: Image */}
+                    <motion.div
+                        ref={imgRef}
+                        initial={{ opacity: 0, x: 50, rotate: 5 }}
+                        animate={{ opacity: 1, x: 0, rotate: 3 }}
+                        transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
+                        className="relative group"
+                    >
+                        {/* Decorative Elements behind image */}
+                        <div className="absolute -top-2.5 right-0 w-full h-full bg-neo-green border-4 border-black box-shadow-neo z-0" />
+
+                        <div className="relative z-10 bg-white overflow-hidden transform transition-transform duration-300 hover:scale-[1.01] hover:rotate-0">
+                            <img
+                                src={portfolioFace}
+                                alt="Jai Samyukth B U"
+                                className={[
+                                    "w-full h-auto object-cover transition-all duration-700",
+                                    // Touch devices: state-driven color reveal on scroll
+                                    isColored
+                                        ? "grayscale-0 contrast-100"
+                                    : "grayscale contrast-125",
+                                    // Desktop: CSS hover via parent group (overrides state)
+                                    "group-hover:grayscale-0 group-hover:contrast-100",
+                                ].join(" ")}
+                            />
+                        </div>
+
+                        {/* Floater decoration */}
+                        <motion.div
+                            animate={{ y: [0, -10, 0] }}
+                            transition={{ repeat: Infinity, duration: 4, ease: "easeInOut" }}
+                            className="absolute -bottom-12 -left-10 bg-neo-purple border-4 border-black p-4 shadow-neo z-20 hidden md:block"
+                        >
+                            <p className="font-mono font-bold text-sm">STATUS: DEBUGGING</p>
+                        </motion.div>
+                    </motion.div>
+
+                </div>
+            </section>
 
             {/* Things I Usually Help Build Block */}
             <div className="max-w-7xl mx-auto w-full mt-24 border-t-4 border-black pt-12 mb-12">
@@ -166,6 +168,6 @@ export const Hero: React.FC = () => {
                     </ul>
                 </div>
             </div>
-        </section>
+        </div>
     );
 };
