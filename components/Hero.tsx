@@ -58,7 +58,7 @@ export const Hero: React.FC = () => {
                         </h1>
 
                         <div className="text-base md:text-lg font-medium font-mono mb-10 max-w-lg leading-relaxed space-y-3">
-                            <p>Hi, I'm Jai Samyukth.</p>
+                            <p>Hi, I&apos;m Jai Samyukth.</p>
                             <p>Most of my products started there.</p>
                         </div>
 
