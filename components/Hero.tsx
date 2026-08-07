@@ -50,20 +50,16 @@ export const Hero: React.FC = () => {
                             <div className="w-3 h-3 md:w-4 md:h-4 bg-green-500 rounded-full border-2 border-black"></div>
                         </div>
 
-                        <h1 className="text-[1.75rem] md:text-[2.35rem] lg:text-[3.2rem] font-black uppercase leading-[1.1] mb-8">
-                            I kept getting annoyed by inefficient systems.<br />
-                            Now people pay me to replace them with software.<br />
-                            <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">This wasn't supposed to happen.</span>
+                        <h1 className="text-[2.2rem] md:text-[3.2rem] lg:text-[4.2rem] font-black uppercase leading-[1.1] mb-8 tracking-tight">
+                            I Notice<br />
+                            What People<br />
+                            Have Learned<br />
+                            <span className="text-neo-blue bg-neo-yellow px-2 inline-block transform -rotate-1 mt-2">To Tolerate.</span>
                         </h1>
 
-                        <p className="text-lg md:text-xl font-medium font-mono mb-8 max-w-lg leading-relaxed">
-                            Co-founder of Genrec AI.<br /><br />
-                            Most of my client work lives there. Most of my product ideas escape from there.<br /><br />
-                            I build MVPs, internal software, AI products and systems that people actually use.
-                        </p>
-
-                        <div className="mb-8 text-base font-medium max-w-xl">
-                            <p className="font-bold text-gray-700">Most visitors come here for one of three reasons.<br />They're building. They're stuck. Or they're curious.</p>
+                        <div className="text-base md:text-lg font-medium font-mono mb-10 max-w-lg leading-relaxed space-y-3">
+                            <p>Hi, I'm Jai Samyukth.</p>
+                            <p>Most of my products started there.</p>
                         </div>
 
                         <div className="flex flex-col sm:flex-row gap-4 w-full sm:w-auto mb-8">
