@@ -1,0 +1,43 @@
+/* Design tokens (DESIGN.md, Phase 2). Names are the engine contract; values are this site's. */
+@font-face {
+  font-family: 'Archivo';
+  src: url('/fonts/archivo-latin.woff2') format('woff2');
+  font-weight: 100 900;
+  font-stretch: 62% 125%;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+:root {
+  --c-bg: #f2f1ee;
+  --c-fg: #111110;
+  --c-muted: #5c5b57;
+  --c-line: rgb(17 17 16 / 0.14);
+  --c-accent: #7a1a9a; /* the seam: sampled from the street light in the portrait */
+  --c-curtain: var(--c-fg);
+  --c-night-muted: #a09e98;
+
+  --f-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
+  --f-body: 'Archivo', system-ui, sans-serif;
+
+  --t-mega: clamp(3.75rem, 0.6rem + 13.4vw, 15rem);
+  --t-xl: clamp(2.5rem, 1.2rem + 5.2vw, 6.25rem);
+  --t-l: clamp(1.75rem, 1.15rem + 2.3vw, 3.25rem);
+  --t-m: clamp(1.25rem, 1.08rem + 0.7vw, 1.75rem);
+  --t-body: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
+  --t-s: 0.875rem;
+  --t-xs: 0.8125rem;
+
+  --u: clamp(0.5rem, 0.35rem + 0.6vw, 1rem);
+  --gutter: clamp(1rem, 0.6rem + 1.6vw, 2.5rem);
+  --header-h: 4.25rem;
+
+  --radius: 0px;
+  --pill: 999px;
+
+  --z-content: 1;
+  --z-header: 50;
+  --z-menu: 60;
+  --z-curtain: 90;
+}

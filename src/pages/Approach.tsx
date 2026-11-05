@@ -1,61 +1,50 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { approachSteps } from '../data/content';
-import { PageHero } from '../components/PageHero';
 import { Arrow } from '../components/Bits';
-import { Reveal } from '../components/Motion';
+import { PageHead } from '../components/PageHead';
 
 export function Approach() {
   return (
     <>
-      <PageHero
+      <PageHead
         crumb="Approach"
-        title="The"
-        accent="approach."
-        lede={
-          <p>
-            Objective: <strong className="font-semibold">stop doing boring things manually.</strong> The rest is just four steps on repeat.
-          </p>
-        }
-        aside={<p className="eyebrow text-muted">Confidential // approach_doc_v2</p>}
+        title="Approach"
+        lede="The objective: stop doing boring things by hand. The method is four steps on repeat."
+        facts={[
+          { k: 'Steps', v: approachSteps.length },
+          { k: 'Discovery phase', v: 'None' },
+          { k: 'Usual fix time', v: '2 AM' },
+        ]}
       />
-
-      <section className="pb-24 md:pb-32">
-        <div className="wrap">
-          <ol>
-            {approachSteps.map((s, i) => (
-              <Reveal
-                as="li"
-                key={s.title}
-                delay={i * 80}
-                className="group grid gap-4 border-t border-ink/20 py-10 transition-colors duration-500 last:border-b md:grid-cols-12 md:items-baseline md:py-14"
-              >
-                <span className="font-mono text-sm text-muted md:col-span-1">0{i + 1}</span>
-                <h2 className="text-[clamp(3rem,9vw,8.5rem)] font-semibold leading-[0.85] tracking-[-0.05em] transition-colors duration-500 group-hover:text-blue md:col-span-6">
+      <section className="wrap section--tight" aria-label="Steps">
+        <ol className="biglist">
+          {approachSteps.map((s, i) => (
+            <li key={s.title} data-reveal="up">
+              <span className="biglist__n">Step {i + 1}</span>
+              <div>
+                <h2 className="biglist__t" style={{ fontSize: 'var(--t-xl)' }}>
                   {s.title}
                 </h2>
-                <p className="max-w-md text-lg text-muted md:col-span-5">{s.body}</p>
-              </Reveal>
-            ))}
-          </ol>
-        </div>
+                <p className="biglist__b">{s.body}</p>
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
-
-      <section className="on-ink bg-ink py-24 text-paper md:py-32">
-        <div className="wrap grid gap-10 md:grid-cols-12">
-          <p className="eyebrow text-acid md:col-span-3">// The result</p>
-          <div className="md:col-span-9">
-            <Reveal as="p" className="font-serif text-[clamp(2rem,4vw,3.75rem)] leading-[1.05]">
-              Software you forget exists because it actually works. That’s the only compliment I care about.
-            </Reveal>
-            <Reveal as="p" delay={120} className="mt-8 max-w-2xl text-lg text-muted-dark">
-              It’s also why I don’t do three-week discovery phases. The fastest way to test whether an idea works is to write the code and find out.
-            </Reveal>
-            <Reveal delay={200}>
-              <Link to="/contact" className="btn btn-ghost mt-10">
-                <span>Start with a conversation</span> <Arrow />
+      <section className="night section--airy">
+        <div className="wrap grid">
+          <p className="t-l about-say" style={{ gridColumn: '1 / 10' }} data-split="lines">
+            The result is software you forget exists, because it works. That is the only compliment I care about.
+          </p>
+          <div className="about-say" style={{ gridColumn: '1 / 8', marginTop: '2rem', display: 'grid', gap: '1.5rem' }}>
+            <p className="muted">It is also why I skip three-week discovery phases. The fastest way to find out whether an idea works is to write the code.</p>
+            <div>
+              <Link to="/contact" className="btn btn--ghost" data-label="Contact">
+                <span>Start with a conversation</span>
+                <Arrow />
               </Link>
-            </Reveal>
+            </div>
           </div>
         </div>
       </section>

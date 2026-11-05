@@ -1,6 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Layout } from './components/Layout';
+import { Shell } from './components/Shell';
 import { Home } from './pages/Home';
 import { Work } from './pages/Work';
 import { ProjectDetail } from './pages/ProjectDetail';
@@ -14,7 +14,7 @@ import { Name } from './pages/Name';
 
 export function App() {
   return (
-    <Layout>
+    <Shell>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Work />} />
@@ -27,6 +27,6 @@ export function App() {
         <Route path="/name" element={<Name />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
-    </Layout>
+    </Shell>
   );
 }

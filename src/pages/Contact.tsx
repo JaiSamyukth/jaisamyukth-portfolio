@@ -1,9 +1,8 @@
 import React, { useState } from 'react';
 import { contactReasons } from '../data/content';
 import { person, socials } from '../data/site';
-import { Breadcrumbs } from '../components/PageHero';
-import { Arrow, LocalTime } from '../components/Bits';
-import { Reveal, Split } from '../components/Motion';
+import { LocalTime } from '../components/Bits';
+import { PageHead } from '../components/PageHead';
 
 export function Contact() {
   const [copied, setCopied] = useState(false);
@@ -11,77 +10,69 @@ export function Contact() {
     try {
       await navigator.clipboard.writeText(person.email);
       setCopied(true);
-      window.setTimeout(() => setCopied(false), 2000);
+      setTimeout(() => setCopied(false), 2000);
     } catch {
-      window.location.href = `mailto:${person.email}`;
+      location.href = `mailto:${person.email}`;
     }
   };
-
   return (
     <>
-      <section className="pb-20 pt-32 md:pt-40">
-        <div className="wrap">
-          <Breadcrumbs items={[{ label: 'Contact' }]} />
-          <h1 className="mt-8 text-mega font-semibold">
-            <Split text="Say" />{' '}
-            <Reveal as="span" delay={250} className="inline-block font-serif font-normal italic text-blue">
-              hi.
-            </Reveal>
-          </h1>
-
-          <div className="mt-14 grid gap-12 border-t border-ink/20 pt-10 md:grid-cols-12">
-            <div className="md:col-span-7">
-              <p className="eyebrow text-muted">Email — for actual work</p>
-              <a href={`mailto:${person.email}`} className="group mt-4 inline-flex flex-wrap items-center gap-4 text-[clamp(1.6rem,4.4vw,4rem)] font-semibold tracking-[-0.035em]">
-                <span className="link">{person.email}</span>
-                <Arrow diagonal className="text-[0.7em] transition-transform duration-500 ease-expo group-hover:-translate-y-1 group-hover:translate-x-1" />
-              </a>
-              <div className="mt-6 flex flex-wrap items-center gap-3">
-                <button type="button" onClick={copy} className="btn btn-ghost" aria-live="polite">
-                  <span>{copied ? 'Copied ✓' : 'Copy address'}</span>
-                </button>
-                <span className="eyebrow text-muted">
-                  Response latency &lt; 24h · it’s <LocalTime /> here
-                </span>
-              </div>
+      <PageHead
+        crumb="Contact"
+        title="Contact"
+        facts={[
+          { k: 'Reply time', v: 'Within a day' },
+          { k: 'Local time', v: <><LocalTime /> IST</> },
+          { k: 'Taking on', v: 'Client work' },
+        ]}
+      />
+      <section className="wrap section--tight">
+        <div className="grid">
+          <div className="about-say" style={{ gridColumn: '1 / 8', display: 'grid', gap: '1.5rem', alignContent: 'start' }}>
+            <p className="label">Email, for actual work</p>
+            <a href={`mailto:${person.email}`} className="t-l link" style={{ justifySelf: 'start', wordBreak: 'break-word' }}>
+              {person.email}
+            </a>
+            <div className="hero__actions">
+              <button type="button" className="btn btn--solid" onClick={copy}>
+                <span aria-live="polite">{copied ? 'Copied' : 'Copy the address'}</span>
+              </button>
+              <p className="label">
+                Replies within a day. It is <LocalTime /> in {person.location.city}.
+              </p>
             </div>
-            <Reveal className="md:col-span-4 md:col-start-9">
-              <p className="eyebrow text-muted">Most people who email me…</p>
-              <ul className="mt-4 space-y-3">
-                {contactReasons.map((r) => (
-                  <li key={r} className="flex gap-3">
-                    <span aria-hidden="true" className="text-muted">→</span>
-                    {r}
-                  </li>
-                ))}
-              </ul>
-              <p className="mt-6 text-xl font-semibold">If any of that sounds familiar — let’s fix it.</p>
-            </Reveal>
+          </div>
+          <div className="about-say" style={{ gridColumn: '9 / -1' }} data-reveal="up">
+            <p className="label">Most people who write fall into one of these</p>
+            <ul className="case__list" style={{ marginTop: '0.75rem' }}>
+              {contactReasons.map((r) => (
+                <li key={r}>{r}</li>
+              ))}
+            </ul>
+            <p className="t-m" style={{ marginTop: '1.25rem', fontWeight: 600 }}>
+              If that sounds familiar, let’s fix it.
+            </p>
           </div>
         </div>
       </section>
-
-      <section className="on-ink bg-ink py-20 text-paper md:py-28">
+      <section className="night section" aria-labelledby="elsewhere">
         <div className="wrap">
-          <h2 className="eyebrow text-muted-dark">Elsewhere</h2>
-          <ul className="mt-8">
-            {socials.map((s, i) => (
-              <Reveal as="li" key={s.href} delay={i * 60} className="border-t border-paper/15 last:border-b">
-                <a
-                  href={s.href}
-                  target="_blank"
-                  rel="me noopener noreferrer"
-                  className="group grid grid-cols-[1fr_auto] items-baseline gap-4 py-6 md:grid-cols-[1fr_1fr_auto]"
-                >
-                  <span className="text-[clamp(2rem,5vw,4.5rem)] font-semibold leading-none tracking-[-0.04em] transition-colors duration-300 group-hover:text-acid">
-                    {s.label}
+          <h2 id="elsewhere" className="label" style={{ marginBottom: '1rem' }}>
+            Elsewhere
+          </h2>
+          <ul>
+            {socials.map((s) => (
+              <li key={s.href} className="index__row" style={{ borderColor: 'rgb(242 241 238 / 0.16)' }}>
+                <a href={s.href} target="_blank" rel="me noopener noreferrer" className="index__link" style={{ gridTemplateColumns: 'minmax(0,5fr) minmax(0,6fr) auto' }}>
+                  <span className="index__title">{s.label}</span>
+                  <span className="muted">
+                    {s.handle}, {s.note}
                   </span>
-                  <span className="hidden text-muted-dark md:block">
-                    {s.handle} — {s.note}
+                  <span className="index__go" aria-hidden="true" style={{ borderColor: 'rgb(242 241 238 / 0.3)' }}>
+                    <span className="arrow">→</span>
                   </span>
-                  <Arrow diagonal className="text-3xl transition-transform duration-500 ease-expo group-hover:rotate-45" />
                 </a>
-              </Reveal>
+              </li>
             ))}
           </ul>
         </div>

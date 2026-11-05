@@ -1,7 +1,7 @@
 import { org, person } from './site';
 
 export const services = [
-  { title: 'MVPs people can actually demo', body: 'From idea to something investors and users can click — usually in weeks, not quarters.' },
+  { title: 'MVPs people can actually demo', body: 'From idea to something investors and users can click, usually in weeks, not quarters.' },
   { title: 'Internal software that replaces spreadsheets', body: 'Billing, operations, permissions. One system instead of five tabs and a prayer.' },
   { title: 'AI features that solve boring work', body: 'LLM integrations, retrieval over your own documents, and automation that earns its token bill.' },
   { title: 'Systems that survive real users', body: 'Real-time sync, role-based access, and backends that don’t fall over on a Friday.' },
@@ -27,7 +27,7 @@ export const tickerLines = [
 export const stats = [
   { value: '30+', label: 'repositories', note: 'Most are terrible. The rest pay for servers.' },
   { value: '3', label: 'systems in the wild', note: 'Lumina IQ, Tabble and a production CRM.' },
-  { value: '1', label: 'studio co-founded', note: 'Genrec AI — client work funds the products.' },
+  { value: '1', label: 'studio co-founded', note: 'Genrec AI. Client work funds the products.' },
   { value: '<24h', label: 'reply latency', note: 'For actual work. Recruiter bots wait longer.' },
 ];
 
@@ -40,8 +40,8 @@ export const stack = [
 
 export const timeline = [
   { when: 'May 2023', title: 'Started building', body: 'Got college lab access by offering to build tools they’d actually use. If you automate someone’s boring job, they let you use their computers.' },
-  { when: '2024', title: 'People paid me', body: 'Shipped three full projects. Learned that clients don’t care about clean architecture — they care whether the button works.' },
-  { when: '2024', title: 'The cloud incidents', body: 'AWS charged me for experimenting. Azure showed up carrying $1,000 in startup credits — an unusually good first impression. Git faithfully recorded every terrible decision.' },
+  { when: '2024', title: 'People paid me', body: 'Shipped three full projects. Learned that clients don’t care about clean architecture. They care whether the button works.' },
+  { when: '2024', title: 'The cloud incidents', body: 'AWS charged me for experimenting. Azure showed up carrying $1,000 in startup credits, an unusually good first impression. Git faithfully recorded every terrible decision.' },
   { when: 'Late 2024', title: 'Lumina IQ MVP', body: 'Turned exam-cram frustration into a product. First external testers. Some feedback was angry, which meant it was forcing them to think.' },
   { when: '2025', title: 'Tabble architecture', body: 'A complete restaurant sync system, wired together and tested. Now looking for a restaurant owner brave enough to install it.' },
   { when: 'Now', title: 'The current loop', body: 'Client builds at Genrec AI pay for the servers. Products break and get fixed. Thirty abandoned repos remain politely ignored.' },
@@ -56,7 +56,7 @@ export const testimonial = {
 };
 
 export const approachSteps = [
-  { title: 'Observe', body: 'Watch how humans actually use things — which is rarely how the documentation says they should.' },
+  { title: 'Observe', body: 'Watch how humans actually use things, which is rarely how the documentation says they should.' },
   { title: 'Panic', body: 'Realise how much time and money is being burned by manual copy-pasting.' },
   { title: 'Build', body: 'Write code that absorbs the chaos instead of putting a nice UI on top of it.' },
   { title: 'Break & fix', body: 'Deploy it. Watch users break it in ways nobody imagined. Fix it at 2 AM.' },
@@ -109,7 +109,7 @@ export const faqs = [
   },
   {
     q: 'How do you pronounce and spell “Jai Samyukth”?',
-    a: `It’s said “${person.pronunciation}”. People who have only heard the name often search for it as ${person.misheard.join(', ')} — they all mean the same person: Jai Samyukth B U, co-founder of Genrec AI.`,
+    a: `It’s said “${person.pronunciation}”. People who have only heard the name often search for it as ${person.misheard.join(', ')}. They all mean the same person: Jai Samyukth B U, co-founder of Genrec AI.`,
   },
   {
     q: 'What is Genrec AI?',
@@ -121,10 +121,10 @@ export const faqs = [
   },
   {
     q: 'What is Tabble?',
-    a: 'Tabble is a restaurant ordering and operations platform with three interfaces — customer, chef and admin — synchronised in real time over WebSockets. It is designed for small restaurants in India that can’t justify a traditional POS system.',
+    a: 'Tabble is a restaurant ordering and operations platform with three interfaces (customer, chef and admin) synchronised in real time over WebSockets. It is designed for small restaurants in India that can’t justify a traditional POS system.',
   },
   {
     q: 'Is Jai Samyukth available for freelance or client work?',
-    a: `Yes. He takes on client projects through Genrec AI — MVPs, internal tools that replace spreadsheets, AI and LLM integrations, and system rebuilds. Email ${person.email}; replies usually arrive within 24 hours.`,
+    a: `Yes. He takes on client projects through Genrec AI: MVPs, internal tools that replace spreadsheets, AI and LLM integrations, and system rebuilds. Email ${person.email}; replies usually arrive within 24 hours.`,
   },
 ];

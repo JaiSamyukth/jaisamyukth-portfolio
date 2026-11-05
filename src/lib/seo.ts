@@ -73,7 +73,7 @@ const websiteNode = {
   '@id': SITE_ID,
   url: `${SITE_URL}/`,
   name: person.name,
-  alternateName: ['Jai Samyukth portfolio', 'Jai Samyukth B U — portfolio'],
+  alternateName: ['Jai Samyukth portfolio', 'Jai Samyukth B U portfolio'],
   inLanguage: 'en',
   publisher: { '@id': PERSON_ID },
   about: { '@id': PERSON_ID },
@@ -132,21 +132,21 @@ type StaticDef = { title: string; description: string; type: string; crumb?: str
 
 const staticPages: Record<string, StaticDef> = {
   '/': {
-    title: 'Jai Samyukth B U — Systems Builder & Co-founder of Genrec AI',
+    title: 'Jai Samyukth B U · Systems builder, co-founder of Genrec AI',
     description:
-      'Jai Samyukth B U is the co-founder of Genrec AI in Coimbatore, India. He builds MVPs, AI/LLM features and internal tools that replace spreadsheets — including Lumina IQ and Tabble.',
+      'Jai Samyukth B U, co-founder of Genrec AI in Coimbatore, builds MVPs, AI features and internal tools that replace spreadsheets. Maker of Lumina IQ and Tabble.',
     type: 'ProfilePage',
     ogType: 'profile',
   },
   '/work': {
-    title: 'Work — Lumina IQ, Tabble & a production CRM | Jai Samyukth B U',
+    title: 'Work: Lumina IQ, Tabble and a production CRM | Jai Samyukth B U',
     description:
       'Selected work by Jai Samyukth B U: Lumina IQ (AI active-recall learning), Tabble (real-time restaurant ordering) and a role-based CRM that replaced five spreadsheets.',
     type: 'CollectionPage',
     crumb: 'Work',
   },
   '/about': {
-    title: 'About Jai Samyukth B U — pronunciation, background & FAQ',
+    title: 'About Jai Samyukth B U: pronunciation, background and FAQ',
     description:
       'Who Jai Samyukth B U is (often misheard as “Jai Samuth”): co-founder of Genrec AI, CSBS engineer and systems builder from Coimbatore. Background, stack, timeline and FAQ.',
     type: 'AboutPage',
@@ -154,21 +154,21 @@ const staticPages: Record<string, StaticDef> = {
     ogType: 'profile',
   },
   '/approach': {
-    title: 'Approach — observe, panic, build, fix | Jai Samyukth B U',
+    title: 'Approach: observe, panic, build, fix | Jai Samyukth B U',
     description:
-      'How Jai Samyukth B U builds software: watch how people really work, find the waste, write code that absorbs the chaos, then ship and fix fast. No three-week discovery phases.',
+      'How Jai Samyukth B U builds software: watch how people really work, find the waste, write code that absorbs the chaos, then ship and fix fast.',
     type: 'WebPage',
     crumb: 'Approach',
   },
   '/learnings': {
     title: 'Things I’ve learned expensively | Jai Samyukth B U',
     description:
-      'A running tally of lessons from breaking production, debugging at 2 AM and reading cloud invoices — by Jai Samyukth B U, co-founder of Genrec AI.',
+      'A running tally of lessons from breaking production, debugging at 2 AM and reading cloud invoices, by Jai Samyukth B U, co-founder of Genrec AI.',
     type: 'WebPage',
     crumb: 'Lessons',
   },
   '/experimental': {
-    title: 'Lab — unfinished business & failed experiments | Jai Samyukth B U',
+    title: 'Lab: unfinished business and failed experiments | Jai Samyukth B U',
     description:
       'The experiments that didn’t make it: early Tabble versions, a confidently hallucinating RAG bot, CRM clones and more from Jai Samyukth B U’s GitHub.',
     type: 'WebPage',
@@ -177,12 +177,12 @@ const staticPages: Record<string, StaticDef> = {
   '/name': {
     title: 'How to say & spell Jai Samyukth (not Jai Samuth or Jai Sampath)',
     description:
-      'Jai Samyukth is pronounced “jai · sum-YOOKTH” and spelled J-A-I S-A-M-Y-U-K-T-H. Often typed as Jai Samuth, Jai Sampath or Jay Samyukth — all the same person: Jai Samyukth B U, co-founder of Genrec AI.',
+      'Jai Samyukth is said “jai · sum-YOOKTH”. Often typed as Jai Samuth, Jai Sampath or Jay Samyukth: all the same person, the co-founder of Genrec AI.',
     type: 'WebPage',
     crumb: 'The name',
   },
   '/contact': {
-    title: 'Contact Jai Samyukth B U — hire for MVPs, AI & internal tools',
+    title: 'Contact Jai Samyukth B U: hire for MVPs, AI and internal tools',
     description:
       'Need an MVP, an AI feature, or software that replaces your spreadsheets? Email Jai Samyukth B U (Genrec AI). Replies usually within 24 hours.',
     type: 'ContactPage',
@@ -264,8 +264,8 @@ export function getMeta(rawPath: string): PageMeta {
   const m = path.match(/^\/work\/([^/]+)$/);
   const project = m ? getProject(m[1]) : undefined;
   if (project) {
-    const title = `${project.title} — ${project.category} case study | Jai Samyukth B U`;
-    const description = `${project.summary} Built by Jai Samyukth B U.`;
+    const title = `${project.title}: ${project.category} case study | Jai Samyukth B U`;
+    const description = project.summary.length > 135 ? project.summary : `${project.summary} By Jai Samyukth B U.`;
     return {
       path,
       title,
@@ -314,7 +314,7 @@ export function renderHead(meta: PageMeta): string {
     `<meta property="og:title" content="${t}" />`,
     `<meta property="og:description" content="${d}" />`,
     `<meta property="og:image" content="${esc(meta.ogImage)}" />`,
-    `<meta property="og:image:alt" content="${esc(person.name)} — ${esc(person.role)}" />`,
+    `<meta property="og:image:alt" content="${esc(person.name)}, ${esc(person.role)}" />`,
     `<meta name="twitter:card" content="summary_large_image" />`,
     `<meta name="twitter:title" content="${t}" />`,
     `<meta name="twitter:description" content="${d}" />`,

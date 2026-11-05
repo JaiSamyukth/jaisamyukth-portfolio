@@ -40,6 +40,9 @@ export interface Project {
   cover?: Shot;
   gallery: Shot[];
   accent: 'acid' | 'blue' | 'ink';
+  year: string;
+  /** What this system joins together: the concept, stated as plain fact. */
+  joins: { from: string; to: string; note: string };
 }
 
 const shot = (small: string, large: string, w: number, h: number, alt: string): Shot => ({
@@ -63,14 +66,14 @@ export const projects: Project[] = [
     status: 'Live',
     focus: 'Forced active recall',
     summary:
-      'Lumina IQ is an AI-powered adaptive learning platform by Genrec AI that turns a syllabus or notes into a structured revision path and active-recall sessions.',
+      'Lumina IQ, by Genrec AI, turns a syllabus or notes into a structured revision path and AI active-recall sessions, so students know what they have learned.',
     hook: 'Students don’t hate studying. They hate not knowing whether they’ve actually learned anything.',
     overview:
       'I watched people highlight entire PDFs and somehow expect their brain to cooperate. So I built this. You paste your syllabus in, it creates a structured path, and then relentlessly forces you to recall the information.',
     problem:
       'Rereading notes the night before an exam feels like studying, but it’s just creating a false sense of familiarity. The exam usually disagrees with your confidence level.',
     build:
-      'People were already pasting their notes into ChatGPT, but without any structure. I built a proper loop: explanation, prioritisation, and active recall — backed by retrieval over the student’s own material. It doesn’t let you pretend you know the answer.',
+      'People were already pasting their notes into ChatGPT, but without any structure. I built a proper loop: explanation, prioritisation, and active recall, backed by retrieval over the student’s own material. It doesn’t let you pretend you know the answer.',
     outcomes: [
       'Stopped students from mindless highlighting',
       'Didn’t crash during the Startup Grind demo',
@@ -79,13 +82,15 @@ export const projects: Project[] = [
     traction: [
       'Handled actual student queries without melting',
       'Showcased to investors who pretended to understand RAG',
-      'Gets angry feedback when a question is too hard — which means it’s working',
+      'Gets angry feedback when a question is too hard, which means it’s working',
     ],
     stack: ['Python', 'FastAPI', 'TypeScript', 'React', 'PostgreSQL', 'Azure', 'LLMs / RAG'],
     liveLink: 'https://luminaiq.fun',
     cover: luminaCover,
     gallery: [luminaCover, shot(luminaApp960, luminaApp1600, 1600, 756, 'Lumina IQ generating Q&A questions from an uploaded PDF')],
     accent: 'acid',
+    year: '2024',
+    joins: { from: 'A highlighted PDF', to: 'A recall loop', note: 'Notes, explanations and questions in one study path' },
   },
   {
     id: 'tabble',
@@ -96,10 +101,10 @@ export const projects: Project[] = [
     status: 'Waiting for hardware',
     focus: 'Real-time synchronisation',
     summary:
-      'Tabble is a restaurant ordering and operations platform with customer, chef and admin interfaces, built for small restaurants in India that can’t justify a traditional POS.',
+      'Tabble is restaurant ordering with customer, chef and admin screens synced live, built for small restaurants in India that can’t justify a POS.',
     hook: 'Restaurant software usually assumes perfect communication. Restaurants don’t.',
     overview:
-      'Three interfaces. The customer taps what they want. The chef sees it instantly. The admin watches the chaos. No shouting, no illegible handwritten notes, no forgotten extra-spicy requests — all wired together over WebSockets.',
+      'Three interfaces. The customer taps what they want. The chef sees it instantly. The admin watches the chaos. No shouting, no illegible handwritten notes, no forgotten extra-spicy requests. All wired together over WebSockets.',
     problem:
       'Waiters shouldn’t have to memorise fifteen modifications to a burger. Go to a small restaurant and watch how orders happen: it’s usually someone writing on a tiny pad while balancing plates.',
     build:
@@ -119,6 +124,8 @@ export const projects: Project[] = [
       shot(tabbleAdmin960, tabbleAdmin1600, 1600, 900, 'Tabble admin dashboard showing today’s orders, billing and revenue'),
     ],
     accent: 'blue',
+    year: '2025',
+    joins: { from: '3 screens', to: '1 order', note: 'Customer, chef and admin, synced live' },
   },
   {
     id: 'crm-platform',
@@ -129,7 +136,7 @@ export const projects: Project[] = [
     status: 'Deployed',
     focus: 'Data management & RBAC',
     summary:
-      'A production CRM and finance system that replaced five spreadsheets with one role-based platform for billing, expenses, investments and permissions.',
+      'A production CRM that replaced five spreadsheets with one role-based system for billing, expenses, investments and permissions.',
     hook: 'Excel is an incredible spreadsheet. It’s also the most common database I’ve ever been asked to replace.',
     overview:
       'A company wasn’t looking for another dashboard. They wanted one place where billing, expenses, investments and permissions actually made sense. Replacing five spreadsheets with one system makes accountants considerably less nervous.',
@@ -146,6 +153,8 @@ export const projects: Project[] = [
     stack: ['TypeScript', 'React', 'Supabase', 'PostgreSQL'],
     gallery: [],
     accent: 'ink',
+    year: '2024',
+    joins: { from: '5 spreadsheets', to: '1 system', note: 'Billing, expenses, investments and permissions' },
   },
 ];
 

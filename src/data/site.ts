@@ -46,7 +46,7 @@ export const person = {
     { typed: 'Jai Samyuktha / Samyukta', why: 'Samyuktha is a related name (usually feminine). Mine has no final “a”.' },
     { typed: 'Jai Samyuth', why: 'The “k” is soft, so it often disappears in writing.' },
     { typed: 'Jai Samyukt / Samyuk', why: 'The final “th” gets dropped.' },
-    { typed: 'JaiSamyukth17', why: 'That’s my handle on X and Instagram — same person.' },
+    { typed: 'JaiSamyukth17', why: 'That’s my handle on X and Instagram. Same person.' },
   ],
   /** Syllables for the spelling breakdown on /name. */
   syllables: [
@@ -63,9 +63,9 @@ export const person = {
   education: 'B.Tech, Computer Science and Business Systems (CSBS)',
   email: 'jaisamyukth@gmail.com',
   oneLiner:
-    'I notice what people have learned to tolerate — then write software until they don’t have to.',
+    'I notice what people have learned to tolerate, then write software until they don’t have to.',
   summary:
-    'Jai Samyukth B U is a systems builder and the co-founder of Genrec AI, based in Coimbatore, India. He builds MVPs, internal tools that replace spreadsheets, AI and LLM features, and real-time systems — including Lumina IQ (AI-powered active-recall learning) and Tabble (restaurant ordering for small restaurants).',
+    'Jai Samyukth B U is a systems builder and the co-founder of Genrec AI, based in Coimbatore, India. He builds MVPs, internal tools that replace spreadsheets, AI and LLM features, and real-time systems, including Lumina IQ (AI-powered active-recall learning) and Tabble (restaurant ordering for small restaurants).',
   knowsAbout: [
     'Full-stack development',
     'AI and LLM integration',
@@ -96,7 +96,7 @@ export const org = {
 export const socials = [
   { label: 'GitHub', href: 'https://github.com/JaiSamyukth', handle: '@JaiSamyukth', note: 'my graveyard of repos' },
   { label: 'LinkedIn', href: 'https://www.linkedin.com/in/jaisamyukth', handle: 'in/jaisamyukth', note: 'for the recruiter bots' },
-  { label: 'X', href: 'https://x.com/JaiSamyukth17', handle: '@JaiSamyukth17', note: 'occasional noise' },
+  { label: 'X (Twitter)', href: 'https://x.com/JaiSamyukth17', handle: '@JaiSamyukth17', note: 'occasional noise' },
   { label: 'Instagram', href: 'https://www.instagram.com/jaisamyukth17/', handle: '@jaisamyukth17', note: 'proof I go outside' },
   { label: 'Dev.to', href: 'https://dev.to/jaisamyukth', handle: 'dev.to/jaisamyukth', note: 'rants about broken workflows' },
 ];

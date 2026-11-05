@@ -2,7 +2,7 @@
 
 Portfolio of **Jai Samyukth B U** — systems builder and co-founder of Genrec AI.
 
-React 19 + TypeScript + Tailwind, built with Vite and **prerendered to static HTML** at build time, then deployed on Vercel.
+React 19 + TypeScript, plain CSS design tokens, GSAP + Lenis for motion, built with Vite and **prerendered to static HTML** at build time, then deployed on Vercel. The design follows `DESIGN.md` (concept: *Samyukth* means joined).
 
 ```bash
 npm ci
@@ -22,6 +22,8 @@ npm run typecheck
 | `src/lib/seo.ts` | Per-route title/description/canonical/OG + the schema.org JSON-LD graph |
 | `src/lib/aieo.ts` | Generates `sitemap.xml`, `llms.txt` and `llms-full.txt` from the same data |
 | `src/entry-server.tsx` + `scripts/prerender.mjs` | Render each route to `dist/<route>/index.html` |
+| `src/engine/` | Motion engine: Lenis on GSAP's ticker, reveals, the seam page transition, React Router adapter |
+| `src/styles/` | `tokens.css` (palette, type, spacing), `engine.css`, `site.css` |
 
 Edit the data files and everything — the pages, structured data, sitemap and LLM summaries — stays in sync.
 

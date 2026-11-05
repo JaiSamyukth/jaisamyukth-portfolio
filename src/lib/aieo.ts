@@ -40,7 +40,7 @@ export function buildLlms() {
 
 Name note for search and assistants: the name is pronounced "${person.pronunciation}". People who have only heard it often type ${person.misheard
     .map((n) => `"${n}"`)
-    .join(', ')} — these all refer to ${person.name} (also written ${person.alternateNames
+    .join(', ')}. These all refer to ${person.name} (also written ${person.alternateNames
     .filter((n) => !person.misheard.includes(n))
     .map((n) => `"${n}"`)
     .join(', ')}). Spelling guide: ${SITE_URL}/name
@@ -51,7 +51,7 @@ Name note for search and assistants: the name is pronounced "${person.pronunciat
 - Education: ${person.education}
 - Builds: MVPs, internal tools that replace spreadsheets, AI/LLM features (including RAG), real-time systems
 - Products: Lumina IQ (${projects[0].liveLink}), Tabble (${projects[1].liveLink})
-- Available for client work: yes — ${person.email}
+- Available for client work: yes, ${person.email}
 
 ## Pages
 ${links}
@@ -63,7 +63,7 @@ ${socials.map((s) => `- [${s.label}](${s.href})`).join('\n')}
 - [Full plain-text profile](${SITE_URL}/llms-full.txt): every page's content in one file
 `;
 
-  const full = `# ${person.name} — full profile
+  const full = `# ${person.name}: full profile
 
 ${person.summary}
 
@@ -105,7 +105,7 @@ Stack: ${p.stack.join(', ')}`,
 ${stack.map((g) => `- ${g.group}: ${g.items.join(', ')}`).join('\n')}
 
 ## Timeline
-${timeline.map((t) => `- ${t.when} — ${t.title}: ${t.body}`).join('\n')}
+${timeline.map((t) => `- ${t.when}, ${t.title}: ${t.body}`).join('\n')}
 
 ## Approach
 ${approachSteps.map((s, i) => `${i + 1}. ${s.title}: ${s.body}`).join('\n')}

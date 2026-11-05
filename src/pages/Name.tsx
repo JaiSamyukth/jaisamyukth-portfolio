@@ -1,153 +1,112 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { person, socials } from '../data/site';
-import { Breadcrumbs } from '../components/PageHero';
-import { Arrow, SayMyName, SectionLabel } from '../components/Bits';
-import { Reveal, Split } from '../components/Motion';
+import { Arrow, Crumbs, SayIt } from '../components/Bits';
 
-/**
- * A real, useful page about the name itself: how it sounds, how it's spelled,
- * what it means, and the ways people commonly mistype it. This is the page a
- * search engine should surface for "Jai Samuth", "Jai Sampath", "Jay Samyukth"…
- */
+/** A real page about the name: how it sounds, how it's spelled, what it means, and the ways
+ *  people mistype it. The page a search engine should surface for "Jai Samuth" or "Jai Sampath". */
 export function Name() {
   return (
     <>
-      <section className="pb-16 pt-32 md:pt-40">
-        <div className="wrap">
-          <Breadcrumbs items={[{ label: 'The name' }]} />
-          <p className="eyebrow mt-10 text-muted">A short guide to one name</p>
-          <h1 className="mt-4 text-display font-semibold">
-            <Split text="How to say" />{' '}
-            <span className="block">
-              <Split text="Jai Samyukth" delay={200} />
-            </span>
-          </h1>
-          <Reveal as="p" delay={300} className="mt-10 max-w-3xl text-lede">
-            If you typed <strong className="font-semibold">Jai Samuth</strong>, <strong className="font-semibold">Jai Sampath</strong> or{' '}
-            <strong className="font-semibold">Jay Samyukth</strong> — you were probably looking for me: {person.name}, co-founder of Genrec AI
-            in {person.location.city}. It’s spelled <strong className="font-semibold">J-A-I S-A-M-Y-U-K-T-H</strong>.
-          </Reveal>
-        </div>
-      </section>
+      <header className="pagehead wrap">
+        <Crumbs trail={[{ label: 'The name' }]} />
+        <h1 className="t-xl" data-split="lines" data-intro>
+          How to say Jai Samyukth
+        </h1>
+        <p className="pagehead__lede" data-reveal="up" data-intro data-delay="0.3">
+          If you typed <strong>Jai Samuth</strong>, <strong>Jai Sampath</strong> or <strong>Jay Samyukth</strong>, you were probably looking for me: {person.name},
+          co-founder of Genrec AI in {person.location.city}. It is spelled <strong>J‑A‑I S‑A‑M‑Y‑U‑K‑T‑H</strong>.
+        </p>
+      </header>
 
-      <section className="on-ink bg-ink py-24 text-paper md:py-32">
+      <section className="night section" aria-labelledby="say">
         <div className="wrap">
-          <div className="flex flex-wrap items-end justify-between gap-6">
-            <div>
-              <SectionLabel index="01" className="text-muted-dark">
-                Say it
-              </SectionLabel>
-              <p className="mt-6 font-serif text-[clamp(2.6rem,7vw,6.5rem)] italic leading-none">/ {person.pronunciation} /</p>
-            </div>
-            <SayMyName />
+          <div className="index__head">
+            <h2 id="say" className="t-mega" style={{ fontSize: 'var(--t-xl)' }}>
+              / {person.pronunciation} /
+            </h2>
+            <SayIt />
           </div>
-          <ol className="mt-16 grid gap-px overflow-hidden rounded-md bg-paper/15 md:grid-cols-3">
-            {person.syllables.map((s, i) => (
-              <Reveal as="li" key={s.part} delay={i * 90} className="bg-ink p-8">
-                <span className="font-mono text-xs text-acid">0{i + 1}</span>
-                <p className="mt-8 text-[clamp(3rem,6vw,5rem)] font-semibold leading-none tracking-[-0.04em]">{s.part}</p>
-                <p className="mt-4 text-lg">
-                  say “<span className="font-semibold">{s.say}</span>”
-                </p>
-                <p className="text-muted-dark">{s.note}</p>
-              </Reveal>
+          <ol className="syll">
+            {person.syllables.map((s) => (
+              <li key={s.part} data-reveal="up">
+                <span className="label">Say “{s.say}”</span>
+                <span className="t-xl">{s.part}</span>
+                <span className="muted">{s.note}</span>
+              </li>
             ))}
           </ol>
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
-        <div className="wrap grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <SectionLabel index="02" className="text-muted">
+      <section className="wrap section" aria-labelledby="typos-title">
+        <div className="grid">
+          <div style={{ gridColumn: '1 / 5' }} className="about-say">
+            <h2 id="typos-title" className="t-l">
               Typed it differently?
-            </SectionLabel>
-            <h2 className="mt-6 text-title font-semibold">
-              Common <span className="font-serif font-normal italic">misspellings</span>
             </h2>
-            <p className="mt-6 text-muted">All of these point to the same person.</p>
+            <p className="muted" style={{ marginTop: '1rem' }}>
+              All of these point to the same person.
+            </p>
           </div>
-          <div className="md:col-span-8">
-            <table className="w-full border-collapse text-left">
+          <div style={{ gridColumn: '6 / -1' }} className="about-say">
+            <table className="typos">
               <thead>
-                <tr className="eyebrow text-muted">
-                  <th scope="col" className="pb-4 font-normal">
-                    You typed
-                  </th>
-                  <th scope="col" className="pb-4 font-normal">
-                    Why it happens
-                  </th>
+                <tr>
+                  <th scope="col">You typed</th>
+                  <th scope="col">Why it happens</th>
                 </tr>
               </thead>
               <tbody>
                 {person.typos.map((t) => (
-                  <tr key={t.typed} className="border-t border-ink/20 align-baseline last:border-b">
-                    <th scope="row" className="py-5 pr-6 text-xl font-semibold tracking-tight">
-                      {t.typed}
-                    </th>
-                    <td className="py-5 text-muted">{t.why}</td>
+                  <tr key={t.typed}>
+                    <th scope="row">{t.typed}</th>
+                    <td>{t.why}</td>
                   </tr>
                 ))}
               </tbody>
             </table>
-            <p className="mt-8 text-lg">
-              Correct spelling: <strong className="font-semibold">{person.shortName}</strong> · full name{' '}
-              <strong className="font-semibold">{person.name}</strong>.
+            <p style={{ marginTop: '1.5rem' }}>
+              Correct spelling: <strong>{person.shortName}</strong>. Full name: <strong>{person.name}</strong>.
             </p>
           </div>
         </div>
       </section>
 
-      <section className="bg-paper-2 py-24 md:py-32">
-        <div className="wrap grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <SectionLabel index="03" className="text-muted">
-              What it means
-            </SectionLabel>
-          </div>
-          <Reveal as="p" className="font-serif text-[clamp(1.8rem,3.4vw,3.2rem)] leading-[1.1] md:col-span-8">
+      <section className="wrap section--tight" aria-labelledby="meaning">
+        <div className="grid">
+          <h2 id="meaning" className="label about-say" style={{ gridColumn: '1 / 5' }}>
+            What it means
+          </h2>
+          <p className="t-l about-say" style={{ gridColumn: '6 / -1' }} data-split="lines">
             {person.meaning}
-          </Reveal>
+          </p>
         </div>
       </section>
 
-      <section className="py-24 md:py-32">
-        <div className="wrap grid gap-12 md:grid-cols-12">
-          <div className="md:col-span-4">
-            <SectionLabel index="04" className="text-muted">
-              Which Jai?
-            </SectionLabel>
-            <h2 className="mt-6 text-title font-semibold">
-              The one who <span className="font-serif font-normal italic">builds</span> things.
-            </h2>
-          </div>
-          <div className="space-y-6 text-lg md:col-span-7 md:col-start-6">
-            <p>
-              There are a lot of Jais. This one is a systems builder from {person.location.city}, {person.location.country}, studying{' '}
-              {person.education.replace('B.Tech, ', '')}, and co-founder of{' '}
-              <a href="https://www.genrecai.com" target="_blank" rel="noopener" className="link">
-                Genrec AI
-              </a>
-              . I built <Link to="/work/lumina-iq" className="link">Lumina IQ</Link> (AI active-recall learning) and{' '}
-              <Link to="/work/tabble" className="link">Tabble</Link> (real-time restaurant ordering).
+      <section className="wrap section" aria-labelledby="which">
+        <div className="grid">
+          <h2 id="which" className="t-l about-say" style={{ gridColumn: '1 / 5' }}>
+            Which Jai?
+          </h2>
+          <div className="about-say" style={{ gridColumn: '6 / -1', display: 'grid', gap: '1.25rem' }}>
+            <p className="t-m">
+              There are a lot of Jais. This one is a systems builder from {person.location.city}, studying Computer Science and Business Systems, and co-founder of
+              Genrec AI. I built <Link to="/work/lumina-iq" className="link">Lumina IQ</Link> and <Link to="/work/tabble" className="link">Tabble</Link>.
             </p>
-            <p className="text-muted">Same person on every platform:</p>
-            <ul className="flex flex-wrap gap-2">
+            <ul className="chips" aria-label="Profiles">
               {socials.map((s) => (
                 <li key={s.href}>
-                  <a href={s.href} target="_blank" rel="me noopener noreferrer" className="chip hover:bg-ink hover:text-paper">
+                  <a href={s.href} target="_blank" rel="me noopener noreferrer" className="chip">
                     {s.label} · {s.handle}
                   </a>
                 </li>
               ))}
             </ul>
-            <div className="flex flex-wrap gap-3 pt-4">
-              <Link to="/about" className="btn btn-solid">
-                <span>More about me</span> <Arrow />
-              </Link>
-              <Link to="/work" className="btn btn-ghost">
-                <span>See the work</span>
+            <div>
+              <Link to="/about" className="btn btn--solid" data-label="About">
+                <span>More about me</span>
+                <Arrow />
               </Link>
             </div>
           </div>
