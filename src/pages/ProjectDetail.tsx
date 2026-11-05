@@ -40,7 +40,7 @@ export function ProjectDetail() {
             <dt>Live</dt>
             <dd>
               {p.liveLink ? (
-                <a href={p.liveLink} target="_blank" rel="noopener" className="link">
+                <a href={p.liveLink} target="_blank" rel="noopener" className="link tap">
                   {p.liveLink.replace(/^https?:\/\//, '')}
                 </a>
               ) : (
@@ -149,9 +149,13 @@ export function ProjectDetail() {
       <nav className="night" aria-label="Next case study">
         <Link to={`/work/${next.id}`} className="case__next wrap" data-label={next.title}>
           <span className="label">Next case study</span>
-          <span className="t-mega" style={{ display: 'block', marginTop: '1rem' }}>
-            {next.title}
+          <span className="case__next-title">
+            <span className="t-mega">{next.title}</span>
+            <span className="case__next-go" aria-hidden="true">
+              <span className="arrow">→</span>
+            </span>
           </span>
+          <i className="case__next-seam" aria-hidden="true" />
         </Link>
       </nav>
     </article>

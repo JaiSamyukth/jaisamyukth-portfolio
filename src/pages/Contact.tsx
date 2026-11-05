@@ -63,9 +63,9 @@ export function Contact() {
           <ul>
             {socials.map((s) => (
               <li key={s.href} className="index__row" style={{ borderColor: 'rgb(242 241 238 / 0.16)' }}>
-                <a href={s.href} target="_blank" rel="me noopener noreferrer" className="index__link" style={{ gridTemplateColumns: 'minmax(0,5fr) minmax(0,6fr) auto' }}>
+                <a href={s.href} target="_blank" rel="me noopener noreferrer" className="index__link social__link">
                   <span className="index__title">{s.label}</span>
-                  <span className="muted">
+                  <span className="muted social__handle">
                     {s.handle}, {s.note}
                   </span>
                   <span className="index__go" aria-hidden="true" style={{ borderColor: 'rgb(242 241 238 / 0.3)' }}>

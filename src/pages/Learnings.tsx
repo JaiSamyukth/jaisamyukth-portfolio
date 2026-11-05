@@ -1,8 +1,13 @@
 import React from 'react';
+import { usePage } from '../engine/react';
 import { learnings } from '../data/content';
 import { PageHead } from '../components/PageHead';
 
 export function Learnings() {
+  usePage(() => {
+    document.documentElement.classList.add('page-night');
+    return () => document.documentElement.classList.remove('page-night');
+  });
   return (
     <div className="night">
       <PageHead

@@ -7,7 +7,8 @@ export function NotFound() {
   return (
     <section className="lost wrap">
       <p className="label">Error 404</p>
-      <h1 className="t-mega lost__digits" aria-label="404, page not found">
+      <h1 className="t-mega lost__digits">
+        <span className="sr-only">404, page not found</span>
         <span aria-hidden="true">4</span>
         <span className="lost__gap" aria-hidden="true" />
         <span aria-hidden="true">4</span>

@@ -128,7 +128,7 @@ export function Hero() {
             </span>
             <SayIt />
           </p>
-          <div className="hero__actions" data-reveal="up" data-intro data-delay="0.9">
+          <div className="hero__actions" data-reveal="up" data-intro data-delay="0.55">
             <Link to="/work" className="btn btn--solid" data-label="Work">
               <span>See the work</span>
               <Arrow />

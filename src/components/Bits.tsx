@@ -80,12 +80,20 @@ export function Crumbs({ trail }: { trail: { label: string; to?: string }[] }) {
     <nav aria-label="Breadcrumb">
       <ol className="crumbs">
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" className="link">
+            Home
+          </Link>
         </li>
         {trail.map((c) => (
           <li key={c.label} style={{ display: 'flex', gap: '0.5rem' }}>
             <span aria-hidden="true">/</span>
-            {c.to ? <Link to={c.to}>{c.label}</Link> : <span aria-current="page">{c.label}</span>}
+            {c.to ? (
+              <Link to={c.to} className="link">
+                {c.label}
+              </Link>
+            ) : (
+              <span aria-current="page">{c.label}</span>
+            )}
           </li>
         ))}
       </ol>

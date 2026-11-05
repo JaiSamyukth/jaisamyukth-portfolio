@@ -33,7 +33,7 @@ export function Home() {
           <h2 id="work-title" className="t-xl" data-split="lines">
             Selected work
           </h2>
-          <p className="muted measure">The projects that survived past 48 hours, usually because someone paid me or I got annoyed enough to finish.</p>
+          <p className="muted measure">The projects that survived past 48 hours, because someone paid me or I got annoyed enough to finish them.</p>
         </div>
         <WorkIndex />
       </section>
@@ -44,7 +44,7 @@ export function Home() {
             <h2 id="joins-title" className="t-xl" data-split="lines">
               What gets joined
             </h2>
-            <p className="muted measure">Samyukth means joined. It turns out that is most of the job: many messy parts in, one thing that works out.</p>
+            <p className="muted measure">Samyukth means joined. That is most of the job: you hand me five messy parts and get one thing back that works.</p>
           </div>
           <ul>
             {projects.map((p) => (
@@ -70,7 +70,7 @@ export function Home() {
           <figure className="quote">
             <blockquote data-split="lines">“{testimonial.quote}”</blockquote>
             <figcaption className="label">
-              <a href={testimonial.href} target="_blank" rel="noopener noreferrer" className="link" style={{ color: 'var(--c-fg)' }}>
+              <a href={testimonial.href} target="_blank" rel="noopener noreferrer" className="link tap" style={{ color: 'var(--c-fg)' }}>
                 {testimonial.name}
               </a>
               , {testimonial.role.toLowerCase()}

@@ -16,7 +16,7 @@ export function Name() {
           Jai Samyukth
         </h1>
         <p className="pagehead__lede" data-reveal="up" data-intro data-delay="0.3">
-          If you typed <strong>Jai Samuth</strong>, <strong>Jai Sampath</strong> or <strong>Jay Samyukth</strong>, you were probably looking for me: {person.name},
+          If you typed <strong>Jai Samuth</strong>, <strong>Jai Sampath</strong> or <strong>Jay Samyukth</strong>, you were looking for me: {person.name},
           co-founder of Genrec AI in {person.location.city}. It is spelled <strong>J‑A‑I S‑A‑M‑Y‑U‑K‑T‑H</strong>.
         </p>
       </header>
@@ -94,7 +94,7 @@ export function Name() {
           <div className="about-say" style={{ gridColumn: '6 / -1', display: 'grid', gap: '1.25rem' }}>
             <p className="t-m">
               There are a lot of Jais. This one is a systems builder from {person.location.city}, studying Computer Science and Business Systems, and co-founder of
-              Genrec AI. I built <Link to="/work/lumina-iq" className="link">Lumina IQ</Link> and <Link to="/work/tabble" className="link">Tabble</Link>.
+              Genrec AI. I built <Link to="/work/lumina-iq" className="link tap">Lumina IQ</Link> and <Link to="/work/tabble" className="link tap">Tabble</Link>.
             </p>
             <ul className="chips" aria-label="Profiles">
               {socials.map((s) => (

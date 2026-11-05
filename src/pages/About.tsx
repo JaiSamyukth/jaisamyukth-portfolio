@@ -45,12 +45,12 @@ export function About() {
               I notice inefficient systems, become a little obsessed with them, and build software until they stop being inefficient.
             </p>
             <p data-reveal="up">
-              I started building things because I couldn’t stop. Eventually someone paid me for it. Then the first AWS invoice arrived, politely explaining that
+              I started building things because I couldn’t stop. Then someone paid me for it. Then the first AWS invoice arrived, politely explaining that
               curiosity isn’t free, and I learned infrastructure the only way that works: by breaking it at 1 AM and fixing it before anyone noticed.
             </p>
             <p data-reveal="up">
-              Lumina IQ exists because I watched students highlight entire PDFs and expect their brains to cooperate. Tabble exists because every waiter
-              eventually develops superhero memory, because the software doesn’t. Messy code in production beats clean code in a private repo.
+              Lumina IQ exists because I watched students highlight entire PDFs and expect their brains to cooperate. Tabble exists because waiters
+              end up with superhero memory, since the software has none. Messy code in production beats clean code in a private repo.
             </p>
             <p className="muted" style={{ fontSize: 'var(--t-body)' }} data-reveal="up">
               Co-founder of{' '}
@@ -76,7 +76,7 @@ export function About() {
               <SayIt />
             </div>
             <p className="muted">
-              {person.meaning} People usually hear the name before they read it, so it gets typed many ways. All of these are me:
+              {person.meaning} You probably heard the name before you read it, so you might have typed it a few ways. All of these are me:
             </p>
             <ul className="chips" aria-label="Spellings people use">
               {person.alternateNames.map((n) => (
@@ -86,7 +86,7 @@ export function About() {
               ))}
             </ul>
             <p>
-              <Link to="/name" className="link">
+              <Link to="/name" className="link tap">
                 The full spelling guide
               </Link>
             </p>

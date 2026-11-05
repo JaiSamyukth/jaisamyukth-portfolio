@@ -43,7 +43,7 @@ export const person = {
     { typed: 'Jai Samuth', why: 'The “y” and “k” get swallowed when the name is said quickly.' },
     { typed: 'Jai Sampath', why: 'Sampath is a far more common name, so ears and autocorrect reach for it.' },
     { typed: 'Jay Samyukth', why: 'Jai and Jay sound identical; it’s spelled J-A-I.' },
-    { typed: 'Jai Samyuktha / Samyukta', why: 'Samyuktha is a related name (usually feminine). Mine has no final “a”.' },
+    { typed: 'Jai Samyuktha / Samyukta', why: 'Samyuktha is a related name, more often feminine. Mine has no final “a”.' },
     { typed: 'Jai Samyuth', why: 'The “k” is soft, so it often disappears in writing.' },
     { typed: 'Jai Samyukt / Samyuk', why: 'The final “th” gets dropped.' },
     { typed: 'JaiSamyukth17', why: 'That’s my handle on X and Instagram. Same person.' },

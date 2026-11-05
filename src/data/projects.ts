@@ -67,11 +67,11 @@ export const projects: Project[] = [
     focus: 'Forced active recall',
     summary:
       'Lumina IQ, by Genrec AI, turns a syllabus or notes into a structured revision path and AI active-recall sessions, so students know what they have learned.',
-    hook: 'Students don’t hate studying. They hate not knowing whether they’ve actually learned anything.',
+    hook: 'A student can reread a chapter three times and still not know what stuck.',
     overview:
-      'I watched people highlight entire PDFs and somehow expect their brain to cooperate. So I built this. You paste your syllabus in, it creates a structured path, and then relentlessly forces you to recall the information.',
+      'I watched people highlight entire PDFs and somehow expect their brain to cooperate. So I built this. You paste your syllabus in, it creates a structured path, and then makes you recall it, question by question.',
     problem:
-      'Rereading notes the night before an exam feels like studying, but it’s just creating a false sense of familiarity. The exam usually disagrees with your confidence level.',
+      'Rereading notes the night before an exam feels like studying, but it builds a false sense of familiarity. The exam disagrees with your confidence level.',
     build:
       'People were already pasting their notes into ChatGPT, but without any structure. I built a proper loop: explanation, prioritisation, and active recall, backed by retrieval over the student’s own material. It doesn’t let you pretend you know the answer.',
     outcomes: [
@@ -102,16 +102,16 @@ export const projects: Project[] = [
     focus: 'Real-time synchronisation',
     summary:
       'Tabble is restaurant ordering with customer, chef and admin screens synced live, built for small restaurants in India that can’t justify a POS.',
-    hook: 'Restaurant software usually assumes perfect communication. Restaurants don’t.',
+    hook: 'Restaurant software assumes perfect communication. Restaurants have a waiter with a notepad.',
     overview:
-      'Three interfaces. The customer taps what they want. The chef sees it instantly. The admin watches the chaos. No shouting, no illegible handwritten notes, no forgotten extra-spicy requests. All wired together over WebSockets.',
+      'Three interfaces. The customer taps what they want. The chef sees it in under a second. The admin watches the chaos. No shouting, no illegible handwritten notes, no forgotten extra-spicy requests. All wired together over WebSockets.',
     problem:
-      'Waiters shouldn’t have to memorise fifteen modifications to a burger. Go to a small restaurant and watch how orders happen: it’s usually someone writing on a tiny pad while balancing plates.',
+      'Waiters shouldn’t have to memorise fifteen modifications to a burger. Go to a small restaurant and watch how orders happen: it is someone writing on a tiny pad while balancing plates.',
     build:
-      'It turns out a ₹5,000 tablet and a basic cloud setup solve the entire problem. Nobody built it because the small-restaurant market isn’t glamorous enough for VC money. I built it because I hate watching bad workflows.',
+      'A ₹5,000 tablet and a basic cloud setup solve the entire problem. Nobody built it because the small-restaurant market isn’t glamorous enough for VC money. I built it because I hate watching bad workflows.',
     outcomes: [
       'Removed manual order taking',
-      'Made the kitchen slightly less chaotic',
+      'Made the kitchen less chaotic',
       'Three different UIs talking to each other without catching fire',
     ],
     traction: ['Backend is stable', 'UI doesn’t make users want to cry', 'Looking for a brave restaurant owner'],
@@ -137,15 +137,15 @@ export const projects: Project[] = [
     focus: 'Data management & RBAC',
     summary:
       'A production CRM that replaced five spreadsheets with one role-based system for billing, expenses, investments and permissions.',
-    hook: 'Excel is an incredible spreadsheet. It’s also the most common database I’ve ever been asked to replace.',
+    hook: 'Excel is a great spreadsheet. It’s also the most common database I’ve ever been asked to replace.',
     overview:
-      'A company wasn’t looking for another dashboard. They wanted one place where billing, expenses, investments and permissions actually made sense. Replacing five spreadsheets with one system makes accountants considerably less nervous.',
+      'A company wasn’t looking for another dashboard. They wanted one place where billing, expenses, investments and permissions made sense. Replacing five spreadsheets with one system makes accountants less nervous.',
     problem:
-      'Employees should not be able to accidentally delete the company’s financial history. That requirement eliminated several bad ideas immediately.',
+      'Employees should not be able to accidentally delete the company’s financial history. That one requirement killed several bad ideas.',
     build:
       'Built with React, TypeScript and Supabase, with strict role-based access control. The database is locked down so nobody can “accidentally” drop a table.',
     outcomes: [
-      'Client actually uses it every day',
+      'The client uses it every day',
       'I got paid',
       'Database hasn’t corrupted itself yet',
     ],

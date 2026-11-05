@@ -1,7 +1,7 @@
 import { org, person } from './site';
 
 export const services = [
-  { title: 'MVPs people can actually demo', body: 'From idea to something investors and users can click, usually in weeks, not quarters.' },
+  { title: 'MVPs you can demo', body: 'From an idea to something investors and users can click through, in weeks.' },
   { title: 'Internal software that replaces spreadsheets', body: 'Billing, operations, permissions. One system instead of five tabs and a prayer.' },
   { title: 'AI features that solve boring work', body: 'LLM integrations, retrieval over your own documents, and automation that earns its token bill.' },
   { title: 'Systems that survive real users', body: 'Real-time sync, role-based access, and backends that don’t fall over on a Friday.' },
@@ -39,12 +39,12 @@ export const stack = [
 ];
 
 export const timeline = [
-  { when: 'May 2023', title: 'Started building', body: 'Got college lab access by offering to build tools they’d actually use. If you automate someone’s boring job, they let you use their computers.' },
+  { when: 'May 2023', title: 'Started building', body: 'Got college lab access by offering to build tools they would use. If you automate someone’s boring job, they let you use their computers.' },
   { when: '2024', title: 'People paid me', body: 'Shipped three full projects. Learned that clients don’t care about clean architecture. They care whether the button works.' },
   { when: '2024', title: 'The cloud incidents', body: 'AWS charged me for experimenting. Azure showed up carrying $1,000 in startup credits, an unusually good first impression. Git faithfully recorded every terrible decision.' },
   { when: 'Late 2024', title: 'Lumina IQ MVP', body: 'Turned exam-cram frustration into a product. First external testers. Some feedback was angry, which meant it was forcing them to think.' },
   { when: '2025', title: 'Tabble architecture', body: 'A complete restaurant sync system, wired together and tested. Now looking for a restaurant owner brave enough to install it.' },
-  { when: 'Now', title: 'The current loop', body: 'Client builds at Genrec AI pay for the servers. Products break and get fixed. Thirty abandoned repos remain politely ignored.' },
+  { when: 'Now', title: 'The current loop', body: 'Client builds at Genrec AI pay for the servers. Products break and get fixed. I still ignore thirty abandoned repos.' },
 ];
 
 export const testimonial = {
@@ -56,7 +56,7 @@ export const testimonial = {
 };
 
 export const approachSteps = [
-  { title: 'Observe', body: 'Watch how humans actually use things, which is rarely how the documentation says they should.' },
+  { title: 'Observe', body: 'Watch how people use things. It rarely matches the documentation.' },
   { title: 'Panic', body: 'Realise how much time and money is being burned by manual copy-pasting.' },
   { title: 'Build', body: 'Write code that absorbs the chaos instead of putting a nice UI on top of it.' },
   { title: 'Break & fix', body: 'Deploy it. Watch users break it in ways nobody imagined. Fix it at 2 AM.' },
@@ -117,7 +117,7 @@ export const faqs = [
   },
   {
     q: 'What is Lumina IQ?',
-    a: 'Lumina IQ is an AI-powered adaptive learning platform built by Genrec AI. It converts a syllabus or notes into a structured revision path and runs active-recall sessions so students know what they have actually learned. It is live at luminaiq.fun.',
+    a: 'Lumina IQ is an AI-powered adaptive learning platform built by Genrec AI. It converts a syllabus or notes into a structured revision path and runs active-recall sessions so students know what they have learned. It is live at luminaiq.fun.',
   },
   {
     q: 'What is Tabble?',
@@ -125,6 +125,6 @@ export const faqs = [
   },
   {
     q: 'Is Jai Samyukth available for freelance or client work?',
-    a: `Yes. He takes on client projects through Genrec AI: MVPs, internal tools that replace spreadsheets, AI and LLM integrations, and system rebuilds. Email ${person.email}; replies usually arrive within 24 hours.`,
+    a: `Yes. He takes on client projects through Genrec AI: MVPs, internal tools that replace spreadsheets, AI and LLM integrations, and system rebuilds. Email ${person.email}; replies arrive within a day.`,
   },
 ];
