@@ -35,11 +35,12 @@ export function LocalTime() {
 
 /** Speaks the name with the browser's speech engine. Hidden where unsupported. */
 export function SayIt({ className = '' }: { className?: string }) {
-  const [ok, setOk] = useState(false);
+  const [ok, setOk] = useState(true);
   const [busy, setBusy] = useState(false);
   useEffect(() => setOk('speechSynthesis' in window), []);
-  if (!ok) return null;
+  // Server render assumes support (most browsers) to keep the layout stable.
   const say = () => {
+    if (!ok) return;
     const u = new SpeechSynthesisUtterance(person.spoken);
     const v = speechSynthesis.getVoices();
     u.voice = v.find((x) => x.lang === 'en-IN') ?? v.find((x) => x.lang.startsWith('en')) ?? null;
@@ -50,7 +51,15 @@ export function SayIt({ className = '' }: { className?: string }) {
     speechSynthesis.speak(u);
   };
   return (
-    <button type="button" className={`chip ${className}`} onClick={say} aria-label={`Hear it: how ${person.shortName} is pronounced`}>
+    <button
+      type="button"
+      className={`chip ${className}`}
+      onClick={say}
+      aria-label={`Hear it: how ${person.shortName} is pronounced`}
+      // Rendered on the server so it never shifts layout; hidden where speech isn't available.
+      style={ok ? undefined : { visibility: 'hidden' }}
+      tabIndex={ok ? undefined : -1}
+    >
       <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" aria-hidden="true">
         <path d="M11 5 6 9H2v6h4l5 4V5z" />
         <path d="M15.5 8.5a5 5 0 0 1 0 7" />

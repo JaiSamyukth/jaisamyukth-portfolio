@@ -10,8 +10,10 @@ export function Name() {
     <>
       <header className="pagehead wrap">
         <Crumbs trail={[{ label: 'The name' }]} />
-        <h1 className="t-xl" data-split="lines" data-intro>
-          How to say Jai Samyukth
+        <h1 className="t-xl" data-split="lines" data-intro style={{ whiteSpace: 'nowrap' }}>
+          How to say
+          <br />
+          Jai Samyukth
         </h1>
         <p className="pagehead__lede" data-reveal="up" data-intro data-delay="0.3">
           If you typed <strong>Jai Samuth</strong>, <strong>Jai Sampath</strong> or <strong>Jay Samyukth</strong>, you were probably looking for me: {person.name},
@@ -22,7 +24,7 @@ export function Name() {
       <section className="night section" aria-labelledby="say">
         <div className="wrap">
           <div className="index__head">
-            <h2 id="say" className="t-mega" style={{ fontSize: 'var(--t-xl)' }}>
+            <h2 id="say" className="t-mega" style={{ fontSize: 'clamp(1.6rem, 0.4rem + 6.2vw, 6.25rem)', whiteSpace: 'nowrap' }}>
               / {person.pronunciation} /
             </h2>
             <SayIt />

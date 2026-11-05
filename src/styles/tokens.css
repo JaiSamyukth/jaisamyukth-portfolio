@@ -9,6 +9,10 @@
   unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
 
+/* Metric-matched fallbacks (measured against Archivo in Chromium) so the swap never re-wraps text. */
+@font-face { font-family: 'Archivo Fallback'; src: local('Arial'), local('Helvetica'), local('Liberation Sans'); font-weight: 100 600; size-adjust: 98.6%; ascent-override: 89.2%; descent-override: 21.3%; line-gap-override: 0%; }
+@font-face { font-family: 'Archivo Fallback'; src: local('Arial Bold'), local('Arial'), local('Helvetica Bold'), local('Liberation Sans Bold'); font-weight: 601 900; size-adjust: 102.8%; ascent-override: 85.6%; descent-override: 20.4%; line-gap-override: 0%; }
+
 :root {
   --c-bg: #f2f1ee;
   --c-fg: #111110;
@@ -18,8 +22,8 @@
   --c-curtain: var(--c-fg);
   --c-night-muted: #a09e98;
 
-  --f-display: 'Archivo', 'Arial Narrow', system-ui, sans-serif;
-  --f-body: 'Archivo', system-ui, sans-serif;
+  --f-display: 'Archivo', 'Archivo Fallback', system-ui, sans-serif;
+  --f-body: 'Archivo', 'Archivo Fallback', system-ui, sans-serif;
 
   --t-mega: clamp(3.75rem, 0.6rem + 13.4vw, 15rem);
   --t-xl: clamp(2.5rem, 1.2rem + 5.2vw, 6.25rem);
