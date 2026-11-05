@@ -441,3 +441,25 @@ html.on-hero:not(.frame-solid):not(.menu-open) .frame__menu-btn { color: var(--c
 /* Dark pages: the returning frame bar is dark too */
 html.page-night.frame-solid .frame { background: var(--c-fg); color: var(--c-bg); box-shadow: 0 1px 0 rgb(242 241 238 / 0.12); }
 .case__next-title .t-mega { display: inline-block; }
+
+/* ---------- Pass 4 fixes (second blind critic) ---------- */
+/* Next case study: a compact target, so the rest state is never read as hovered */
+.case__next { padding-block: calc(var(--u) * 6) calc(var(--u) * 7); }
+/* Footer "Say hi.": the site's own treatment, a violet seam that draws under it */
+.footer__say { position: relative; display: inline-block; }
+.footer__say::after { content: ''; position: absolute; left: 0; right: 0; bottom: 0.02em; height: 0.06em; background: var(--c-accent); transform: scaleX(0); transform-origin: left; transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1); }
+@media (hover: hover) { .footer__say:hover::after { transform: scaleX(1); } }
+.footer__say:focus-visible::after { transform: scaleX(1); }
+/* Focus over the photo: paper ring with an ink offset, visible on magenta */
+html.on-hero .frame__nav :focus-visible, html.on-hero .frame__menu-btn:focus-visible { outline: 2px solid var(--c-bg); box-shadow: 0 0 0 4px var(--c-fg); }
+/* Case screenshots run wider */
+.case__gallery > :nth-child(odd) { grid-column: 1 / 11; }
+.case__gallery > :nth-child(even) { grid-column: 3 / -1; }
+/* Phone rhythm: smaller gaps; 404 sits under the header */
+@media (max-width: 767px) {
+  .section--airy { padding-block: calc(var(--u) * 9); }
+  .section { padding-block: calc(var(--u) * 8); }
+  .lost { min-height: auto; justify-content: start; padding-top: calc(var(--header-h) + 3rem); }
+}
+/* Inline links in running text: 24 px hit area without moving the text */
+.about__text .link, .footer__meaning .link { padding-block: 0.2em; }

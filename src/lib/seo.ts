@@ -161,7 +161,7 @@ const staticPages: Record<string, StaticDef> = {
     crumb: 'Approach',
   },
   '/learnings': {
-    title: 'Things I’ve learned expensively | Jai Samyukth B U',
+    title: 'Things I learned expensively | Jai Samyukth B U',
     description:
       'A running tally of lessons from breaking production, debugging at 2 AM and reading cloud invoices, by Jai Samyukth B U, co-founder of Genrec AI.',
     type: 'WebPage',

@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import portrait960 from '../assets/portrait-960.webp';
 import portrait1600 from '../assets/portrait-1600.webp';
 import { org, person, socials } from '../data/site';
-import { faqs, stack, timeline, testimonial } from '../data/content';
+import { faqs, stack, timeline } from '../data/content';
 import { Arrow, Crumbs, SayIt } from '../components/Bits';
 
 export function About() {
@@ -118,15 +118,6 @@ export function About() {
             </li>
           ))}
         </ol>
-      </section>
-
-      <section className="wrap section--tight" aria-label="Testimonial">
-        <figure className="quote" style={{ maxWidth: '62rem' }}>
-          <blockquote data-split="lines">“{testimonial.quote}”</blockquote>
-          <figcaption className="label">
-            {testimonial.name}, {testimonial.role.toLowerCase()}
-          </figcaption>
-        </figure>
       </section>
 
       <section className="wrap section faq" id="faq" aria-labelledby="faq-title">
