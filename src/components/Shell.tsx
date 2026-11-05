@@ -8,7 +8,7 @@ import { setupMotion } from '../motion/setup';
 import { LocalTime } from './Bits';
 
 const primary = nav.filter((n) => ['/work', '/about', '/contact'].includes(n.path));
-const allPages = [{ label: 'Home', path: '/', hint: 'Start here' }, ...nav, { label: 'The name', path: '/name', hint: 'How to say it' }];
+const allPages = [{ label: 'Home', path: '/', hint: 'Start here' }, ...nav];
 
 function Frame() {
   const [open, setOpen] = useState(false);
@@ -129,9 +129,9 @@ function Footer() {
               {person.location.city}, <LocalTime />
             </p>
             <p className="footer__meaning" style={{ marginTop: '0.6rem' }}>
-              Jai means victory. Samyukth means joined. Often heard as {person.misheard.slice(0, 2).join(' or ')}.{' '}
+              Jai means victory. Samyukth means joined.{' '}
               <Link to="/name" className="link">
-                How to say it
+                Pronunciation
               </Link>
             </p>
           </div>

@@ -108,8 +108,8 @@ export const faqs = [
     a: `${person.summary}`,
   },
   {
-    q: 'How do you pronounce and spell “Jai Samyukth”?',
-    a: `It’s said “${person.pronunciation}”. People who have only heard the name often search for it as ${person.misheard.join(', ')}. They all mean the same person: Jai Samyukth B U, co-founder of Genrec AI.`,
+    q: 'How do you pronounce “Jai Samyukth”?',
+    a: `It’s said “${person.pronunciation}”. Jai rhymes with high, and the stress falls on the last syllable.`,
   },
   {
     q: 'What is Genrec AI?',

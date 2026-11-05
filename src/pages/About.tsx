@@ -63,32 +63,16 @@ export function About() {
         </div>
       </section>
 
-      <section className="night section" id="say-it" aria-labelledby="say-title">
+      <section className="night section--tight" id="say-it" aria-labelledby="say-title">
         <div className="wrap grid">
-          <div style={{ gridColumn: '1 / 7' }} className="about-say">
-            <h2 id="say-title" className="t-xl" data-split="lines">
-              It’s Samyukth. Not Samuth.
-            </h2>
-          </div>
-          <div style={{ gridColumn: '8 / -1', display: 'grid', gap: '1.25rem', alignContent: 'start' }} className="about-say">
+          <h2 id="say-title" className="label about-say" style={{ gridColumn: '1 / 4' }}>
+            The name
+          </h2>
+          <div className="about-say" style={{ gridColumn: '4 / -1', display: 'flex', flexWrap: 'wrap', gap: '1rem 2rem', alignItems: 'center' }}>
             <p className="t-l">/ {person.pronunciation} /</p>
-            <div>
-              <SayIt />
-            </div>
-            <p className="muted">
-              {person.meaning} You probably heard the name before you read it, so you might have typed it a few ways. All of these are me:
-            </p>
-            <ul className="chips" aria-label="Spellings people use">
-              {person.alternateNames.map((n) => (
-                <li key={n} className="chip">
-                  {n}
-                </li>
-              ))}
-            </ul>
-            <p>
-              <Link to="/name" className="link tap">
-                The full spelling guide
-              </Link>
+            <SayIt />
+            <p className="muted" style={{ flexBasis: '100%', maxWidth: '40rem' }}>
+              {person.meaning}
             </p>
           </div>
         </div>

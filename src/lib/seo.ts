@@ -148,7 +148,7 @@ const staticPages: Record<string, StaticDef> = {
   '/about': {
     title: 'About Jai Samyukth B U: pronunciation, background and FAQ',
     description:
-      'Who Jai Samyukth B U is (often misheard as “Jai Samuth”): co-founder of Genrec AI, CSBS engineer and systems builder from Coimbatore. Background, stack, timeline and FAQ.',
+      'Jai Samyukth B U is co-founder of Genrec AI and a systems builder from Coimbatore studying CSBS. Background, stack, timeline and FAQ.',
     type: 'AboutPage',
     crumb: 'About',
     ogType: 'profile',

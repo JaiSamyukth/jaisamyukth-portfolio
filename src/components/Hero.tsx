@@ -7,7 +7,7 @@ import { person } from '../data/site';
 import { usePage } from '../engine/react';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { isMobile, isTouch, onScroll, prefersReducedMotion } from '../engine';
-import { Arrow, LocalTime, SayIt } from './Bits';
+import { Arrow, LocalTime } from './Bits';
 
 const WORDS = ['Jai', 'Samyukth'];
 const LATE = new Set(['1:3', '1:5']); // the y and the k: the letters people drop when they hear it
@@ -114,19 +114,6 @@ export function Hero() {
         <div className="hero__copy">
           <p className="hero__lede" data-split="lines" data-intro data-delay="0.35">
             Co-founder of Genrec AI. I build MVPs, internal tools and AI features for teams who are tired of doing things by hand.
-          </p>
-          <p className="heard">
-            <span>Often heard as</span>
-            {person.misheard.slice(0, 2).map((n, i) => (
-              <s key={n}>
-                {n}
-                <i className="strike" aria-hidden="true" style={{ ['--late' as string]: i }} />
-              </s>
-            ))}
-            <span>
-              Spelled <strong>{person.shortName}</strong>
-            </span>
-            <SayIt />
           </p>
           <div className="hero__actions" data-reveal="up" data-intro data-delay="0.55">
             <Link to="/work" className="btn btn--solid" data-label="Work">
