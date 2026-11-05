@@ -174,6 +174,13 @@ const staticPages: Record<string, StaticDef> = {
     type: 'WebPage',
     crumb: 'Lab',
   },
+  '/name': {
+    title: 'How to say & spell Jai Samyukth (not Jai Samuth or Jai Sampath)',
+    description:
+      'Jai Samyukth is pronounced “jai · sum-YOOKTH” and spelled J-A-I S-A-M-Y-U-K-T-H. Often typed as Jai Samuth, Jai Sampath or Jay Samyukth — all the same person: Jai Samyukth B U, co-founder of Genrec AI.',
+    type: 'WebPage',
+    crumb: 'The name',
+  },
   '/contact': {
     title: 'Contact Jai Samyukth B U — hire for MVPs, AI & internal tools',
     description:
@@ -195,7 +202,7 @@ export function getMeta(rawPath: string): PageMeta {
     const extra: Record<string, unknown>[] = [];
     if (def.crumb) extra.push(crumbs([{ name: def.crumb, path }]));
     let pageExtra: Record<string, unknown> = {};
-    if (path === '/' || path === '/about') pageExtra = { mainEntity: { '@id': PERSON_ID }, about: { '@id': PERSON_ID } };
+    if (path === '/' || path === '/about' || path === '/name') pageExtra = { mainEntity: { '@id': PERSON_ID }, about: { '@id': PERSON_ID } };
     if (path === '/work') {
       pageExtra = {
         mainEntity: {
@@ -209,6 +216,29 @@ export function getMeta(rawPath: string): PageMeta {
         },
       };
       extra.push(...projects.map((p) => softwareNode(p.id)));
+    }
+    if (path === '/name') {
+      extra.push({
+        '@type': 'FAQPage',
+        '@id': `${absolute(path)}#faq`,
+        mainEntity: [
+          {
+            '@type': 'Question',
+            name: 'How do you pronounce Jai Samyukth?',
+            acceptedAnswer: { '@type': 'Answer', text: `It is pronounced “${person.pronunciation}”: Jai (rhymes with high), Sam (as in some), yukth (stressed, soft k then th).` },
+          },
+          {
+            '@type': 'Question',
+            name: 'How do you spell Jai Samyukth?',
+            acceptedAnswer: { '@type': 'Answer', text: 'J-A-I S-A-M-Y-U-K-T-H. Full name: Jai Samyukth B U.' },
+          },
+          ...person.typos.map((t) => ({
+            '@type': 'Question',
+            name: `Is “${t.typed}” the same person as Jai Samyukth?`,
+            acceptedAnswer: { '@type': 'Answer', text: `Yes. ${t.why} The correct spelling is Jai Samyukth (Jai Samyukth B U, co-founder of Genrec AI).` },
+          })),
+        ],
+      });
     }
     if (path === '/about') {
       extra.push({

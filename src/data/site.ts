@@ -22,14 +22,40 @@ export const person = {
     'Jai Samyukth',
     'JaiSamyukth',
     'Jai Samyukth BU',
+    'Jai Samyukth B.U.',
+    'Jay Samyukth',
     'Jai Samuth',
+    'Jai Sampath',
     'Jai Samyuth',
     'Jai Samyukt',
+    'Jai Samyuk',
     'Jai Samyuktha',
-    'Jai Samyuktha BU',
+    'Jai Samyukta',
   ],
   /** The subset of alternateNames that are mishearings rather than formatting variants. */
-  misheard: ['Jai Samuth', 'Jai Samyuth', 'Jai Samyukt', 'Jai Samyuktha'],
+  misheard: ['Jai Samuth', 'Jai Sampath', 'Jay Samyukth', 'Jai Samyuktha', 'Jai Samyuth'],
+  /**
+   * Spelling guide shown on /name. Each entry is something people really type
+   * after hearing the name, plus why it happens. Honest, visible content is what
+   * lets a search engine connect these queries to this page.
+   */
+  typos: [
+    { typed: 'Jai Samuth', why: 'The “y” and “k” get swallowed when the name is said quickly.' },
+    { typed: 'Jai Sampath', why: 'Sampath is a far more common name, so ears and autocorrect reach for it.' },
+    { typed: 'Jay Samyukth', why: 'Jai and Jay sound identical; it’s spelled J-A-I.' },
+    { typed: 'Jai Samyuktha / Samyukta', why: 'Samyuktha is a related name (usually feminine). Mine has no final “a”.' },
+    { typed: 'Jai Samyuth', why: 'The “k” is soft, so it often disappears in writing.' },
+    { typed: 'Jai Samyukt / Samyuk', why: 'The final “th” gets dropped.' },
+    { typed: 'JaiSamyukth17', why: 'That’s my handle on X and Instagram — same person.' },
+  ],
+  /** Syllables for the spelling breakdown on /name. */
+  syllables: [
+    { part: 'Jai', say: 'jai', note: 'rhymes with “high”' },
+    { part: 'Sam', say: 'sum', note: 'as in “some”' },
+    { part: 'yukth', say: 'YOOKTH', note: 'stressed; a soft “k”, then “th”' },
+  ],
+  meaning:
+    'Jai comes from the Sanskrit “jaya”, meaning victory. Samyukth comes from “saṃyukta”, meaning united or joined together.',
   role: 'Co-founder of Genrec AI · Systems builder',
   jobTitle: 'Co-founder & Systems Engineer',
   location: { city: 'Coimbatore', region: 'Tamil Nadu', country: 'India', countryCode: 'IN' },

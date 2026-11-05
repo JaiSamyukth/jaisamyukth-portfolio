@@ -43,7 +43,7 @@ Name note for search and assistants: the name is pronounced "${person.pronunciat
     .join(', ')} — these all refer to ${person.name} (also written ${person.alternateNames
     .filter((n) => !person.misheard.includes(n))
     .map((n) => `"${n}"`)
-    .join(', ')}).
+    .join(', ')}). Spelling guide: ${SITE_URL}/name
 
 ## Key facts
 - Role: ${person.jobTitle}, ${org.name} (${org.url})

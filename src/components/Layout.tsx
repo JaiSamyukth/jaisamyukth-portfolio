@@ -155,14 +155,14 @@ function Footer() {
         {/* Visible, honest name-variant line: helps people (and search engines) who only heard the name. */}
         <p className="mt-16 max-w-3xl text-sm text-muted-dark">
           Searched for {person.misheard.join(', ')}? You found
-          him — it’s <Link to="/about#say-it" className="link text-paper">{person.name}</Link>, pronounced “{person.pronunciation}”.
+          him — it’s <Link to="/name" className="link text-paper">{person.name}</Link>, pronounced “{person.pronunciation}”.
         </p>
       </div>
 
       <div className="wrap mt-10 flex flex-col gap-2 border-t border-paper/15 py-6 text-xs text-muted-dark sm:flex-row sm:justify-between">
         <p>© {year} {person.name}. Hosted somewhere between Azure credits and stubborn optimism.</p>
         <p>
-          <a href="/llms.txt" className="link">llms.txt</a> · <a href="/sitemap.xml" className="link">sitemap</a>
+          <Link to="/name" className="link">How to say my name</Link> · <a href="/llms.txt" className="link">llms.txt</a> · <a href="/sitemap.xml" className="link">sitemap</a>
         </p>
       </div>
 

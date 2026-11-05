@@ -10,6 +10,7 @@ import { Learnings } from './pages/Learnings';
 import { Experimental } from './pages/Experimental';
 import { Contact } from './pages/Contact';
 import { NotFound } from './pages/NotFound';
+import { Name } from './pages/Name';
 
 export function App() {
   return (
@@ -23,6 +24,7 @@ export function App() {
         <Route path="/learnings" element={<Learnings />} />
         <Route path="/experimental" element={<Experimental />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/name" element={<Name />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Layout>

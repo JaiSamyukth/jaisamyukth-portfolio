@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import React from 'react';
 import portrait720 from '../assets/portrait-720.webp';
 import portrait1200 from '../assets/portrait-1200.webp';
@@ -77,12 +78,17 @@ export function About() {
               It’s a name people usually hear before they read it, so it gets typed a lot of different ways. If you searched for any of these,
               you’re in the right place:
             </Reveal>
-            <Reveal as="ul" delay={200} className="mt-6 flex flex-wrap gap-2">
+            <Reveal as="ul" delay={200} className="mt-6 flex flex-wrap gap-2" aria-label="Spellings people use">
               {person.alternateNames.map((n) => (
                 <li key={n} className="chip border-paper/30 text-paper">
                   {n}
                 </li>
               ))}
+            </Reveal>
+            <Reveal delay={260}>
+              <Link to="/name" className="btn btn-ghost mt-8">
+                <span>Full spelling guide</span> <Arrow />
+              </Link>
             </Reveal>
           </div>
         </div>
