@@ -1,102 +1,37 @@
-# Neo-Brutalism Website
+# jaisamyukth.genrecai.com
 
-A modern portfolio website built with a neo-brutalism design aesthetic, featuring bold colors, strong borders, and intentional design choices that make a statement.
+Portfolio of **Jai Samyukth B U** — systems builder and co-founder of Genrec AI.
 
-## 🚀 Features
+React 19 + TypeScript + Tailwind, built with Vite and **prerendered to static HTML** at build time, then deployed on Vercel.
 
-- **Neo-Brutalism Design** - Bold, intentional aesthetic with strong visual elements
-- **React 19** - Built with the latest version of React
-- **TypeScript** - Type-safe development
-- **Tailwind CSS** - Utility-first styling
-- **Framer Motion** - Smooth animations and transitions
-- **React Router** - Client-side routing
-- **Vite** - Fast build tool and dev server
-
-## 📦 Tech Stack
-
-- **Frontend:** React 19, TypeScript
-- **Styling:** Tailwind CSS
-- **Animation:** Framer Motion
-- **Routing:** React Router DOM
-- **Build Tool:** Vite
-- **Icons:** Lucide React
-
-## 🛠️ Getting Started
-
-### Prerequisites
-
-- Node.js (v18 or higher recommended)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Shyamnath-Sankar/Neo-Brutalism-Website.git
-   cd Neo-Brutalism-Website
-   ```
-
-2. Install dependencies:
-   ```bash
-   npm install
-   ```
-
-3. Start the development server:
-   ```bash
-   npm run dev
-   ```
-
-4. Open your browser and navigate to `http://localhost:5173`
-
-## 📜 Available Scripts
-
-- `npm run dev` - Start development server
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build
-
-## 📁 Project Structure
-
-```
-├── components/       # Reusable UI components
-│   ├── Footer.tsx
-│   ├── Hero.tsx
-│   ├── Marquee.tsx
-│   ├── Navigation.tsx
-│   ├── NeoButton.tsx
-│   ├── ProjectCard.tsx
-│   ├── RevealCard.tsx
-│   └── ScrollToTop.tsx
-├── pages/           # Page components
-│   ├── About.tsx
-│   ├── Approach.tsx
-│   ├── Contact.tsx
-│   ├── Experimental.tsx
-│   ├── Home.tsx
-│   ├── ProjectDetail.tsx
-│   └── Work.tsx
-├── data/            # Data files
-│   └── projects.ts
-├── public/          # Static assets
-├── App.tsx          # Main application component
-├── index.tsx        # Application entry point
-└── index.css        # Global styles
+```bash
+npm ci
+npm run dev        # local dev server on :3000
+npm run build      # client build → SSR build → prerender every route into dist/
+npm run preview    # serve dist/
+npm run typecheck
 ```
 
-## 🎨 Design Philosophy
+## How it's put together
 
-This project embraces the neo-brutalism design trend, characterized by:
+| Path | What it is |
+| --- | --- |
+| `src/data/site.ts` | Identity: name, **name variants / misspellings**, pronunciation, socials, nav |
+| `src/data/projects.ts` | Case studies (Lumina IQ, Tabble, CRM) |
+| `src/data/content.ts` | Copy for every other section, including the FAQ |
+| `src/lib/seo.ts` | Per-route title/description/canonical/OG + the schema.org JSON-LD graph |
+| `src/lib/aieo.ts` | Generates `sitemap.xml`, `llms.txt` and `llms-full.txt` from the same data |
+| `src/entry-server.tsx` + `scripts/prerender.mjs` | Render each route to `dist/<route>/index.html` |
 
-- Bold, contrasting colors
-- Strong borders and shadows
-- Intentionally "raw" aesthetic
-- Playful yet purposeful design elements
+Edit the data files and everything — the pages, structured data, sitemap and LLM summaries — stays in sync.
 
-## 📄 License
+## Search & AI discoverability
 
-This project is open source and available under the [MIT License](LICENSE).
+- Every route ships real HTML (no "empty div" for crawlers or AI agents that don't run JS).
+- `Person` JSON-LD lists `alternateName` for common mishearings (“Jai Samuth”, “Jai Samyuktha”…), linked to Genrec AI and every profile via `sameAs`.
+- The same variants appear as **visible** text (hero, About › “How to say it”, footer), so they're honest content rather than hidden keywords.
+- FAQ on /about is mirrored as `FAQPage` structured data.
+- `/llms.txt` and `/llms-full.txt` give answer engines a clean plain-text profile; `robots.txt` explicitly allows AI crawlers.
+- Old hash URLs (`/#/work`) are redirected to real paths on load.
 
-## 👤 Author
-
-**Shyamnath Sankar**
-
-- GitHub: [@Shyamnath-Sankar](https://github.com/Shyamnath-Sankar)
+Images in `images/` are originals; optimised WebP versions live in `src/assets/`.

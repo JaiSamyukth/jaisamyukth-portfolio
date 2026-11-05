@@ -1,11 +1,21 @@
-# Robots.txt for Jai Samyukth Portfolio
-# https://jaisamyukth.genrecai.com
+# https://jaisamyukth.genrecai.com — Jai Samyukth B U
+# Search engines and AI assistants are welcome. Plain-text summaries live at /llms.txt and /llms-full.txt.
 
 User-agent: *
 Allow: /
 
-# Sitemap location
-Sitemap: https://jaisamyukth.genrecai.com/sitemap.xml
+# AI crawlers and answer engines: explicitly allowed
+User-agent: GPTBot
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: ClaudeBot
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
 
-# Crawl-delay for polite crawling
-Crawl-delay: 1
+Sitemap: https://jaisamyukth.genrecai.com/sitemap.xml

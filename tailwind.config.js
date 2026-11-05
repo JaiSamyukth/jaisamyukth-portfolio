@@ -1,41 +1,32 @@
 /** @type {import('tailwindcss').Config} */
 export default {
-  content: [
-    "./index.html",
-    "./**/*.{js,ts,jsx,tsx}",
-    "!./node_modules/**",
-  ],
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
   theme: {
     extend: {
       colors: {
-        'neo-white': '#fdfbf7', // slightly off-white parchment
-        'neo-black': '#0a0a0a',
-        'neo-green': '#ccff00', // Acid green
-        'neo-purple': '#b983ff', // Electric purple
-        'neo-pink': '#ff0099',  // Hot pink
-        'neo-blue': '#2b59ff',  // Electric Blue
-        'neo-yellow': '#fff500', // Intense Yellow
+        paper: '#f1ede4',
+        'paper-2': '#e7e2d6',
+        ink: '#0e0e0c',
+        'ink-2': '#1b1b18',
+        acid: '#ccff00',
+        blue: '#2b59ff',
+        muted: '#5f5b53',
+        'muted-dark': '#a29d92',
       },
       fontFamily: {
-        sans: ['"Space Grotesk"', 'sans-serif'],
-        mono: ['"Space Mono"', 'monospace'],
+        sans: ['"Space Grotesk"', 'ui-sans-serif', 'system-ui', 'sans-serif'],
+        serif: ['"Instrument Serif"', 'ui-serif', 'Georgia', 'serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'SFMono-Regular', 'monospace'],
       },
-      boxShadow: {
-        'neo': '6px 6px 0px 0px #000000',
-        'neo-lg': '10px 10px 0px 0px #000000',
-        'neo-sm': '4px 4px 0px 0px #000000',
-        'neo-hover': '12px 12px 0px 0px #000000',
+      fontSize: {
+        mega: ['clamp(3.4rem, 13.2vw, 15rem)', { lineHeight: '0.82', letterSpacing: '-0.055em' }],
+        display: ['clamp(2.6rem, 7.5vw, 7.5rem)', { lineHeight: '0.9', letterSpacing: '-0.045em' }],
+        title: ['clamp(2rem, 4.6vw, 4.25rem)', { lineHeight: '0.95', letterSpacing: '-0.035em' }],
+        lede: ['clamp(1.25rem, 2.1vw, 1.75rem)', { lineHeight: '1.3', letterSpacing: '-0.01em' }],
       },
-      animation: {
-        'marquee': 'marquee 25s linear infinite',
-      },
-      keyframes: {
-        marquee: {
-          '0%': { transform: 'translateX(0%)' },
-          '100%': { transform: 'translateX(-100%)' },
-        }
-      }
-    }
+      maxWidth: { page: '88rem' },
+      transitionTimingFunction: { expo: 'cubic-bezier(0.16, 1, 0.3, 1)' },
+    },
   },
   plugins: [],
-}
+};
