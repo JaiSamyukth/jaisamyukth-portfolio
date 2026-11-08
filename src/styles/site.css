@@ -338,3 +338,32 @@ a, button, summary, [role='button'] { cursor: pointer; }
   .wc__img, .work-cards li:nth-child(even) .wc__img { order: 0; border: 0; border-bottom: var(--b) solid var(--ink); }
 }
 @media (prefers-reduced-motion: reduce) { .work-cards .wc { rotate: none !important; } }
+
+/* ---------- jury v3 fixes ---------- */
+/* nav + logo answer in the button language, not colour alone */
+.frame__nav a { transition: background-color 0.15s, color 0.15s, translate 0.15s, box-shadow 0.15s, border-color 0.15s; }
+@media (hover: hover) {
+  .frame__nav a:hover { background: var(--acid); color: var(--ink); border-color: var(--ink); box-shadow: 3px 3px 0 var(--ink); translate: -2px -2px; }
+  .frame__nav a[aria-current='page']:hover { color: var(--ink); box-shadow: 6px 6px 0 var(--ink); }
+  .frame__name:hover { color: var(--ink); background: var(--yellow); box-shadow: 4px 4px 0 var(--ink); translate: -2px -2px; }
+}
+.frame__nav a:focus-visible { background: var(--acid); color: var(--ink); border-color: var(--ink); }
+.frame__name { padding: 0.1rem 0.4rem; transition: background-color 0.15s, translate 0.15s, box-shadow 0.15s; }
+/* "Say hi." gets a lime bar that wipes in */
+.footer__say { position: relative; }
+.footer__say::after { content: ''; position: absolute; left: 0; right: 0; bottom: -0.06em; height: 0.12em; background: var(--acid); transform: scaleX(0); transform-origin: left; transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+@media (hover: hover) { .footer__say:hover::after { transform: scaleX(1); } }
+.footer__say:focus-visible::after { transform: scaleX(1); }
+/* footer meta readable */
+.footer .mono.muted, .footer__base { color: #b8b6af; }
+/* mobile: stickers sit above titles instead of on them */
+@media (max-width: 767px) {
+  .crumbs { flex-wrap: nowrap; white-space: nowrap; align-items: baseline; }
+}
+/* case study: tighter, wider screens */
+.case-cover { padding-top: calc(var(--u) * 4); }
+.case__gallery { grid-template-columns: 1fr; }
+.rot-pill { white-space: nowrap; }
+
+.sticker--float { position: absolute; top: -1.4rem; left: 50%; translate: -50% 0; white-space: nowrap; }
+@media (max-width: 767px) { .sticker--float { position: static; translate: none; display: table; margin: -0.25rem auto 1.25rem; white-space: normal; } }

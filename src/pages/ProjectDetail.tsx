@@ -57,7 +57,7 @@ export function ProjectDetail() {
       </header>
 
       {p.cover ? (
-        <section className="section wrap" aria-label="Screens">
+        <section className="section--tight wrap case-cover" aria-label="Screens">
           <TiltedCard
             imageSrc={p.cover.large}
             altText={p.cover.alt}

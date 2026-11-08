@@ -8,7 +8,7 @@ import DotGrid from './rb/DotGrid';
 import CircularText from './rb/CircularText';
 import TextPressure from './rb/TextPressure';
 
-const BUILDS = ['MVPs people can demo', 'software that kills spreadsheets', 'AI that does the boring work', 'systems that survive real users'];
+const BUILDS = ['MVPs you can demo', 'spreadsheet killers', 'AI for boring work', 'systems that survive'];
 
 export function Hero() {
   return (

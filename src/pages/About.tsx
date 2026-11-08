@@ -19,7 +19,7 @@ export function About() {
             </p>
             <h1 className="t-mega" style={{ marginTop: '1.25rem' }} data-reveal="up" data-intro>
               Jai <br />
-              <span className="c-acid">Samyukth</span> B U.
+              <span className="c-acid">Samyukth</span> B&nbsp;U.
             </h1>
             <p className="phead__lede" style={{ color: '#d6d4cd' }} data-reveal="up" data-intro data-delay="0.15">
               I notice inefficient systems. I become obsessed with them. I build software until they stop being inefficient.

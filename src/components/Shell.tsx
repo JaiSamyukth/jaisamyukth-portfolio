@@ -85,10 +85,11 @@ function Frame() {
 }
 
 function Footer() {
+  const { pathname } = useLocation();
   return (
     <footer className="footer">
       <div className="wrap footer__top">
-        <div>
+        <div className={pathname === '/contact' ? 'sr-only' : undefined}>
           <p className="label c-acid">Have something that needs building?</p>
           <Magnet magnetStrength={4} padding={80}>
             <a href={`mailto:${person.email}`} className="footer__say" data-no-transition>

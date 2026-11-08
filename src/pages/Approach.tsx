@@ -9,7 +9,7 @@ export function Approach() {
       <div className="wrap section">
         <Crumbs trail={[{ label: 'My Method' }]} />
         <div className="card card--lg" style={{ position: 'relative', marginTop: '2.5rem' }}>
-          <p className="sticker bg-yellow tilt-r" style={{ position: 'absolute', top: '-1.4rem', left: '50%', translate: '-50% 0' }}>
+          <p className="sticker sticker--float bg-yellow tilt-r" >
             Confidential // approach_doc_v1
           </p>
           <h1 className="t-mega center" style={{ textDecoration: 'underline wavy var(--acid)', textUnderlineOffset: '0.12em', textDecorationThickness: '0.08em' }} data-reveal="up" data-intro>

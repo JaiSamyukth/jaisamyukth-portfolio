@@ -12,7 +12,7 @@ export function Contact() {
       <div className="wrap section" style={{ maxWidth: '64rem' }}>
         <Crumbs trail={[{ label: 'Complain' }]} />
         <div className="card" style={{ border: '8px solid var(--ink)', boxShadow: '16px 16px 0 var(--ink)', position: 'relative', marginTop: '2rem' }}>
-          <p className="sticker bg-ink tilt-r" style={{ position: 'absolute', top: '-1.4rem', left: '50%', translate: '-50% 0', color: 'var(--paper)' }}>
+          <p className="sticker sticker--float bg-ink tilt-r" style={{ color: 'var(--paper)' }}>
             Open frequency
           </p>
           <h1 className="t-mega center" data-reveal="up" data-intro>
