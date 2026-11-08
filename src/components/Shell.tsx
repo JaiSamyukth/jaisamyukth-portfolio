@@ -71,7 +71,7 @@ function Frame() {
           <ul className="menu__list">
             {[{ label: 'Home', path: '/', hint: 'start here' }, ...nav].map((n) => (
               <li key={n.path}>
-                <NavLink to={n.path} end>
+                <NavLink to={n.path} end data-label={n.label} onClick={() => n.path === pathname && setOpen(false)}>
                   <span>{n.label}</span>
                   <span className="label muted">{n.hint}</span>
                 </NavLink>

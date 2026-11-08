@@ -4,7 +4,7 @@
 // Opt a link out with data-no-transition.
 import { useEffect, useRef } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { boot, cleanup, enter, leave, onPage, type PageFn } from './index';
+import { boot, cleanup, enter, leave, onPage, replay, type PageFn } from './index';
 
 export function Engine({ setup }: { setup?: () => void }) {
   const navigate = useNavigate();
@@ -23,13 +23,22 @@ export function Engine({ setup }: { setup?: () => void }) {
       const a = (e.target as Element).closest('a');
       if (!a || (a.target && a.target !== '_self') || a.hasAttribute('download') || a.hasAttribute('data-no-transition')) return;
       const url = new URL(a.href, location.href);
-      if (url.origin !== location.origin || url.pathname === location.pathname) return;
+      if (url.origin !== location.origin) return;
+      const same = url.pathname === location.pathname;
+      if (same && url.hash) return; // in-page anchors keep their normal jump
       if (/\.(txt|xml|png|webp|svg)$/.test(url.pathname)) return; // static files, not routes
       e.preventDefault(); // React Router's <Link> sees defaultPrevented and stands down
       if (mode.current !== 'idle') return;
-      mode.current = 'push';
       const label = a.dataset.label || a.getAttribute('aria-label') || a.textContent?.trim() || '';
       const at = e.detail > 0 ? { x: e.clientX, y: e.clientY } : undefined; // keyboard clicks report 0,0
+      if (same) {
+        // The tab you're already on: splash again and go back to the top.
+        mode.current = 'push';
+        await replay(label.length > 40 ? '' : label, at);
+        mode.current = 'idle';
+        return;
+      }
+      mode.current = 'push';
       await leave(label.length > 40 ? '' : label, url.pathname, at);
       cleanup();
       navigate(url.pathname + url.search + url.hash);

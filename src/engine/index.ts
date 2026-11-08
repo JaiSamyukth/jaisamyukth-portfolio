@@ -71,6 +71,16 @@ export async function leave(label?: string, to?: string, at?: Point) {
   await playLeave(label, to, at);
 }
 
+/** Clicking the tab you're already on: play a cover, jump to the top, reveal. No re-render. */
+export async function replay(label?: string, at?: Point) {
+  if (!booted) return;
+  stopScroll();
+  await playLeave(label, location.pathname, at);
+  resetScroll();
+  await playEnter();
+  startScroll();
+}
+
 export function cleanup() {
   if (!ready) return;
   ready = false;
