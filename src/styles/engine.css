@@ -1,0 +1,83 @@
+/* ENGINE + FOUNDATION (from the awwwards engine). Project look lives in tokens.css and site.css. */
+*, *::before, *::after { box-sizing: border-box; }
+* { margin: 0; padding: 0; }
+html {
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+  background: var(--c-bg);
+  color: var(--c-fg);
+}
+body {
+  min-height: 100dvh;
+  font-family: var(--f-body);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  overflow-x: clip;
+}
+img, picture, video, canvas, svg { display: block; max-width: 100%; }
+img { height: auto; }
+input, button, textarea, select { font: inherit; color: inherit; }
+button { background: none; border: 0; cursor: pointer; }
+a { color: inherit; text-decoration: none; }
+ul, ol { list-style: none; }
+h1, h2, h3, h4 { font-weight: inherit; font-size: inherit; text-wrap: balance; }
+p { text-wrap: pretty; }
+::selection { background: var(--c-accent); color: var(--c-bg); }
+
+:focus-visible { outline: 2px solid var(--c-accent); outline-offset: 3px; border-radius: 2px; }
+.night :focus-visible, .on-photo :focus-visible { outline-color: var(--c-bg); }
+#main:focus { outline: none; }
+.skip-link {
+  position: fixed; left: var(--gutter); top: var(--gutter); z-index: calc(var(--z-curtain) + 1);
+  padding: 0.6em 1em; background: var(--c-fg); color: var(--c-bg);
+  transform: translateY(-200%);
+}
+.skip-link:focus-visible { transform: none; }
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+}
+
+/* Lenis */
+html.lenis, html.lenis body { height: auto; }
+.lenis:not(.lenis-autoToggle).lenis-stopped { overflow: clip; }
+.lenis [data-lenis-prevent] { overscroll-behavior: contain; }
+
+#main { position: relative; z-index: var(--z-content); }
+
+/* Hidden-until-revealed (only when motion is allowed and JS runs).
+   First load: intro elements animate in with CSS so they paint before JS (fast LCP on phones).
+   After the first in-site navigation, GSAP plays every intro behind the curtain. */
+.motion [data-split]:not([data-intro]), .motion [data-reveal]:not([data-intro]) { visibility: hidden; }
+.motion.is-navigated [data-intro] { visibility: hidden; }
+@keyframes intro-in { from { opacity: 0; transform: translateY(1.25rem); } }
+.motion:not(.is-navigated) [data-intro] { animation: intro-in 1s cubic-bezier(0.16, 1, 0.3, 1) 0.12s backwards; }
+.split-line { padding-bottom: 0.08em; margin-bottom: -0.08em; }
+[data-split] > *, [data-split] > * > * { text-indent: 0; }
+[data-split] > :first-child, [data-split] > :first-child > :first-child { text-indent: inherit; }
+
+/* Curtain: two halves meet on a seam. GSAP owns their transforms (no CSS transform here). */
+#curtain { position: fixed; inset: 0; z-index: var(--z-curtain); pointer-events: none; visibility: hidden; overflow: hidden; }
+.curtain__half { position: absolute; top: 0; bottom: 0; width: calc(50% + 1px); background: var(--c-curtain); }
+.curtain__half--l { left: 0; }
+.curtain__half--r { right: 0; }
+.curtain__seam { position: absolute; top: 0; bottom: 0; left: calc(50% - 3px); width: 6px; background: var(--acid); transform-origin: 50% 0%; }
+.curtain__fx { position: absolute; inset: 0; }
+.curtain__piece { position: absolute; will-change: transform; }
+.curtain__label {
+  z-index: 1;
+  position: absolute; left: 50%; top: 50%; translate: -50% -50%; padding-inline: 1rem;
+  color: var(--ink); font-size: var(--t-l); font-weight: 700; letter-spacing: -0.03em; white-space: nowrap; text-transform: uppercase;
+  background: var(--acid); border: 4px solid var(--ink); padding: 0.2em 0.6em; box-shadow: 6px 6px 0 var(--pink);
+}
+
+/* The deck deals label colours per transition (see transition.ts). */
+#curtain .curtain__label { background: var(--fx-lbg, var(--acid)); color: var(--fx-lfg, var(--ink)); box-shadow: 6px 6px 0 var(--fx-lsh, var(--pink)); }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }
+}

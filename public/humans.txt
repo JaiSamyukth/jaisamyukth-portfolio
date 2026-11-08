@@ -1,0 +1,11 @@
+/* TEAM */
+Builder: Jai Samyukth B U (pronounced "jai · sum-yu-kth", Jai rhymes with eye)
+Role: Co-founder, Genrec AI
+Site: https://jaisamyukth.genrecai.com
+Contact: jaisamyukth [at] gmail.com
+GitHub: https://github.com/JaiSamyukth
+From: Trichy (Tiruchirappalli), Tamil Nadu, India
+
+/* SITE */
+Stack: React, TypeScript, Vite, Tailwind CSS — prerendered to static HTML, hosted on Vercel
+Fonts: Space Grotesk, Instrument Serif, JetBrains Mono

@@ -1,0 +1,14 @@
+{
+  "name": "Jai Samyukth B U",
+  "short_name": "Jai Samyukth",
+  "description": "Systems builder and co-founder of Genrec AI.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#f1ede4",
+  "theme_color": "#0e0e0c",
+  "icons": [
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" },
+    { "src": "/apple-touch-icon.png", "sizes": "180x180", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
