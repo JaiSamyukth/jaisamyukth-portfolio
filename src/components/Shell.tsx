@@ -146,6 +146,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="curtain__half curtain__half--l" />
         <div className="curtain__half curtain__half--r" />
         <div className="curtain__seam" />
+        <div className="curtain__fx" />
         <div className="curtain__label" />
       </div>
       <Progress />

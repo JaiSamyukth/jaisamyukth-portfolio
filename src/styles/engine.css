@@ -66,11 +66,21 @@ html.lenis, html.lenis body { height: auto; }
 .curtain__half--l { left: 0; }
 .curtain__half--r { right: 0; }
 .curtain__seam { position: absolute; top: 0; bottom: 0; left: calc(50% - 3px); width: 6px; background: var(--acid); transform-origin: 50% 0%; }
+.curtain__fx { position: absolute; inset: 0; }
+.curtain__piece { position: absolute; will-change: transform; }
 .curtain__label {
   position: absolute; left: 50%; top: 50%; translate: -50% -50%; padding-inline: 1rem;
   color: var(--ink); font-size: var(--t-l); font-weight: 700; letter-spacing: -0.03em; white-space: nowrap; text-transform: uppercase;
   background: var(--acid); border: 4px solid var(--ink); padding: 0.2em 0.6em; box-shadow: 6px 6px 0 var(--pink);
 }
+
+/* Each transition gets a label that contrasts with its shape. */
+#curtain[data-fx='blinds'] .curtain__label { background: var(--yellow); box-shadow: 6px 6px 0 var(--ink); }
+#curtain[data-fx='iris'] .curtain__label { background: var(--pink); box-shadow: 6px 6px 0 var(--ink); }
+#curtain[data-fx='slash'] .curtain__label { background: var(--yellow); box-shadow: 6px 6px 0 var(--pink); }
+#curtain[data-fx='tiles'] .curtain__label { background: var(--acid); box-shadow: 6px 6px 0 var(--ink); }
+#curtain[data-fx='diamond'] .curtain__label { background: var(--ink); color: var(--acid); border-color: var(--acid); box-shadow: 6px 6px 0 var(--pink); }
+#curtain[data-fx='shutters'] .curtain__label { background: var(--pink); box-shadow: 6px 6px 0 var(--acid); }
 
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; scroll-behavior: auto !important; }

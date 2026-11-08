@@ -8,7 +8,7 @@ import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { initScroll, resetScroll, startScroll, stopScroll } from './scroll';
 import { initReveals } from './reveal';
-import { playEnter, playLeave } from './transition';
+import { playEnter, playLeave, type Point } from './transition';
 import { prefersReducedMotion } from './env';
 
 export { onScroll, scrollState, scrollToTarget, stopScroll, startScroll } from './scroll';
@@ -66,9 +66,9 @@ export async function boot(setup?: () => void) {
   intro?.play();
 }
 
-export async function leave(label?: string) {
+export async function leave(label?: string, to?: string, at?: Point) {
   stopScroll();
-  await playLeave(label);
+  await playLeave(label, to, at);
 }
 
 export function cleanup() {

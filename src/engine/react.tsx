@@ -29,7 +29,8 @@ export function Engine({ setup }: { setup?: () => void }) {
       if (mode.current !== 'idle') return;
       mode.current = 'push';
       const label = a.dataset.label || a.getAttribute('aria-label') || a.textContent?.trim() || '';
-      await leave(label.length > 40 ? '' : label);
+      const at = e.detail > 0 ? { x: e.clientX, y: e.clientY } : undefined; // keyboard clicks report 0,0
+      await leave(label.length > 40 ? '' : label, url.pathname, at);
       cleanup();
       navigate(url.pathname + url.search + url.hash);
     };
