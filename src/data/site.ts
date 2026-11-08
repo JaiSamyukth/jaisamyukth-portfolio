@@ -58,7 +58,7 @@ export const person = {
     'Jai comes from the Sanskrit “jaya”, meaning victory. Samyukth comes from “saṃyukta”, meaning united or joined together.',
   role: 'Co-founder of Genrec AI · Systems builder',
   jobTitle: 'Co-founder & Systems Engineer',
-  location: { city: 'Coimbatore', region: 'Tamil Nadu', country: 'India', countryCode: 'IN' },
+  location: { city: 'Trichy', officialCity: 'Tiruchirappalli', region: 'Tamil Nadu', country: 'India', countryCode: 'IN' },
   timeZone: 'Asia/Kolkata',
   education: 'B.Tech, Computer Science and Business Systems (CSBS)',
   email: 'jaisamyukth@gmail.com',
@@ -67,7 +67,7 @@ export const person = {
   oneLiner:
     'I notice what people have learned to tolerate, then write software until they don’t have to.',
   summary:
-    'Jai Samyukth B U is a systems builder and the co-founder of Genrec AI, based in Coimbatore, India. He builds MVPs, internal tools that replace spreadsheets, AI and LLM features, and real-time systems, including Lumina IQ (AI-powered active-recall learning) and Tabble (restaurant ordering for small restaurants).',
+    'Jai Samyukth B U is a systems builder and the co-founder of Genrec AI, based in Trichy (Tiruchirappalli), Tamil Nadu, India. He builds MVPs, internal tools that replace spreadsheets, AI and LLM features, and real-time systems, including Lumina IQ (AI-powered active-recall learning) and Tabble (restaurant ordering for small restaurants).',
   knowsAbout: [
     'Full-stack development',
     'AI and LLM integration',

@@ -4,7 +4,7 @@ Role: Co-founder, Genrec AI
 Site: https://jaisamyukth.genrecai.com
 Contact: jaisamyukth [at] gmail.com
 GitHub: https://github.com/JaiSamyukth
-From: Coimbatore, India
+From: Trichy (Tiruchirappalli), Tamil Nadu, India
 
 /* SITE */
 Stack: React, TypeScript, Vite, Tailwind CSS — prerendered to static HTML, hosted on Vercel

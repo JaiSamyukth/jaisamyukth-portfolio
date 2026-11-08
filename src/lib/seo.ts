@@ -37,10 +37,10 @@ const personNode = {
   worksFor: { '@id': ORG_ID },
   homeLocation: {
     '@type': 'Place',
-    name: `${person.location.city}, ${person.location.country}`,
+    name: `${person.location.city}, ${person.location.region}, ${person.location.country}`,
     address: {
       '@type': 'PostalAddress',
-      addressLocality: person.location.city,
+      addressLocality: person.location.officialCity,
       addressRegion: person.location.region,
       addressCountry: person.location.countryCode,
     },
@@ -68,7 +68,7 @@ const orgNode = {
   url: org.url,
   description: org.description,
   founder: { '@id': PERSON_ID },
-  address: { '@type': 'PostalAddress', addressLocality: person.location.city, addressCountry: person.location.countryCode },
+  address: { '@type': 'PostalAddress', addressLocality: person.location.officialCity, addressRegion: person.location.region, addressCountry: person.location.countryCode },
 };
 
 const websiteNode = {
@@ -137,7 +137,7 @@ const staticPages: Record<string, StaticDef> = {
   '/': {
     title: 'Jai Samyukth B U · Systems builder, co-founder of Genrec AI',
     description:
-      'Jai Samyukth B U, co-founder of Genrec AI in Coimbatore. I build MVPs, AI tools and software that kills spreadsheets. Fast, a bit messy, always shipped.',
+      'Jai Samyukth B U, co-founder of Genrec AI from Trichy, Tamil Nadu. I turn messy client problems into MVPs, AI tools and software that kills spreadsheets, and make sure they ship.',
     type: 'ProfilePage',
     ogType: 'profile',
   },
@@ -151,7 +151,7 @@ const staticPages: Record<string, StaticDef> = {
   '/about': {
     title: 'About Jai Samyukth B U: pronunciation, background and FAQ',
     description:
-      'Jai Samyukth B U: co-founder of Genrec AI, CSBS student, serial builder from Coimbatore with 30+ repos and a grudge against inefficient systems.',
+      'Jai Samyukth B U: co-founder of Genrec AI, CSBS student, serial builder from Trichy, Tamil Nadu with 30+ repos and a grudge against inefficient systems.',
     type: 'AboutPage',
     crumb: 'About',
     ogType: 'profile',

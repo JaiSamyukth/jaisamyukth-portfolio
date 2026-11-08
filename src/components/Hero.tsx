@@ -3,12 +3,9 @@ import { Link } from 'react-router-dom';
 import portrait960 from '../assets/portrait-960.webp';
 import { person } from '../data/site';
 import TiltedCard from './rb/TiltedCard';
-import RotatingText from './rb/RotatingText';
 import DotGrid from './rb/DotGrid';
 import CircularText from './rb/CircularText';
 import TextPressure from './rb/TextPressure';
-
-const BUILDS = ['MVPs you can actually demo', 'software that kills spreadsheets', 'AI that does the boring work', 'systems that survive real users'];
 
 export function Hero() {
   return (
@@ -33,26 +30,10 @@ export function Hero() {
             <br />
             <span className="hl hl--yellow">to tolerate.</span>
           </p>
-          <div className="hero__hi">
-            <p>
-              Five spreadsheets doing a database’s job. A waiter writing orders on his palm. A student rereading notes at 2 AM. Hi, I’m Jai Samyukth,
-              and most of my products started right there.
-            </p>
-            <p className="hero__rot">
-              <span>So now I build</span>
-              <span className="rot-wrap">
-                <RotatingText
-                  texts={BUILDS}
-                  mainClassName="rot-pill"
-                  staggerFrom="last"
-                  staggerDuration={0.02}
-                  rotationInterval={2600}
-                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-                />
-                <span aria-hidden="true">.</span>
-              </span>
-            </p>
-          </div>
+          <p className="hero__hi">
+            Then I get it fixed. I’m Jai Samyukth, co-founder of Genrec AI. I sit with clients until I understand the mess, turn it into a plan my team can
+            actually build, and stay on everyone’s case until it ships.
+          </p>
           <div className="hero__actions">
             <Link to="/work" className="neo-btn" data-label="Survivors">
               See my work <span className="arrow" aria-hidden="true">→</span>
@@ -70,15 +51,13 @@ export function Hero() {
           <div className="hero__photo-back" aria-hidden="true" />
           <TiltedCard
             imageSrc={portrait960}
-            altText={`${person.name}, co-founder of Genrec AI, at night in Coimbatore`}
-            captionText="Jai Samyukth · Coimbatore"
+            altText={`${person.name}, co-founder of Genrec AI`}
             containerHeight="min(36rem, 120vw)"
             containerWidth="100%"
             imageHeight="min(36rem, 120vw)"
             imageWidth="100%"
             rotateAmplitude={10}
             scaleOnHover={1.04}
-            showTooltip
             radius={0}
             glare={0.12}
           />

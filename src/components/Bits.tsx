@@ -20,7 +20,7 @@ export function Shot({ shot, sizes = '100vw', eager = false, className }: { shot
   );
 }
 
-/** Local time in Coimbatore. Stable placeholder on the server so hydration never drifts. */
+/** Local time in India (IST). Stable placeholder on the server so hydration never drifts. */
 export function LocalTime() {
   const [now, setNow] = useState<string | null>(null);
   useEffect(() => {

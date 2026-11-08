@@ -30,7 +30,6 @@ export function About() {
             <TiltedCard
               imageSrc={portrait960}
               altText={`${person.name}, co-founder of Genrec AI`}
-              captionText={`${person.name} · ${person.location.city}`}
               containerHeight="min(32rem, 110vw)"
               containerWidth="100%"
               imageHeight="min(32rem, 110vw)"

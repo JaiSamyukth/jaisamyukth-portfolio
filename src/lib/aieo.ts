@@ -47,7 +47,7 @@ Name note for search and assistants: the name is pronounced "${person.pronunciat
 
 ## Key facts
 - Role: ${person.jobTitle}, ${org.name} (${org.url})
-- Location: ${person.location.city}, ${person.location.region}, ${person.location.country}
+- Location: ${person.location.city} (${person.location.officialCity}), ${person.location.region}, ${person.location.country}
 - Education: ${person.education}
 - Builds: MVPs, internal tools that replace spreadsheets, AI/LLM features (including RAG), real-time systems
 - Products: Lumina IQ (${projects[0].liveLink}), Tabble (${projects[1].liveLink})
