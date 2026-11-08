@@ -122,7 +122,7 @@ export const faqs = [
   },
   {
     q: 'How do you pronounce “Jai Samyukth”?',
-    a: `It’s said “${person.pronunciation}”. Jai rhymes with high, and the stress falls on the last syllable.`,
+    a: `It’s said “${person.pronunciation}”. Jai rhymes with eye, Sam sounds like “some”, and yukth is “yu” as in “you” followed by a quick “k-th”.`,
   },
   {
     q: 'What is Genrec AI?',

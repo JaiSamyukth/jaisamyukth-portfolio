@@ -180,7 +180,7 @@ const staticPages: Record<string, StaticDef> = {
   '/name': {
     title: 'How to say & spell Jai Samyukth (not Jai Samuth or Jai Sampath)',
     description:
-      'Jai Samyukth is said “jai · sum-YOOKTH”. Often typed as Jai Samuth, Jai Sampath or Jay Samyukth: all the same person, the co-founder of Genrec AI.',
+      'Jai Samyukth is said “jai · sum-yu-kth”, with Jai rhyming with eye. Often typed as Jai Samuth, Jai Sampath or Jay Samyukth: all the same person, the co-founder of Genrec AI.',
     type: 'WebPage',
     crumb: 'The name',
   },
@@ -228,7 +228,7 @@ export function getMeta(rawPath: string): PageMeta {
           {
             '@type': 'Question',
             name: 'How do you pronounce Jai Samyukth?',
-            acceptedAnswer: { '@type': 'Answer', text: `It is pronounced “${person.pronunciation}”: Jai (rhymes with high), Sam (as in some), yukth (stressed, soft k then th).` },
+            acceptedAnswer: { '@type': 'Answer', text: `It is pronounced “${person.pronunciation}”: Jai (rhymes with eye), Sam (as in some), yukth (“yu” as in you, then a quick k and a soft th).` },
           },
           {
             '@type': 'Question',

@@ -9,9 +9,9 @@ export const person = {
   givenName: 'Jai Samyukth',
   familyName: 'B U',
   // How the name sounds, written as a respelling a human can read aloud.
-  pronunciation: 'jai · sum-YOOKTH',
+  pronunciation: 'jai · sum-yu-kth',
   // Spoken text for the "hear it" button (speech engines handle the respelling better).
-  spoken: 'Jai, Sum-yookth',
+  spoken: 'Jai, Sum-yu-kth',
   /**
    * Spellings people actually type when they've only heard the name.
    * These are rendered as visible text (About page + footer) and listed as
@@ -42,7 +42,7 @@ export const person = {
   typos: [
     { typed: 'Jai Samuth', why: 'The “y” and “k” get swallowed when the name is said quickly.' },
     { typed: 'Jai Sampath', why: 'Sampath is a far more common name, so ears and autocorrect reach for it.' },
-    { typed: 'Jay Samyukth', why: 'Jai and Jay sound identical; it’s spelled J-A-I.' },
+    { typed: 'Jay Samyukth', why: 'Jay is the spelling English keyboards reach for, but it’s J-A-I and rhymes with “eye”, not “day”.' },
     { typed: 'Jai Samyuktha / Samyukta', why: 'Samyuktha is a related name, more often feminine. Mine has no final “a”.' },
     { typed: 'Jai Samyuth', why: 'The “k” is soft, so it often disappears in writing.' },
     { typed: 'Jai Samyukt / Samyuk', why: 'The final “th” gets dropped.' },
@@ -50,9 +50,9 @@ export const person = {
   ],
   /** Syllables for the spelling breakdown on /name. */
   syllables: [
-    { part: 'Jai', say: 'jai', note: 'rhymes with “high”' },
+    { part: 'Jai', say: 'jai', note: 'rhymes with “eye”, “high” and “why”' },
     { part: 'Sam', say: 'sum', note: 'as in “some”' },
-    { part: 'yukth', say: 'YOOKTH', note: 'stressed; a soft “k”, then “th”' },
+    { part: 'yukth', say: 'yu-kth', note: '“yu” as in “you”, then a quick “k” and a soft “th”' },
   ],
   meaning:
     'Jai comes from the Sanskrit “jaya”, meaning victory. Samyukth comes from “saṃyukta”, meaning united or joined together.',
