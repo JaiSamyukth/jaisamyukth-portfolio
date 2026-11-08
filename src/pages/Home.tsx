@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { WorkIndex } from '../components/WorkIndex';
-import { howItGoes, obsessions, services, stats, testimonial, tickerLines, trackRecord } from '../data/content';
+import { howItGoes, obsessions, services, stats, testimonial, tickerLines } from '../data/content';
 import ScrollVelocity from '../components/rb/ScrollVelocity';
 import ScrollReveal from '../components/rb/ScrollReveal';
 import CountUp from '../components/rb/CountUp';
@@ -15,7 +15,7 @@ export function Home() {
 
       <section aria-label="Currently taking on" className="band bg-yellow">
         <ScrollVelocity
-          texts={[`Currently taking on → ${tickerLines.join(' → ')} ✦`, `${trackRecord[3]} ✦ No 30-page proposals ✦`]}
+          texts={[`Currently taking on → ${tickerLines.join(' → ')} ✦`]}
           velocity={60}
           fontSize="clamp(1.4rem, 3.4vw, 3rem)"
           fontWeight={700}
