@@ -22,17 +22,16 @@ export function Hero() {
             <i />
           </div>
           <p className="hero__title">
-            I notice
+            Hi, I’m Jai.
             <br />
-            what people
+            I help ideas
             <br />
-            have learned
+            leave the
             <br />
-            <span className="hl hl--yellow">to tolerate.</span>
+            <span className="hl hl--yellow">group chat.</span>
           </p>
           <p className="hero__hi">
-            Then I get it fixed. I’m Jai Samyukth, co-founder of Genrec AI. I sit with clients until I understand the mess, turn it into a plan my team can
-            actually build, and stay on everyone’s case until it ships.
+            Co-founder of Genrec AI. I talk to clients, plan the work with my team, and make sure it actually ships.
           </p>
           <div className="hero__actions">
             <Link to="/work" className="neo-btn" data-label="Survivors">
