@@ -8,7 +8,7 @@ import DotGrid from './rb/DotGrid';
 import CircularText from './rb/CircularText';
 import TextPressure from './rb/TextPressure';
 
-const BUILDS = ['MVPs you can demo', 'spreadsheet killers', 'AI for boring work', 'systems that survive'];
+const BUILDS = ['MVPs you can actually demo', 'software that kills spreadsheets', 'AI that does the boring work', 'systems that survive real users'];
 
 export function Hero() {
   return (
@@ -34,17 +34,23 @@ export function Hero() {
             <span className="hl hl--yellow">to tolerate.</span>
           </p>
           <div className="hero__hi">
-            <p>Hi, I’m Jai Samyukth. Most of my products started there.</p>
+            <p>
+              Five spreadsheets doing a database’s job. A waiter writing orders on his palm. A student rereading notes at 2 AM. Hi, I’m Jai Samyukth,
+              and most of my products started right there.
+            </p>
             <p className="hero__rot">
-              <span>I build</span>
-              <RotatingText
-                texts={BUILDS}
-                mainClassName="rot-pill"
-                staggerFrom="last"
-                staggerDuration={0.02}
-                rotationInterval={2600}
-                transition={{ type: 'spring', damping: 30, stiffness: 400 }}
-              />
+              <span>So now I build</span>
+              <span className="rot-wrap">
+                <RotatingText
+                  texts={BUILDS}
+                  mainClassName="rot-pill"
+                  staggerFrom="last"
+                  staggerDuration={0.02}
+                  rotationInterval={2600}
+                  transition={{ type: 'spring', damping: 30, stiffness: 400 }}
+                />
+                <span aria-hidden="true">.</span>
+              </span>
             </p>
           </div>
           <div className="hero__actions">

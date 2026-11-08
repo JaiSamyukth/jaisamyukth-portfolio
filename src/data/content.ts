@@ -60,13 +60,13 @@ export const approachSteps = [
   { title: 'Observe', body: 'Watch how humans actually use things, which is rarely how the documentation says they should.' },
   { title: 'Panic', body: 'Realize how much time and money is being burned by manual copy-pasting.' },
   { title: 'Build', body: 'Write code that absorbs the chaos instead of just putting a nice UI on top of it.' },
-  { title: 'Break & fix', body: 'Deploy it. Watch users break it in ways you never imagined. Fix it at 2 AM.' },
+  { title: 'Break & fix', body: 'Deploy it. Watch users break it in ways you never imagined. Fix it at 2 AM.' },
 ];
 
 export const learnings = [
   'Users don’t read. They click.',
   'Production doesn’t care that it worked locally.',
-  'Git remembers everything. Especially the 3 AM commits.',
+  'Git remembers everything. Especially the 3 AM commits.',
   'Backups are cheaper than confidence.',
   'Cloud invoices are educational material. Expensive, unskippable material.',
   'Every “small feature” is lying about its size.',
@@ -83,7 +83,7 @@ export const learnings = [
 export const howItGoes = [
   { title: 'You send me the mess', body: 'Screenshots, a voice note, a spreadsheet called FINAL_v7. I’ve seen worse. Probably.' },
   { title: 'I ship something real in days', body: 'Not a deck. Not a Figma file. A thing you can click, break and show your investors.' },
-  { title: 'It breaks, I fix it', body: 'Users will find bugs I didn’t know were physically possible. I fix them, usually before you notice. Occasionally at 2 AM.' },
+  { title: 'It breaks, I fix it', body: 'Users will find bugs I didn’t know were physically possible. I fix them, usually before you notice. Occasionally at 2 AM.' },
 ];
 
 export const emailBrief = [

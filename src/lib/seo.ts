@@ -159,7 +159,7 @@ const staticPages: Record<string, StaticDef> = {
   '/approach': {
     title: 'Approach: observe, panic, build, fix | Jai Samyukth B U',
     description:
-      'My method: watch people suffer, panic, build the fix, break it in production, fix it at 2 AM. No 3-week discovery phases. By Jai Samyukth B U.',
+      'My method: watch people suffer, panic, build the fix, break it in production, fix it at 2 AM. No 3-week discovery phases. By Jai Samyukth B U.',
     type: 'WebPage',
     crumb: 'Approach',
   },

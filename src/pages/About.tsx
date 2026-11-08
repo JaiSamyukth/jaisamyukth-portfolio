@@ -54,7 +54,7 @@ export function About() {
               <div className="stack-gap t-m">
                 <p>
                   I started building things because I couldn’t stop. Eventually, someone paid me for it. Then the first AWS invoice arrived, politely informing me that
-                  curiosity isn’t free. I learned infrastructure the only way that works: by breaking it at 1 AM and frantically trying to fix it before anyone noticed.
+                  curiosity isn’t free. I learned infrastructure the only way that works: by breaking it at 1 AM and frantically trying to fix it before anyone noticed.
                 </p>
                 <p>
                   My projects usually start because I watch people do something stupid. Lumina IQ exists because I watched students highlight entire PDFs and somehow
@@ -68,11 +68,11 @@ export function About() {
             </div>
             <div className="card bg-yellow tilt-l">
               <h2 className="t-l" style={{ marginBottom: '0.75rem' }}>
-                Why I build
+                What I’m like to work with
               </h2>
               <p className="t-m">
-                I can’t ignore inefficient systems. I watch people do things manually, panic slightly at how much time they are burning, and then disappear to write
-                code until the problem goes away. Everything I build starts exactly like that.
+                Fast, direct and mildly allergic to meetings. You’ll get a working link before you get a status update, and I’ll tell you when an idea is bad,
+                including mine. If something breaks at 2 AM, so does my sleep schedule.
               </p>
             </div>
             <div>

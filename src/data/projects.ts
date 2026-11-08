@@ -110,7 +110,7 @@ export const projects: Project[] = [
     hook: 'Restaurant software usually assumes perfect communication. Restaurants don’t.',
     overview: 'Three interfaces: Customer taps what they want. Chef sees it instantly. Admin watches the chaos. No shouting, no illegible handwritten notes, no forgotten extra-spicy requests. I wired the whole thing together with WebSockets.',
     problem: 'Waiters shouldn’t have to memorize 15 different modifications to a burger. Go to a small restaurant and watch how orders happen. It’s usually a guy trying to write on a tiny pad while balancing plates.',
-    build: 'Turns out a ₹5,000 tablet and a basic cloud setup solves the entire problem. Nobody built it because the small restaurant market isn’t glamorous enough for VC money. I built it because I hate watching bad workflows.',
+    build: 'Turns out a ₹5,000 tablet and a basic cloud setup solves the entire problem. Nobody built it because the small restaurant market isn’t glamorous enough for VC money. I built it because I hate watching bad workflows.',
     outcomes: [
       'Removed manual order taking',
       'Made the kitchen slightly less chaotic',
@@ -131,7 +131,7 @@ export const projects: Project[] = [
     ],
     accent: 'blue',
     year: '2025',
-    oneLiner: 'Restaurant ordering on a ₹5,000 tablet. Customer taps, chef sees it in real time, owner watches the money come in.',
+    oneLiner: 'Restaurant ordering on a ₹5,000 tablet. Customer taps, chef sees it in real time, owner watches the money come in.',
     forWho: 'Small restaurants in India that can’t justify a ₹1 lakh POS and are tired of decoding a waiter’s handwriting.',
     joins: { from: '3 screens', to: '1 order', note: 'Customer, chef and admin, synced live' },
   },
