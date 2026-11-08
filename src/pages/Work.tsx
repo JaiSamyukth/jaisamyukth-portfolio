@@ -1,32 +1,26 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { WorkIndex } from '../components/WorkIndex';
-import { Arrow } from '../components/Bits';
 import { PageHead } from '../components/PageHead';
-import { projects } from '../data/projects';
 
 export function Work() {
   return (
     <>
       <PageHead
-        crumb="Work"
-        title="Work"
-        lede="Products from Genrec AI and client systems that run every day. I have dozens of abandoned repositories; these are the ones that made it."
-        facts={[
-          { k: 'Systems in use', v: projects.length },
-          { k: 'Years', v: '2024 to now' },
-          { k: 'Built from', v: 'Coimbatore' },
-        ]}
-      />
-      <section className="wrap section--tight" aria-label="Projects">
+        crumb="Survivors"
+        tag="Survivors: 3 · Abandoned: lots"
+        lede="I have dozens of abandoned repositories. These are the ones that actually made it. Mostly because someone paid me, or because I got annoyed enough to finish them."
+      >
+        Things that <span className="hl hl--acid">survived</span>
+      </PageHead>
+      <section className="section wrap" aria-label="Projects">
         <WorkIndex level={2} />
       </section>
-      <section className="wrap section">
-        <div className="index__head" style={{ marginBottom: 0 }}>
-          <p className="t-l measure">The other ninety percent lives in the lab, with notes on why it failed.</p>
-          <Link to="/experimental" className="btn btn--ghost" data-label="Lab">
-            <span>Visit the lab</span>
-            <Arrow />
+      <section className="section--tight wrap">
+        <div className="card card--lg bg-purple" style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'space-between', alignItems: 'center' }}>
+          <p className="t-l">Want the 90% that didn’t make it?</p>
+          <Link to="/experimental" className="neo-btn neo-btn--ink" data-label="Lab">
+            Enter the graveyard <span className="arrow" aria-hidden="true">→</span>
           </Link>
         </div>
       </section>

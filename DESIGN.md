@@ -1,5 +1,29 @@
 # DESIGN.md: jaisamyukth.genrecai.com
 
+## v3 (current): loud on purpose
+
+The owner's verdict on v2 ("Samyukth means joined", one grotesk, one muted violet) was that it lost
+the fun, the colour and the voice of the original site. v3 brings that personality back on top of
+v2's foundations (prerendered SEO, accessibility, performance, the page-transition engine).
+
+- **Palette:** the original neo-brutalist set: paper #fdfbf7, ink #0a0a0a, acid #ccff00, pink #ff0099,
+  blue #2b59ff, yellow #fff500, purple #b983ff. Hard 4 px borders, offset shadows, tilted stickers.
+- **Type:** Space Grotesk + Space Mono (the original brand fonts), self-hosted. The hero name uses
+  Roboto Flex (variable width/weight) subset to the name's letters, for the TextPressure effect.
+- **Copy:** the original, uncensored voice is restored (nav: Survivors, The Idiot, My Method, Scars,
+  Lab, Complain).
+- **React Bits components** (vendored in `src/components/rb/`, TS + CSS variants):
+  TextPressure (hero name), RotatingText (what I build), TiltedCard (portraits, case covers),
+  DotGrid (hero background), CircularText (badges), ScrollVelocity (marquees), ScrollReveal
+  (manifesto), CountUp (stats), ChromaGrid (work grid), SpotlightCard (testimonial), Magnet
+  ("Say hi"), ClickSpark (brand-coloured sparks on every click), FuzzyText (404), FallingText
+  (Scars page, physics loaded only on demand). Local edit: ChromaGrid opens internal links in place.
+
+---
+
+## v2 (superseded): "Samyukth means joined"
+
+
 Built with the `/awwwards` method: brief, three concepts, one system, then QA against the
 Awwwards rubric with a blind critic.
 

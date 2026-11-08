@@ -1,127 +1,141 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import portrait960 from '../assets/portrait-960.webp';
-import portrait1600 from '../assets/portrait-1600.webp';
 import { org, person, socials } from '../data/site';
 import { faqs, stack, timeline } from '../data/content';
-import { Arrow, Crumbs, SayIt } from '../components/Bits';
+import { Crumbs, SayIt } from '../components/Bits';
+import TiltedCard from '../components/rb/TiltedCard';
+import ScrollVelocity from '../components/rb/ScrollVelocity';
 
 export function About() {
   const devto = socials.find((s) => s.label === 'Dev.to')!;
   return (
     <>
-      <header className="pagehead wrap about-head">
-        <Crumbs trail={[{ label: 'About' }]} />
-        <div className="pagehead__grid">
-          <h1 className="t-mega" data-split="chars" data-intro>
-            About
-          </h1>
-          <figure className="about__photo" style={{ gridColumn: "auto" }} data-reveal="clip" data-intro data-delay="0.2">
-            <div className="frame-img">
-              <img
-                src={portrait960}
-                srcSet={`${portrait960} 960w, ${portrait1600} 1600w`}
-                sizes="(max-width: 767px) 100vw, 40vw"
-                width={960}
-                height={1309}
-                alt={`${person.name}, co-founder of Genrec AI`}
-                fetchPriority="high"
-              />
-            </div>
-            <figcaption className="label" style={{ marginTop: '0.6rem' }}>
-              {person.name}, {person.location.city}
-            </figcaption>
-          </figure>
+      <header className="phead night" style={{ borderBottom: '8px solid var(--yellow)' }}>
+        <div className="wrap about-grid">
+          <div>
+            <Crumbs trail={[{ label: 'The Idiot' }]} />
+            <p className="label c-yellow" style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
+              <span style={{ width: '4rem', height: '0.4rem', background: 'var(--yellow)', display: 'inline-block' }} /> Serial_builder_v1.0
+            </p>
+            <h1 className="t-mega" style={{ marginTop: '1.25rem' }} data-reveal="up" data-intro>
+              Jai <br />
+              <span className="c-acid">Samyukth</span> B U.
+            </h1>
+            <p className="phead__lede" style={{ color: '#d6d4cd' }} data-reveal="up" data-intro data-delay="0.15">
+              I notice inefficient systems. I become obsessed with them. I build software until they stop being inefficient.
+            </p>
+          </div>
+          <div style={{ position: 'relative', maxWidth: '26rem', justifySelf: 'center', width: '100%' }}>
+            <div className="hero__photo-back" aria-hidden="true" style={{ background: 'var(--pink)' }} />
+            <TiltedCard
+              imageSrc={portrait960}
+              altText={`${person.name}, co-founder of Genrec AI`}
+              captionText={`${person.name} · ${person.location.city}`}
+              containerHeight="min(32rem, 110vw)"
+              containerWidth="100%"
+              imageHeight="min(32rem, 110vw)"
+              imageWidth="100%"
+              rotateAmplitude={10}
+              scaleOnHover={1.04}
+              radius={0}
+              glare={0.12}
+            />
+          </div>
         </div>
       </header>
 
-      <section className="wrap section--tight">
-        <div className="grid">
-          <p className="t-xl about-say" style={{ gridColumn: '1 / 8' }} data-split="lines">
-            A name that means victory, joined. Fitting, for someone who glues systems together.
-          </p>
-          <div className="about__text about-say" style={{ gridColumn: "8 / -1" }}>
-            <p className="t-l" data-split="lines" data-intro data-delay="0.3">
-              I notice inefficient systems, become a little obsessed with them, and build software until they stop being inefficient.
-            </p>
-            <p data-reveal="up">
-              I started building things because I couldn’t stop. Then someone paid me for it. Then the first AWS invoice arrived, politely explaining that
-              curiosity isn’t free, and I learned infrastructure the only way that works: by breaking it at 1 AM and fixing it before anyone noticed.
-            </p>
-            <p data-reveal="up">
-              Lumina IQ exists because I watched students highlight entire PDFs and expect their brains to cooperate. Tabble exists because waiters
-              end up with superhero memory, since the software has none. Messy code in production beats clean code in a private repo.
-            </p>
-            <p className="muted" style={{ fontSize: 'var(--t-body)' }} data-reveal="up">
-              Co-founder of{' '}
-              <a href={org.url} target="_blank" rel="noopener" className="link">
-                Genrec AI
-              </a>
-              , where client builds fund our own products. {person.education}.
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="night section--tight" id="say-it" aria-labelledby="say-title">
-        <div className="wrap grid">
-          <h2 id="say-title" className="label about-say" style={{ gridColumn: '1 / 4' }}>
-            The name
-          </h2>
-          <div className="about-say" style={{ gridColumn: '4 / -1', display: 'flex', flexWrap: 'wrap', gap: '1rem 2rem', alignItems: 'center' }}>
-            <p className="t-l">/ {person.pronunciation} /</p>
-            <SayIt />
-            <p className="muted" style={{ flexBasis: '100%', maxWidth: '40rem' }}>
-              {person.meaning}
-            </p>
-          </div>
-        </div>
-      </section>
-
-      <section className="wrap section" aria-labelledby="stack-title">
-        <h2 id="stack-title" className="t-xl" data-split="lines" style={{ marginBottom: 'calc(var(--u) * 5)' }}>
-          Things I argue with
-        </h2>
-        <div className="stack">
-          {stack.map((g) => (
-            <div key={g.group} data-reveal="up">
-              <h3>{g.group}</h3>
-              <ul>
-                {g.items.map((i) => (
-                  <li key={i}>{i}</li>
-                ))}
-              </ul>
-              {g.aside ? (
-                <p className="muted t-xs" style={{ marginTop: '0.8rem' }}>
-                  {g.aside}
+      <section className="section wrap">
+        <div className="about-grid">
+          <div className="stack-gap">
+            <div className="card card--lg">
+              <h2 className="t-l" style={{ borderBottom: 'var(--b) solid var(--ink)', paddingBottom: '0.5rem', marginBottom: '1.25rem' }}>
+                Background
+              </h2>
+              <div className="stack-gap t-m">
+                <p>
+                  I started building things because I couldn’t stop. Eventually, someone paid me for it. Then the first AWS invoice arrived, politely informing me that
+                  curiosity isn’t free. I learned infrastructure the only way that works: by breaking it at 1 AM and frantically trying to fix it before anyone noticed.
                 </p>
-              ) : null}
-            </div>
-          ))}
-        </div>
-      </section>
-
-      <section className="wrap section" aria-labelledby="time-title">
-        <h2 id="time-title" className="t-xl" data-split="lines" style={{ marginBottom: 'calc(var(--u) * 5)' }}>
-          Mistakes and fixes
-        </h2>
-        <ol className="timeline">
-          {timeline.map((t) => (
-            <li key={t.title} data-reveal="fade">
-              <span className="label tabular">{t.when}</span>
-              <div>
-                <h3>{t.title}</h3>
-                <p className="muted" style={{ marginTop: '0.35rem', maxWidth: '44rem' }}>
-                  {t.body}
+                <p>
+                  My projects usually start because I watch people do something stupid. Lumina IQ exists because I watched students highlight entire PDFs and somehow
+                  expect their brains to cooperate. Tabble exists because every waiter eventually develops superhero-level memory because the software doesn’t.
+                </p>
+                <p>
+                  I write code until it solves the problem. Sometimes it’s messy, but messy code running in production beats clean code sitting in a private repo
+                  forever.
                 </p>
               </div>
-            </li>
-          ))}
-        </ol>
+            </div>
+            <div className="card bg-yellow tilt-l">
+              <h2 className="t-l" style={{ marginBottom: '0.75rem' }}>
+                Why I build
+              </h2>
+              <p className="t-m">
+                I can’t ignore inefficient systems. I watch people do things manually, panic slightly at how much time they are burning, and then disappear to write
+                code until the problem goes away. Everything I build starts exactly like that.
+              </p>
+            </div>
+            <div>
+              <h2 className="t-l" style={{ marginBottom: '1.25rem' }}>
+                Things I argue with
+              </h2>
+              <div className="skills">
+                {stack.map((g) => (
+                  <div key={g.group} className="card" style={{ padding: '1.1rem' }}>
+                    <h3>{g.group}</h3>
+                    <ul>
+                      {g.items.map((i) => (
+                        <li key={i}>{i}</li>
+                      ))}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="card bg-blue">
+              <h2 className="label c-yellow" style={{ marginBottom: '0.5rem' }}>
+                // The name
+              </h2>
+              <p className="t-l">/ {person.pronunciation} /</p>
+              <p style={{ marginTop: '0.5rem' }}>{person.meaning}</p>
+              <div style={{ marginTop: '1rem' }}>
+                <SayIt />
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h2 className="t-l" style={{ borderBottom: 'var(--b) solid var(--ink)', paddingBottom: '0.5rem', marginBottom: '2rem' }}>
+              Timeline of mistakes &amp; fixes
+            </h2>
+            <ol className="timeline">
+              {timeline.map((t) => (
+                <li key={t.title} data-reveal="up">
+                  <div className="card">
+                    <span className="sticker bg-ink" style={{ boxShadow: 'none', color: 'var(--paper)' }}>
+                      {t.when}
+                    </span>
+                    <h3>{t.title}</h3>
+                    <p style={{ marginTop: '0.35rem' }}>{t.body}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+            <div className="card bg-ink" style={{ marginTop: '2.5rem' }}>
+              <h2 className="label c-acid">// Notes to self</h2>
+              <p className="mono" style={{ margin: '0.75rem 0 1.25rem' }}>
+                Occasional rants about broken workflows and things I built.
+              </p>
+              <a href={devto.href} target="_blank" rel="me noopener noreferrer" className="neo-btn">
+                Read on dev.to <span className="arrow" aria-hidden="true">→</span>
+              </a>
+            </div>
+          </div>
+        </div>
       </section>
 
-      <section className="wrap section faq" id="faq" aria-labelledby="faq-title">
-        <h2 id="faq-title" className="t-xl" data-split="lines" style={{ marginBottom: 'calc(var(--u) * 5)' }}>
+      <section className="section--tight wrap faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title" className="t-xl" style={{ marginBottom: '2rem' }}>
           Questions people ask
         </h2>
         {faqs.map((f, i) => (
@@ -135,16 +149,17 @@ export function About() {
             <p>{f.a}</p>
           </details>
         ))}
+        <p className="mono muted" style={{ marginTop: '1.5rem' }}>
+          Co-founder of{' '}
+          <a href={org.url} target="_blank" rel="noopener" className="ulink tap">
+            Genrec AI
+          </a>
+          . {person.education}.
+        </p>
       </section>
 
-      <section className="wrap section--tight">
-        <div className="index__head" style={{ marginBottom: 0 }}>
-          <p className="t-l measure">Occasional rants about broken workflows, on dev.to.</p>
-          <a href={devto.href} target="_blank" rel="me noopener noreferrer" className="btn btn--solid">
-            <span>Read the notes</span>
-            <Arrow />
-          </a>
-        </div>
+      <section className="band bg-blue bt" aria-hidden="true">
+        <ScrollVelocity texts={['Available for contracts ✦ Fixing broken code ✦ Ignoring best practices to get things done ✦']} velocity={50} fontSize="clamp(1.3rem, 3vw, 2.6rem)" fontWeight={700} color="#ffffff" numCopies={3} />
       </section>
     </>
   );

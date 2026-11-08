@@ -2,91 +2,119 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { WorkIndex } from '../components/WorkIndex';
-import { Arrow } from '../components/Bits';
-import { projects } from '../data/projects';
-import { services, testimonial } from '../data/content';
+import { obsessions, services, stats, testimonial, tickerLines, trackRecord } from '../data/content';
+import ScrollVelocity from '../components/rb/ScrollVelocity';
+import ScrollReveal from '../components/rb/ScrollReveal';
+import CountUp from '../components/rb/CountUp';
+import SpotlightCard from '../components/rb/SpotlightCard';
 
 export function Home() {
   return (
     <>
       <Hero />
 
-      <section className="section--airy wrap" aria-labelledby="statement">
-        <div className="grid">
-          <h2 id="statement" className="sr-only">
-            What I do
-          </h2>
-          <p className="statement__text t-l" data-split="lines">
-            I notice what people have learned to tolerate. The five spreadsheets, the waiter with a notepad, the student rereading a PDF the night before.
-            Then I write software until they don’t have to.
-          </p>
-          <ul className="statement__list" data-reveal="fade">
-            {services.map((s) => (
-              <li key={s.title}>{s.title}</li>
-            ))}
-          </ul>
+      <section aria-label="Currently taking on" className="band bg-yellow">
+        <ScrollVelocity
+          texts={[`Currently taking on → ${tickerLines.join(' → ')} ✦`, `${trackRecord[3]} ✦ No 30-page proposals ✦`]}
+          velocity={60}
+          fontSize="clamp(1.4rem, 3.4vw, 3rem)"
+          fontWeight={700}
+          color="#0a0a0a"
+          skewWithVelocity={6}
+          numCopies={4}
+        />
+      </section>
+
+      <section className="night section statement" aria-label="Positioning">
+        <div className="wrap">
+          <ScrollReveal baseOpacity={0.28} enableBlur blurStrength={4} baseRotation={2} highlightColor="#ccff00" effect="rise">
+            If you want a 30-page proposal and 3 weeks of meetings, I’m not your guy. If you want something built, broken, fixed, and shipped before Friday,
+            we’ll get along fine.
+          </ScrollReveal>
         </div>
       </section>
 
-      <section className="section wrap" aria-labelledby="work-title">
-        <div className="index__head">
-          <h2 id="work-title" className="t-xl" data-split="lines">
-            Selected work
-          </h2>
-          <p className="muted measure">The projects that survived past 48 hours, because someone paid me or I got annoyed enough to finish them.</p>
+      <section className="section wrap" aria-labelledby="record">
+        <div className="shead">
+          <div>
+            <h2 id="record" className="t-xl">
+              Track record
+            </h2>
+            <p>// numbers I’m willing to say out loud</p>
+          </div>
+        </div>
+        <div className="stats">
+          {stats.map((s) => (
+            <div key={s.label} className={`stat bg-${s.color}`}>
+              <p className="stat__n">
+                <CountUp to={s.to} duration={2.2} suffix={s.suffix} trigger="view" />
+              </p>
+              <p className="stat__l">{s.label}</p>
+              <p className="stat__note">{s.note}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="section wrap bt" aria-labelledby="survived">
+        <div className="shead">
+          <div>
+            <h2 id="survived" className="t-xl">
+              Things that survived
+            </h2>
+            <p>The projects that didn’t get abandoned after 48 hours.</p>
+          </div>
+          <Link to="/work" className="neo-btn neo-btn--paper" data-label="Survivors">
+            View all the messes <span className="arrow" aria-hidden="true">→</span>
+          </Link>
         </div>
         <WorkIndex />
       </section>
 
-      <section className="night section" aria-labelledby="joins-title">
-        <div className="wrap">
-          <div className="index__head">
-            <h2 id="joins-title" className="t-xl" data-split="lines">
-              What gets joined
+      <section className="section wrap bt" aria-label="What I build and think about">
+        <div className="lists">
+          <div className="card card--lg bg-ink">
+            <h2 className="t-l c-yellow" style={{ marginBottom: '1.5rem' }}>
+              Things I usually help build
             </h2>
-            <p className="muted measure">Samyukth means joined. That is most of the job: you hand me five messy parts and get one thing back that works.</p>
+            <ul>
+              {services.map((s) => (
+                <li key={s.title}>• {s.title}</li>
+              ))}
+            </ul>
+            <p className="t-m c-acid" style={{ marginTop: '1.75rem', fontStyle: 'italic', fontWeight: 700 }}>
+              If that sounds familiar… keep scrolling.
+            </p>
           </div>
-          <ul>
-            {projects.map((p) => (
-              <li key={p.id} className="joins__row">
-                <span className="joins__side joins__side--from tabular" data-reveal="fade">
-                  {p.joins.from}
-                </span>
-                <span className="joins__seam" data-reveal="clip" aria-hidden="true" />
-                <span className="joins__side tabular" data-reveal="fade" data-delay="0.15">
-                  {p.joins.to}
-                  <span className="joins__note">
-                    {p.title}. {p.joins.note}.
-                  </span>
-                </span>
-              </li>
-            ))}
-          </ul>
+          <div className="card card--lg bg-blue">
+            <h2 className="t-l c-yellow" style={{ marginBottom: '1.5rem' }}>
+              Current obsessions
+            </h2>
+            <ul>
+              {obsessions.map((o) => (
+                <li key={o}>→ {o}</li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
-      <section className="section--airy wrap" aria-label="What a co-builder says">
-        <div className="grid">
-          <figure className="quote">
-            <blockquote data-split="lines">“{testimonial.quote}”</blockquote>
-            <figcaption className="label">
-              <a href={testimonial.href} target="_blank" rel="noopener noreferrer" className="link tap" style={{ color: 'var(--c-fg)' }}>
+      <section className="section wrap" aria-label="What others say">
+        <SpotlightCard className="card card--lg quote-card bg-ink" spotlightColor="rgba(204, 255, 0, 0.35)" theme="dark">
+          <p className="label c-acid" style={{ marginBottom: '1rem' }}>
+            // what others say
+          </p>
+          <figure>
+            <blockquote>“{testimonial.quote}”</blockquote>
+            <figcaption>
+              —{' '}
+              <a href={testimonial.href} target="_blank" rel="noopener noreferrer" className="ulink tap">
                 {testimonial.name}
               </a>
               , {testimonial.role.toLowerCase()}
             </figcaption>
           </figure>
-          <div className="aside" data-reveal="up">
-            <p>
-              Co-founder of Genrec AI, studying Computer Science and Business Systems, and the person behind thirty-odd repositories. Most are terrible. The rest
-              pay for servers.
-            </p>
-            <Link to="/about" className="btn btn--ghost" data-label="About">
-              <span>More about me</span>
-              <Arrow />
-            </Link>
-          </div>
-        </div>
+        </SpotlightCard>
       </section>
     </>
   );

@@ -3,6 +3,9 @@ import { Link, useParams } from 'react-router-dom';
 import { getProject, projects } from '../data/projects';
 import { Crumbs, Shot } from '../components/Bits';
 import { NotFound } from './NotFound';
+import TiltedCard from '../components/rb/TiltedCard';
+
+const BG: Record<string, string> = { 'lumina-iq': 'bg-acid', tabble: 'bg-pink', 'crm-platform': 'bg-blue' };
 
 export function ProjectDetail() {
   const { id = '' } = useParams();
@@ -12,151 +15,140 @@ export function ProjectDetail() {
 
   return (
     <article>
-      <header className="pagehead wrap">
-        <Crumbs trail={[{ label: 'Work', to: '/work' }, { label: p.title }]} />
-        <h1 className="t-mega" data-split="chars" data-intro>
-          {p.title}
-        </h1>
-        <p className="pagehead__lede" data-reveal="up" data-intro data-delay="0.35">
-          {p.hook}
-        </p>
+      <header className={`phead ${BG[p.id]}`}>
+        <div className="wrap">
+          <Crumbs trail={[{ label: 'Survivors', to: '/work' }, { label: p.title }]} />
+          <p className="sticker tilt-l bg-paper phead__tag">
+            {p.category} · {p.status}
+          </p>
+          <h1 className="t-mega" data-reveal="up" data-intro>
+            {p.title}
+          </h1>
+          <p className="phead__lede" data-reveal="up" data-intro data-delay="0.15" style={{ fontWeight: 700 }}>
+            {p.hook}
+          </p>
+          <dl className="case__meta">
+            <div>
+              <dt>Focus</dt>
+              <dd>{p.focus}</dd>
+            </div>
+            <div>
+              <dt>Year</dt>
+              <dd>{p.year}</dd>
+            </div>
+            <div>
+              <dt>Type</dt>
+              <dd>{p.kind}</dd>
+            </div>
+            <div>
+              <dt>Proof it exists</dt>
+              <dd>
+                {p.liveLink ? (
+                  <a href={p.liveLink} target="_blank" rel="noopener" className="ulink tap">
+                    {p.liveLink.replace(/^https?:\/\//, '')} ↗
+                  </a>
+                ) : (
+                  'Only works on the client’s machines'
+                )}
+              </dd>
+            </div>
+          </dl>
+        </div>
       </header>
 
-      <div className="wrap">
-        <dl className="case__meta" data-reveal="fade" data-intro data-delay="0.5">
-          <div>
-            <dt>Type</dt>
-            <dd>{p.kind}</dd>
-          </div>
-          <div>
-            <dt>Year</dt>
-            <dd className="tabular">{p.year}</dd>
-          </div>
-          <div>
-            <dt>Status</dt>
-            <dd>{p.status}</dd>
-          </div>
-          <div>
-            <dt>Live</dt>
-            <dd>
-              {p.liveLink ? (
-                <a href={p.liveLink} target="_blank" rel="noopener" className="link tap">
-                  {p.liveLink.replace(/^https?:\/\//, '')}
-                </a>
-              ) : (
-                'Private client system'
-              )}
-            </dd>
-          </div>
-        </dl>
-      </div>
+      {p.cover ? (
+        <section className="section wrap" aria-label="Screens">
+          <TiltedCard
+            imageSrc={p.cover.large}
+            altText={p.cover.alt}
+            captionText={p.title}
+            containerHeight="auto"
+            containerWidth="100%"
+            imageHeight="auto"
+            imageWidth="100%"
+            rotateAmplitude={5}
+            scaleOnHover={1.02}
+            radius={0}
+            glare={0.2}
+          />
+        </section>
+      ) : null}
 
-      <div className="wrap">
-        {p.cover ? (
-          <figure className="case__hero" data-reveal="clip" data-intro data-delay="0.45">
-            <Shot shot={p.cover} eager sizes="100vw" />
-          </figure>
-        ) : (
-          <div className="night case__hero" style={{ padding: 'clamp(2rem, 6vw, 6rem) var(--gutter)' }} data-reveal="clip" data-intro data-delay="0.45">
-            <p className="case__bigjoin" style={{ fontSize: 'var(--t-xl)' }}>
-              <span style={{ color: 'var(--c-night-muted)' }}>{p.joins.from}</span>
-              <i aria-hidden="true" />
-              <span>{p.joins.to}</span>
-            </p>
-            <p className="label" style={{ marginTop: '1.5rem' }}>
-              Client system. No public screens.
-            </p>
+      <section className="section--tight wrap" aria-label="The story">
+        <div className="card card--lg" style={{ marginBottom: '2rem' }}>
+          <h2 className="label" style={{ marginBottom: '0.75rem' }}>
+            System overview
+          </h2>
+          <p className="t-m" data-reveal="fade">
+            {p.overview}
+          </p>
+        </div>
+        <div className="case__cols">
+          <div className="card bg-yellow">
+            <h2>The frustration</h2>
+            <p>{p.problem}</p>
           </div>
-        )}
-      </div>
-
-      <div className="wrap section--tight">
-        <section className="case__block" aria-labelledby="c-join">
-          <h2 id="c-join">The join</h2>
-          <div>
-            <p className="case__bigjoin" data-reveal="up">
-              <span className="muted">{p.joins.from}</span>
-              <i aria-hidden="true" />
-              <span>{p.joins.to}</span>
-            </p>
-            <p className="muted" style={{ fontSize: 'var(--t-body)', marginTop: '0.75rem' }}>
-              {p.joins.note}. {p.summary}
-            </p>
-          </div>
-        </section>
-        <section className="case__block" aria-labelledby="c-context">
-          <h2 id="c-context">Context</h2>
-          <div>
-            <p data-split="lines">{p.overview}</p>
-          </div>
-        </section>
-        <section className="case__block" aria-labelledby="c-problem">
-          <h2 id="c-problem">What was broken</h2>
-          <div>
-            <p data-split="lines">{p.problem}</p>
-          </div>
-        </section>
-        <section className="case__block" aria-labelledby="c-build">
-          <h2 id="c-build">What I built</h2>
-          <div>
-            <p data-split="lines">{p.build}</p>
-            <ul className="chips" style={{ marginTop: '1.5rem' }} aria-label="Stack">
+          <div className="card bg-ink">
+            <h2 className="c-acid">The code</h2>
+            <p>{p.build}</p>
+            <ul className="pm__tags" style={{ marginTop: '1.25rem' }} aria-label="Stack">
               {p.stack.map((s) => (
-                <li key={s} className="chip">
+                <li key={s} style={{ listStyle: 'none', border: '2px solid #fdfbf7', padding: '0.1rem 0.5rem', fontFamily: 'var(--f-mono)', fontSize: '0.75rem', fontWeight: 700 }}>
                   {s}
                 </li>
               ))}
             </ul>
           </div>
+        </div>
+      </section>
+
+      {p.gallery.length > 1 ? (
+        <section className="section--tight wrap" aria-label="More screens">
+          <div className="case__gallery">
+            {p.gallery.slice(1).map((g) => (
+              <figure key={g.small} data-reveal="up">
+                <Shot shot={g} sizes="(max-width: 900px) 100vw, 50vw" />
+                <figcaption>{g.alt}</figcaption>
+              </figure>
+            ))}
+          </div>
         </section>
-        {p.gallery.length > 1 ? (
-          <section className="case__block" aria-labelledby="c-screens" style={{ display: 'block' }}>
-            <h2 id="c-screens" style={{ marginBottom: 'calc(var(--u) * 4)' }}>
-              Screens
+      ) : null}
+
+      <section className="section--tight wrap" aria-label="Outcome">
+        <div className="case__cols">
+          <div className="card card--lg">
+            <h2 className="t-l" style={{ marginBottom: '1.25rem' }}>
+              The outcome
             </h2>
-            <div className="case__gallery">
-              {p.gallery.slice(1).map((g) => (
-                <figure key={g.small} className="case__fig" data-reveal="up">
-                  <div style={{ background: 'var(--c-fg)' }}>
-                    <Shot shot={g} sizes="(max-width: 767px) 100vw, 66vw" />
-                  </div>
-                  <figcaption>{g.alt}</figcaption>
-                </figure>
-              ))}
-            </div>
-          </section>
-        ) : null}
-        <section className="case__block" aria-labelledby="c-outcome">
-          <h2 id="c-outcome">What changed</h2>
-          <div>
-            <ul className="case__list t-m">
+            <ul className="case__list">
               {p.outcomes.map((o) => (
                 <li key={o}>{o}</li>
               ))}
             </ul>
-            <p className="label" style={{ marginTop: '2rem' }}>
-              Where it stands
-            </p>
+          </div>
+          <div className={`card card--lg ${BG[p.id]}`}>
+            <h2 className="t-l" style={{ marginBottom: '1.25rem' }}>
+              Current state
+            </h2>
             <ul className="case__list">
               {p.traction.map((t) => (
                 <li key={t}>{t}</li>
               ))}
             </ul>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
 
-      <nav className="night" aria-label="Next case study">
-        <Link to={`/work/${next.id}`} className="case__next wrap" data-label={next.title}>
-          <span className="label">Next case study</span>
-          <span className="case__next-title">
-            <span className="t-mega">{next.title}</span>
-            <span className="case__next-go" aria-hidden="true">
-              <span className="arrow">→</span>
-            </span>
-          </span>
-          <i className="case__next-seam" aria-hidden="true" />
-        </Link>
+      <nav className="night bt" aria-label="Next case study" style={{ marginTop: 'calc(var(--u) * 6)' }}>
+        <div className="wrap case__next">
+          <Link to="/work" className="neo-btn neo-btn--paper" data-label="Survivors">
+            ← Back to survivors
+          </Link>
+          <Link to={`/work/${next.id}`} className="neo-btn" data-label={next.title}>
+            Next: {next.title} <span className="arrow" aria-hidden="true">→</span>
+          </Link>
+        </div>
       </nav>
     </article>
   );

@@ -102,10 +102,10 @@ export const socials = [
 ];
 
 export const nav = [
-  { label: 'Work', path: '/work', hint: 'things that survived' },
-  { label: 'About', path: '/about', hint: 'the person' },
-  { label: 'Approach', path: '/approach', hint: 'the method' },
-  { label: 'Lessons', path: '/learnings', hint: 'the scars' },
+  { label: 'Survivors', path: '/work', hint: 'the work' },
+  { label: 'The Idiot', path: '/about', hint: 'about me' },
+  { label: 'My Method', path: '/approach', hint: 'how I work' },
+  { label: 'Scars', path: '/learnings', hint: 'lessons' },
   { label: 'Lab', path: '/experimental', hint: 'unfinished business' },
-  { label: 'Contact', path: '/contact', hint: 'say hi' },
+  { label: 'Complain', path: '/contact', hint: 'say hi' },
 ];

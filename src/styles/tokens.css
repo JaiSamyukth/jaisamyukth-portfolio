@@ -1,44 +1,72 @@
-/* Design tokens (DESIGN.md, Phase 2). Names are the engine contract; values are this site's. */
+/* Design tokens: the original neo-brutalist palette, rebuilt. Loud on purpose. */
 @font-face {
-  font-family: 'Archivo';
-  src: url('/fonts/archivo-latin.woff2') format('woff2');
-  font-weight: 100 900;
-  font-stretch: 62% 125%;
+  font-family: 'Space Grotesk';
+  src: url('/fonts/space-grotesk-300-700-normal.woff2') format('woff2');
+  font-weight: 300 700;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
 }
-
-/* Metric-matched fallbacks (measured against Archivo in Chromium) so the swap never re-wraps text. */
-@font-face { font-family: 'Archivo Fallback'; src: local('Arial'), local('Helvetica'), local('Liberation Sans'); font-weight: 100 600; size-adjust: 98.6%; ascent-override: 89.2%; descent-override: 21.3%; line-gap-override: 0%; }
-@font-face { font-family: 'Archivo Fallback'; src: local('Arial Bold'), local('Arial'), local('Helvetica Bold'), local('Liberation Sans Bold'); font-weight: 601 900; size-adjust: 102.8%; ascent-override: 85.6%; descent-override: 20.4%; line-gap-override: 0%; }
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/fonts/space-mono-400-normal.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/fonts/space-mono-700-normal.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Space Mono';
+  src: url('/fonts/space-mono-400-italic.woff2') format('woff2');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+/* Metric-matched fallback so the swap doesn't shove text around. */
+@font-face { font-family: 'Grotesk Fallback'; src: local('Arial'), local('Helvetica'), local('Liberation Sans'); size-adjust: 102%; ascent-override: 96%; descent-override: 28%; line-gap-override: 0%; }
 
 :root {
-  --c-bg: #f2f1ee;
-  --c-fg: #111110;
-  --c-muted: #5c5b57;
-  --c-line: rgb(17 17 16 / 0.14);
-  --c-accent: #7a1a9a; /* the seam: sampled from the street light in the portrait */
-  --c-curtain: var(--c-fg);
-  --c-night-muted: #a09e98;
+  --paper: #fdfbf7;
+  --ink: #0a0a0a;
+  --acid: #ccff00;
+  --pink: #ff0099;
+  --blue: #2b59ff;
+  --yellow: #fff500;
+  --purple: #b983ff;
+  --muted: #4b4b48;
 
-  --f-display: 'Archivo', 'Archivo Fallback', system-ui, sans-serif;
-  --f-body: 'Archivo', 'Archivo Fallback', system-ui, sans-serif;
+  /* engine contract */
+  --c-bg: var(--paper);
+  --c-fg: var(--ink);
+  --c-muted: var(--muted);
+  --c-line: var(--ink);
+  --c-accent: var(--blue);
+  --c-curtain: var(--ink);
+  --c-night-muted: #b8b6af;
 
-  --t-mega: clamp(3.75rem, 0.6rem + 13.4vw, 15rem);
-  --t-xl: clamp(2.5rem, 1.2rem + 5.2vw, 6.25rem);
-  --t-l: clamp(1.75rem, 1.15rem + 2.3vw, 3.25rem);
-  --t-m: clamp(1.25rem, 1.08rem + 0.7vw, 1.75rem);
+  --f-display: 'Space Grotesk', 'Grotesk Fallback', system-ui, sans-serif;
+  --f-body: 'Space Grotesk', 'Grotesk Fallback', system-ui, sans-serif;
+  --f-mono: 'Space Mono', ui-monospace, monospace;
+
+  --t-mega: clamp(3.25rem, 1rem + 10vw, 11rem);
+  --t-xl: clamp(2.4rem, 1.2rem + 4.6vw, 5.5rem);
+  --t-l: clamp(1.6rem, 1.1rem + 2vw, 2.9rem);
+  --t-m: clamp(1.15rem, 1.02rem + 0.55vw, 1.5rem);
   --t-body: clamp(1rem, 0.96rem + 0.18vw, 1.125rem);
-  --t-s: 0.875rem;
-  --t-xs: 0.8125rem;
+  --t-s: 0.9rem;
+  --t-xs: 0.8rem;
 
   --u: clamp(0.5rem, 0.35rem + 0.6vw, 1rem);
   --gutter: clamp(1rem, 0.6rem + 1.6vw, 2.5rem);
-  --header-h: 4.25rem;
-
-  --radius: 0px;
-  --pill: 999px;
+  --header-h: 4.5rem;
+  --b: 4px; /* border */
+  --shadow: 6px 6px 0 var(--ink);
+  --shadow-lg: 10px 10px 0 var(--ink);
 
   --z-content: 1;
   --z-header: 50;

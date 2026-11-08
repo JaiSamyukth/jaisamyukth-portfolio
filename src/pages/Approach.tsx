@@ -1,53 +1,55 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { approachSteps } from '../data/content';
-import { Arrow } from '../components/Bits';
-import { PageHead } from '../components/PageHead';
+import { Crumbs } from '../components/Bits';
 
 export function Approach() {
   return (
-    <>
-      <PageHead
-        crumb="Approach"
-        title="Approach"
-        lede="The objective: stop doing boring things by hand. The method is four steps on repeat."
-        facts={[
-          { k: 'Steps', v: approachSteps.length },
-          { k: 'Discovery phase', v: 'None' },
-          { k: 'Usual fix time', v: '2 AM' },
-        ]}
-      />
-      <section className="wrap section--tight" aria-label="Steps">
-        <ol className="biglist">
-          {approachSteps.map((s, i) => (
-            <li key={s.title} data-reveal="up">
-              <span className="biglist__n">Step {i + 1}</span>
-              <div>
-                <h2 className="biglist__t" style={{ fontSize: 'var(--t-xl)' }}>
-                  {s.title}
-                </h2>
-                <p className="biglist__b">{s.body}</p>
-              </div>
-            </li>
-          ))}
-        </ol>
-      </section>
-      <section className="night section--airy">
-        <div className="wrap grid">
-          <p className="t-l about-say" style={{ gridColumn: '1 / 10' }} data-split="lines">
-            The result is software you forget exists, because it works. That is the only compliment I care about.
+    <div className="bg-purple" style={{ borderLeft: '20px solid var(--ink)' }}>
+      <div className="wrap section">
+        <Crumbs trail={[{ label: 'My Method' }]} />
+        <div className="card card--lg" style={{ position: 'relative', marginTop: '2.5rem' }}>
+          <p className="sticker bg-yellow tilt-r" style={{ position: 'absolute', top: '-1.4rem', left: '50%', translate: '-50% 0' }}>
+            Confidential // approach_doc_v1
           </p>
-          <div className="about-say" style={{ gridColumn: '1 / 8', marginTop: '2rem', display: 'grid', gap: '1.5rem' }}>
-            <p className="muted">It is also why I skip three-week discovery phases. The fastest way to find out whether an idea works is to write the code.</p>
-            <div>
-              <Link to="/contact" className="btn btn--ghost" data-label="Contact">
-                <span>Start with a conversation</span>
-                <Arrow />
-              </Link>
-            </div>
+          <h1 className="t-mega center" style={{ textDecoration: 'underline wavy var(--acid)', textUnderlineOffset: '0.12em', textDecorationThickness: '0.08em' }} data-reveal="up" data-intro>
+            The approach
+          </h1>
+          <div style={{ margin: '2.5rem 0' }}>
+            <h2 className="sticker bg-ink" style={{ color: 'var(--paper)', boxShadow: 'none', fontSize: '1rem' }}>
+              Objective
+            </h2>
+            <p className="t-l" style={{ borderLeft: '6px solid var(--acid)', paddingLeft: '1.25rem', marginTop: '1rem', textTransform: 'none' }}>
+              Stop doing boring things manually.
+            </p>
+          </div>
+          <ol className="steps">
+            {approachSteps.map((s, i) => (
+              <li key={s.title} className="card step" data-reveal="up" data-delay={String(i * 0.08)}>
+                <span className="step__n" aria-hidden="true">
+                  0{i + 1}
+                </span>
+                <h2>{s.title}</h2>
+                <p>{s.body}</p>
+              </li>
+            ))}
+          </ol>
+          <div className="bg-ink" style={{ marginTop: '3rem', padding: '2rem', border: '4px dashed #777' }}>
+            <h2 className="label c-acid" style={{ fontSize: '1.1rem' }}>
+              // The result:
+            </h2>
+            <p className="t-m mono" style={{ marginTop: '0.75rem' }}>
+              Software that you forget exists because it actually works. That’s the only compliment I care about.
+            </p>
+            <p className="mono" style={{ marginTop: '1rem', color: '#b8b6af' }}>
+              This is also why I don’t do “3-week discovery phases.” The fastest way to test whether an idea works is to write the code and find out.
+            </p>
+            <Link to="/contact" className="neo-btn" style={{ marginTop: '1.75rem' }} data-label="Complain">
+              Start a conversation <span className="arrow" aria-hidden="true">→</span>
+            </Link>
           </div>
         </div>
-      </section>
-    </>
+      </div>
+    </div>
   );
 }

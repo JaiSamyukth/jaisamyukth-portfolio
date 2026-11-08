@@ -1,82 +1,62 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { contactReasons } from '../data/content';
 import { person, socials } from '../data/site';
-import { LocalTime } from '../components/Bits';
-import { PageHead } from '../components/PageHead';
+import { Crumbs, LocalTime } from '../components/Bits';
+import Magnet from '../components/rb/Magnet';
+
+const NOTES: Record<string, string> = { GitHub: 'my graveyard of repos', LinkedIn: 'for the recruiter bots', 'X (Twitter)': 'occasional noise', Instagram: 'proof I go outside', 'Dev.to': 'rants' };
 
 export function Contact() {
-  const [copied, setCopied] = useState(false);
-  const copy = async () => {
-    try {
-      await navigator.clipboard.writeText(person.email);
-      setCopied(true);
-      setTimeout(() => setCopied(false), 2000);
-    } catch {
-      location.href = `mailto:${person.email}`;
-    }
-  };
   return (
-    <>
-      <PageHead
-        crumb="Contact"
-        title="Contact"
-        facts={[
-          { k: 'Reply time', v: 'Within a day' },
-          { k: 'Local time', v: <><LocalTime /> IST</> },
-          { k: 'Taking on', v: 'Client work' },
-        ]}
-      />
-      <section className="wrap section--tight">
-        <div className="grid">
-          <div className="about-say" style={{ gridColumn: '1 / 8', display: 'grid', gap: '1.5rem', alignContent: 'start' }}>
-            <p className="label">Email, for actual work</p>
-            <a href={`mailto:${person.email}`} className="t-l link" style={{ justifySelf: 'start', wordBreak: 'break-word' }}>
-              {person.email}
-            </a>
-            <div className="hero__actions">
-              <button type="button" className="btn btn--solid" onClick={copy}>
-                <span aria-live="polite">{copied ? 'Copied' : 'Copy the address'}</span>
-              </button>
-              <p className="label">
-                Replies within a day. It is <LocalTime /> in {person.location.city}.
-              </p>
-            </div>
-          </div>
-          <div className="about-say" style={{ gridColumn: '9 / -1' }} data-reveal="up">
-            <p className="label">Most people who write fall into one of these</p>
-            <ul className="case__list" style={{ marginTop: '0.75rem' }}>
-              {contactReasons.map((r) => (
-                <li key={r}>{r}</li>
-              ))}
-            </ul>
-            <p className="t-m" style={{ marginTop: '1.25rem', fontWeight: 600 }}>
-              If that sounds familiar, let’s fix it.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section className="night section" aria-labelledby="elsewhere">
-        <div className="wrap">
-          <h2 id="elsewhere" className="label" style={{ marginBottom: '1rem' }}>
-            Elsewhere
-          </h2>
-          <ul>
-            {socials.map((s) => (
-              <li key={s.href} className="index__row" style={{ borderColor: 'rgb(242 241 238 / 0.16)' }}>
-                <a href={s.href} target="_blank" rel="me noopener noreferrer" className="index__link social__link">
-                  <span className="index__title">{s.label}</span>
-                  <span className="muted social__handle">
-                    {s.handle}, {s.note}
-                  </span>
-                  <span className="index__go" aria-hidden="true" style={{ borderColor: 'rgb(242 241 238 / 0.3)' }}>
-                    <span className="arrow">→</span>
-                  </span>
-                </a>
-              </li>
+    <div className="bg-yellow" style={{ backgroundImage: 'radial-gradient(#0a0a0a22 2px, transparent 2px)', backgroundSize: '20px 20px' }}>
+      <div className="wrap section" style={{ maxWidth: '64rem' }}>
+        <Crumbs trail={[{ label: 'Complain' }]} />
+        <div className="card" style={{ border: '8px solid var(--ink)', boxShadow: '16px 16px 0 var(--ink)', position: 'relative', marginTop: '2rem' }}>
+          <p className="sticker bg-ink tilt-r" style={{ position: 'absolute', top: '-1.4rem', left: '50%', translate: '-50% 0', color: 'var(--paper)' }}>
+            Open frequency
+          </p>
+          <h1 className="t-mega center" data-reveal="up" data-intro>
+            Say <br />
+            <span className="c-blue">hi.</span>
+          </h1>
+          <p className="t-m center" style={{ marginTop: '1.5rem', fontWeight: 600 }}>
+            Most people who email me fall into one of these categories.
+          </p>
+          <ul className="mono center" style={{ display: 'grid', gap: '0.75rem', margin: '1.5rem auto', maxWidth: '36rem' }}>
+            {contactReasons.map((r) => (
+              <li key={r}>{r}</li>
             ))}
           </ul>
+          <p className="t-l center c-blue" style={{ margin: '2rem 0' }}>
+            If any of that sounds familiar… let’s fix it.
+          </p>
+          <div className="center" style={{ marginBottom: '2.5rem' }}>
+            <Magnet magnetStrength={3} padding={60}>
+              <a href={`mailto:${person.email}`} className="neo-btn neo-btn--ink" style={{ fontSize: 'clamp(1rem, 2.4vw, 1.4rem)' }} data-no-transition>
+                {person.email}
+              </a>
+            </Magnet>
+          </div>
+          <nav aria-label="Elsewhere" className="contact-cards">
+            <a href={`mailto:${person.email}`} data-no-transition>
+              <b>[Email]</b>
+              <span>for actual work</span>
+            </a>
+            {socials.map((s) => (
+              <a key={s.href} href={s.href} target="_blank" rel="me noopener noreferrer">
+                <b>[{s.label}]</b>
+                <span>{NOTES[s.label] ?? s.note}</span>
+              </a>
+            ))}
+          </nav>
+          <p className="mono muted center" style={{ marginTop: '2rem', fontWeight: 700 }}>
+            RESPONSE LATENCY: &lt; 24H · LOCAL TIME <LocalTime />
+          </p>
         </div>
-      </section>
-    </>
+        <p className="mono center" style={{ marginTop: '3rem', fontWeight: 700, opacity: 0.5 }}>
+          // END OF TRANSMISSION
+        </p>
+      </div>
+    </div>
   );
 }
