@@ -97,7 +97,11 @@ function Footer() {
             </a>
           </Magnet>
           <p className="mono muted" style={{ marginTop: '1rem' }}>
-            {person.email} · replies in under 24h · <LocalTime /> in {person.location.city}
+            {person.email} ·{' '}
+            <a href={person.phoneHref} className="ulink" data-no-transition>
+              {person.phone}
+            </a>{' '}
+            · replies in under 24h · <LocalTime /> in {person.location.city}
           </p>
         </div>
         <div style={{ display: 'grid', gap: '1.75rem', justifyItems: 'start' }}>

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Hero } from '../components/Hero';
 import { WorkIndex } from '../components/WorkIndex';
-import { obsessions, services, stats, testimonial, tickerLines, trackRecord } from '../data/content';
+import { howItGoes, obsessions, services, stats, testimonial, tickerLines, trackRecord } from '../data/content';
 import ScrollVelocity from '../components/rb/ScrollVelocity';
 import ScrollReveal from '../components/rb/ScrollReveal';
 import CountUp from '../components/rb/CountUp';
@@ -72,6 +72,31 @@ export function Home() {
         <WorkIndex />
       </section>
 
+      <section className="section wrap bt" aria-labelledby="how">
+        <div className="shead">
+          <div>
+            <h2 id="how" className="t-xl">
+              How this usually goes
+            </h2>
+            <p>// three steps, zero 3-week discovery phases</p>
+          </div>
+          <Link to="/contact" className="neo-btn neo-btn--pink" data-label="Complain">
+            Start step one <span className="arrow" aria-hidden="true">→</span>
+          </Link>
+        </div>
+        <ol className="how">
+          {howItGoes.map((h, i) => (
+            <li key={h.title} className={`card how__step ${['bg-acid', 'bg-yellow', 'bg-purple'][i]}`} data-reveal="up" data-delay={String(i * 0.08)}>
+              <span className="how__n" aria-hidden="true">
+                0{i + 1}
+              </span>
+              <h3>{h.title}</h3>
+              <p>{h.body}</p>
+            </li>
+          ))}
+        </ol>
+      </section>
+
       <section className="section wrap bt" aria-label="What I build and think about">
         <div className="lists">
           <div className="card card--lg bg-ink">
@@ -80,7 +105,10 @@ export function Home() {
             </h2>
             <ul>
               {services.map((s) => (
-                <li key={s.title}>• {s.title}</li>
+                <li key={s.title}>
+                  <b style={{ display: 'block' }}>• {s.title}</b>
+                  <span style={{ color: '#b8b6af', fontSize: '0.9em' }}>{s.body}</span>
+                </li>
               ))}
             </ul>
             <p className="t-m c-acid" style={{ marginTop: '1.75rem', fontStyle: 'italic', fontWeight: 700 }}>

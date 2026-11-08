@@ -367,3 +367,16 @@ a, button, summary, [role='button'] { cursor: pointer; }
 
 .sticker--float { position: absolute; top: -1.4rem; left: 50%; translate: -50% 0; white-space: nowrap; }
 @media (max-width: 767px) { .sticker--float { position: static; translate: none; display: table; margin: -0.25rem auto 1.25rem; white-space: normal; } }
+
+/* how this usually goes */
+.how { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.5rem; }
+.how__step:nth-child(1) { rotate: -1.2deg; } .how__step:nth-child(2) { rotate: 0.8deg; translate: 0 1.25rem; } .how__step:nth-child(3) { rotate: -0.6deg; }
+.how__n { display: block; font-size: 3.2rem; font-weight: 700; line-height: 1; letter-spacing: -0.04em; }
+.how__step h3 { font-size: var(--t-l); font-weight: 700; text-transform: uppercase; letter-spacing: -0.02em; margin: 0.75rem 0 0.5rem; line-height: 1; }
+.how__step p { font-family: var(--f-mono); }
+@media (max-width: 900px) { .how { grid-template-columns: 1fr; } .how__step:nth-child(2) { translate: none; } }
+@media (prefers-reduced-motion: reduce) { .how__step { rotate: none !important; translate: none !important; } }
+
+.case__hero--tilt { rotate: -0.8deg; transition: rotate 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s; }
+@media (hover: hover) { .case__hero--tilt:hover { rotate: 0deg; box-shadow: 14px 14px 0 var(--ink); } }
+@media (prefers-reduced-motion: reduce) { .case__hero--tilt { rotate: none; } }

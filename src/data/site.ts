@@ -62,6 +62,8 @@ export const person = {
   timeZone: 'Asia/Kolkata',
   education: 'B.Tech, Computer Science and Business Systems (CSBS)',
   email: 'jaisamyukth@gmail.com',
+  phone: '+91 96555 32378',
+  phoneHref: 'tel:+919655532378',
   oneLiner:
     'I notice what people have learned to tolerate, then write software until they don’t have to.',
   summary:

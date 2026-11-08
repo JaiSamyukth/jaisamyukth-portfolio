@@ -13,7 +13,7 @@ export function NotFound() {
           </FuzzyText>
         </div>
         <p className="t-m mono" style={{ marginTop: '1.5rem' }}>
-          This page doesn’t exist. Probably one of the thirty abandoned repos.
+          This page doesn’t exist. Like my sleep schedule, or the 30 repos I swear I’ll finish.
         </p>
         <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', flexWrap: 'wrap', marginTop: '2rem' }}>
           <Link to="/" className="neo-btn" data-label="Home">

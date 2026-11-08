@@ -1,19 +1,19 @@
 import { org, person } from './site';
 
 export const services = [
-  { title: 'MVPs people can actually demo', body: 'From idea to something investors and users can click. Weeks, not quarters.' },
-  { title: 'Internal software that replaces spreadsheets', body: 'Billing, operations, permissions. One system instead of five tabs and a prayer.' },
-  { title: 'AI features that solve boring work', body: 'LLM integrations, retrieval over your own documents, automation that earns its token bill.' },
-  { title: 'Systems that survive real users', body: 'Real-time sync, role-based access, and backends that don’t fall over on a Friday.' },
+  { title: 'MVPs you can actually demo', body: 'Without the “it works on my machine” disclaimer.' },
+  { title: 'Internal software that kills spreadsheets', body: 'RIP FINAL_final_v7_USE_THIS.xlsx. You won’t be missed.' },
+  { title: 'AI that does the boring work', body: 'Not another chatbot nobody asked for. Something that saves real hours.' },
+  { title: 'Systems that survive real users', body: 'Including the guy who presses every button twice.' },
 ];
 
 export const obsessions = [
-  'Making software disappear into people’s workflow.',
-  'Replacing spreadsheets.',
-  'Restaurant operations.',
-  'Knowledge systems.',
-  'Cloud architecture.',
-  'Finding out why humans insist on doing repetitive things manually.',
+  'Making software disappear into people’s workflow. Best compliment: nobody notices it.',
+  'Killing spreadsheets that cosplay as databases.',
+  'Restaurant operations, because waiters deserve better than a notepad and a prayer.',
+  'Knowledge systems that don’t hallucinate with confidence.',
+  'Cloud architecture that doesn’t bankrupt me by Tuesday.',
+  'Why humans still do repetitive things by hand. Seriously. Why.',
 ];
 
 export const tickerLines = ['Fixing broken productions', 'Writing code people pay for', 'Ignoring AWS bills'];
@@ -64,26 +64,38 @@ export const approachSteps = [
 ];
 
 export const learnings = [
-  'Users don’t read.',
-  'Production doesn’t care.',
-  'Git remembers everything.',
-  'Backups are cheaper than confidence.',
-  'Cloud invoices are educational material.',
-  'Every “small feature” is lying.',
-  'Someone will always press the button twice.',
-  'Excel is not a database.',
-  'Documentation is written for Future Me.',
-  'Future Me rarely reads it.',
-  'AWS was my ex.',
-  'Azure arrived with startup credits.',
-  'We’re in a much healthier relationship now.',
+  'Users don’t read. They click.',
   'Production doesn’t care that it worked locally.',
+  'Git remembers everything. Especially the 3 AM commits.',
+  'Backups are cheaper than confidence.',
+  'Cloud invoices are educational material. Expensive, unskippable material.',
+  'Every “small feature” is lying about its size.',
+  'Someone will always press the button twice.',
+  'Excel is not a database. Tell that to every company ever.',
+  'Documentation is written for Future Me. Future Me never reads it.',
+  '“Quick fix” is how weekends die.',
+  'AWS was my ex. Azure showed up with startup credits and no trust issues.',
+  'If it works on the first try, something else is broken.',
+  'Naming things is harder than building them.',
+  'Deploying on a Friday is a personality trait. Mine, unfortunately.',
+];
+
+export const howItGoes = [
+  { title: 'You send me the mess', body: 'Screenshots, a voice note, a spreadsheet called FINAL_v7. I’ve seen worse. Probably.' },
+  { title: 'I ship something real in days', body: 'Not a deck. Not a Figma file. A thing you can click, break and show your investors.' },
+  { title: 'It breaks, I fix it', body: 'Users will find bugs I didn’t know were physically possible. I fix them, usually before you notice. Occasionally at 2 AM.' },
+];
+
+export const emailBrief = [
+  'What you’re building (or what’s currently on fire)',
+  'When you need it. Be honest, I won’t judge. Much.',
+  'What exists right now: code, a spreadsheet, a napkin sketch, pure vibes',
 ];
 
 export const experiments = [
   { title: 'Tabble V1 & V2', body: 'Before I realized WebSockets were the actual problem.' },
   { title: 'Revolvo AI', body: 'A knowledge retrieval bot that hallucinated with extreme confidence.' },
-  { title: 'CRM clones', body: 'Because everyone tries to build Jira once before giving up.' },
+  { title: 'CRM clones', body: 'Everyone builds Jira once. Then they understand why Jira is like that.' },
   { title: 'Feedback forms', body: 'Built for college. Mostly used to submit blank responses.' },
 ];
 

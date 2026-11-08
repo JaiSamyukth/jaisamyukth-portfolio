@@ -31,6 +31,7 @@ const personNode = {
   url: `${SITE_URL}/`,
   image: `${SITE_URL}/portrait.webp`,
   email: `mailto:${person.email}`,
+  telephone: person.phone,
   jobTitle: person.jobTitle,
   description: person.summary,
   worksFor: { '@id': ORG_ID },
@@ -136,21 +137,21 @@ const staticPages: Record<string, StaticDef> = {
   '/': {
     title: 'Jai Samyukth B U · Systems builder, co-founder of Genrec AI',
     description:
-      'Jai Samyukth B U, co-founder of Genrec AI in Coimbatore, builds MVPs, AI features and internal tools that replace spreadsheets. Maker of Lumina IQ and Tabble.',
+      'Jai Samyukth B U, co-founder of Genrec AI in Coimbatore. I build MVPs, AI tools and software that kills spreadsheets. Fast, a bit messy, always shipped.',
     type: 'ProfilePage',
     ogType: 'profile',
   },
   '/work': {
     title: 'Work: Lumina IQ, Tabble and a production CRM | Jai Samyukth B U',
     description:
-      'Selected work by Jai Samyukth B U: Lumina IQ (AI active-recall learning), Tabble (real-time restaurant ordering) and a role-based CRM that replaced five spreadsheets.',
+      'Things that survived: Lumina IQ (AI study tool), Tabble (restaurant ordering) and a CRM that replaced five spreadsheets. By Jai Samyukth B U.',
     type: 'CollectionPage',
     crumb: 'Work',
   },
   '/about': {
     title: 'About Jai Samyukth B U: pronunciation, background and FAQ',
     description:
-      'Jai Samyukth B U is co-founder of Genrec AI and a systems builder from Coimbatore studying CSBS. Background, stack, timeline and FAQ.',
+      'Jai Samyukth B U: co-founder of Genrec AI, CSBS student, serial builder from Coimbatore with 30+ repos and a grudge against inefficient systems.',
     type: 'AboutPage',
     crumb: 'About',
     ogType: 'profile',
@@ -158,21 +159,21 @@ const staticPages: Record<string, StaticDef> = {
   '/approach': {
     title: 'Approach: observe, panic, build, fix | Jai Samyukth B U',
     description:
-      'How Jai Samyukth B U builds software: watch how people really work, find the waste, write code that absorbs the chaos, then ship and fix fast.',
+      'My method: watch people suffer, panic, build the fix, break it in production, fix it at 2 AM. No 3-week discovery phases. By Jai Samyukth B U.',
     type: 'WebPage',
     crumb: 'Approach',
   },
   '/learnings': {
     title: 'Things I learned expensively | Jai Samyukth B U',
     description:
-      'A running tally of lessons from breaking production, debugging at 2 AM and reading cloud invoices, by Jai Samyukth B U, co-founder of Genrec AI.',
+      'Lessons Jai Samyukth B U learned expensively: production doesn’t care, Excel is not a database, and cloud invoices are educational material.',
     type: 'WebPage',
     crumb: 'Lessons',
   },
   '/experimental': {
     title: 'Lab: unfinished business and failed experiments | Jai Samyukth B U',
     description:
-      'The experiments that didn’t make it: early Tabble versions, a confidently hallucinating RAG bot, CRM clones and more from Jai Samyukth B U’s GitHub.',
+      'The 90% that didn’t make it: hallucinating RAG bots, Jira clones and early Tabble versions. Jai Samyukth B U’s graveyard of repos.',
     type: 'WebPage',
     crumb: 'Lab',
   },
@@ -186,7 +187,7 @@ const staticPages: Record<string, StaticDef> = {
   '/contact': {
     title: 'Contact Jai Samyukth B U: hire for MVPs, AI and internal tools',
     description:
-      'Need an MVP, an AI feature, or software that replaces your spreadsheets? Email Jai Samyukth B U (Genrec AI). Replies usually within 24 hours.',
+      'Need an MVP, an AI feature or software that kills your spreadsheets? Email or call Jai Samyukth B U (Genrec AI). Replies in under 24 hours.',
     type: 'ContactPage',
     crumb: 'Contact',
   },

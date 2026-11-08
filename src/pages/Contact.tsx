@@ -1,5 +1,5 @@
 import React from 'react';
-import { contactReasons } from '../data/content';
+import { contactReasons, emailBrief } from '../data/content';
 import { person, socials } from '../data/site';
 import { Crumbs, LocalTime } from '../components/Bits';
 import Magnet from '../components/rb/Magnet';
@@ -36,6 +36,22 @@ export function Contact() {
                 {person.email}
               </a>
             </Magnet>
+            <p className="mono" style={{ margin: '1.25rem 0 0.75rem', fontWeight: 700 }}>
+              or call / text
+            </p>
+            <a href={person.phoneHref} className="neo-btn neo-btn--yellow" style={{ fontSize: 'clamp(1rem, 2.4vw, 1.4rem)' }} data-no-transition>
+              {person.phone}
+            </a>
+          </div>
+          <div className="card bg-acid tilt-l" style={{ margin: '0 auto 2.5rem', maxWidth: '38rem', boxShadow: '6px 6px 0 var(--ink)' }}>
+            <h2 className="label" style={{ marginBottom: '0.75rem' }}>
+              Put this in the email and I’ll reply faster
+            </h2>
+            <ol className="mono" style={{ display: 'grid', gap: '0.5rem', listStyle: 'decimal', paddingLeft: '1.25rem' }}>
+              {emailBrief.map((b) => (
+                <li key={b}>{b}</li>
+              ))}
+            </ol>
           </div>
           <nav aria-label="Elsewhere" className="contact-cards">
             <a href={`mailto:${person.email}`} data-no-transition>

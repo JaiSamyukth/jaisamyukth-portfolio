@@ -3,7 +3,6 @@ import { Link, useParams } from 'react-router-dom';
 import { getProject, projects } from '../data/projects';
 import { Crumbs, Shot } from '../components/Bits';
 import { NotFound } from './NotFound';
-import TiltedCard from '../components/rb/TiltedCard';
 
 const BG: Record<string, string> = { 'lumina-iq': 'bg-acid', tabble: 'bg-pink', 'crm-platform': 'bg-blue' };
 
@@ -25,7 +24,10 @@ export function ProjectDetail() {
             {p.title}
           </h1>
           <p className="phead__lede" data-reveal="up" data-intro data-delay="0.15" style={{ fontWeight: 700 }}>
-            {p.hook}
+            {p.oneLiner}
+          </p>
+          <p className="mono" style={{ marginTop: '0.75rem', fontStyle: 'italic' }} data-reveal="up" data-intro data-delay="0.2">
+            “{p.hook}”
           </p>
           <dl className="case__meta">
             <div>
@@ -58,30 +60,30 @@ export function ProjectDetail() {
 
       {p.cover ? (
         <section className="section--tight wrap case-cover" aria-label="Screens">
-          <TiltedCard
-            imageSrc={p.cover.large}
-            altText={p.cover.alt}
-            captionText={p.title}
-            containerHeight="auto"
-            containerWidth="100%"
-            imageHeight="auto"
-            imageWidth="100%"
-            rotateAmplitude={5}
-            scaleOnHover={1.02}
-            radius={0}
-            glare={0.2}
-          />
+          <figure className="case__hero case__hero--tilt">
+            <Shot shot={p.cover} eager sizes="(max-width: 1440px) 100vw, 1380px" />
+          </figure>
         </section>
       ) : null}
 
       <section className="section--tight wrap" aria-label="The story">
-        <div className="card card--lg" style={{ marginBottom: '2rem' }}>
-          <h2 className="label" style={{ marginBottom: '0.75rem' }}>
-            System overview
-          </h2>
-          <p className="t-m" data-reveal="fade">
-            {p.overview}
-          </p>
+        <div className="case__cols" style={{ marginBottom: '2rem' }}>
+          <div className="card card--lg">
+            <h2 className="label" style={{ marginBottom: '0.75rem' }}>
+              System overview
+            </h2>
+            <p className="t-m" data-reveal="fade">
+              {p.overview}
+            </p>
+          </div>
+          <div className="card card--lg bg-purple tilt-r">
+            <h2 className="label" style={{ marginBottom: '0.75rem' }}>
+              Who it’s for
+            </h2>
+            <p className="t-m" style={{ fontWeight: 600 }}>
+              {p.forWho}
+            </p>
+          </div>
         </div>
         <div className="case__cols">
           <div className="card bg-yellow">

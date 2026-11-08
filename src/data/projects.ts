@@ -43,6 +43,10 @@ export interface Project {
   gallery: Shot[];
   accent: 'acid' | 'blue' | 'ink';
   year: string;
+  /** Plain one-liner: what it is, before the joke. */
+  oneLiner: string;
+  /** Who it's for. */
+  forWho: string;
   /** What this system joins together: the concept, stated as plain fact. */
   joins: { from: string; to: string; note: string };
 }
@@ -89,6 +93,8 @@ export const projects: Project[] = [
     gallery: [luminaCover, shot(luminaApp960, luminaApp1600, 1600, 756, 'Lumina IQ generating Q&A questions from an uploaded PDF')],
     accent: 'acid',
     year: '2024',
+    oneLiner: 'An AI study tool that turns your syllabus into a revision path, then grills you until you actually know it.',
+    forWho: 'Students who reread the same chapter four times and still blank in the exam.',
     joins: { from: 'A highlighted PDF', to: 'A recall loop', note: 'Notes, explanations and questions in one study path' },
   },
   {
@@ -125,6 +131,8 @@ export const projects: Project[] = [
     ],
     accent: 'blue',
     year: '2025',
+    oneLiner: 'Restaurant ordering on a ₹5,000 tablet. Customer taps, chef sees it in real time, owner watches the money come in.',
+    forWho: 'Small restaurants in India that can’t justify a ₹1 lakh POS and are tired of decoding a waiter’s handwriting.',
     joins: { from: '3 screens', to: '1 order', note: 'Customer, chef and admin, synced live' },
   },
   {
@@ -156,6 +164,8 @@ export const projects: Project[] = [
     gallery: [],
     accent: 'ink',
     year: '2024',
+    oneLiner: 'A role-based CRM that replaced five spreadsheets and one very nervous accountant.',
+    forWho: 'A company whose billing, expenses and investments lived in five Excel files held together by hope.',
     joins: { from: '5 spreadsheets', to: '1 system', note: 'Billing, expenses, investments and permissions' },
   },
 ];

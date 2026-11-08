@@ -40,7 +40,8 @@ export function WorkIndex({
               ) : null}
               <span className="pm__body">
                 <H className="pm__title">{p.title}</H>
-                <span className="pm__desc t-m">{p.hook}</span>
+                <span className="pm__desc t-m" style={{ fontWeight: 600 }}>{p.oneLiner}</span>
+                <span className="pm__desc" style={{ fontStyle: 'italic' }}>“{p.hook}”</span>
                 <span className="wc__join mono">
                   {p.joins.from} → {p.joins.to}
                 </span>
@@ -91,7 +92,7 @@ export function WorkIndex({
                 </span>
                 <span className="pm__body">
                   <H className="pm__title">{p.title}</H>
-                  <span className="pm__desc">{p.hook}</span>
+                  <span className="pm__desc">{p.oneLiner}</span>
                   <span className="pm__tags" aria-label="Stack">
                     {p.stack.slice(0, 4).map((t) => (
                       <span key={t}>{t}</span>
