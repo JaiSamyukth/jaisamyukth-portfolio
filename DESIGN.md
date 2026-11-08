@@ -17,7 +17,7 @@ v2's foundations (prerendered SEO, accessibility, performance, the page-transiti
   DotGrid (hero background), CircularText (badges), ScrollVelocity (marquees), ScrollReveal
   (manifesto), CountUp (stats), ChromaGrid (work grid), SpotlightCard (testimonial), Magnet
   ("Say hi"), ClickSpark (brand-coloured sparks on every click), FuzzyText (404), FallingText
-  (Scars page, physics loaded only on demand). Local edit: ChromaGrid opens internal links in place.
+  (Scars page, physics loaded only on demand). Local edits: ChromaGrid opens internal links in place, and takes an `eager` prop so an above-the-fold grid doesn't lazy-load its LCP image.
 
 ---
 

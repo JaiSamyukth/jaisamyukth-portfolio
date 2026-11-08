@@ -316,3 +316,25 @@ html { scroll-padding-top: calc(var(--header-h) + 1rem); } /* sticky header neve
 @media (hover: hover) { .contact-cards a:nth-child(3):hover { background: var(--pink); color: var(--ink); } }
 .progress { position: fixed; inset: 0 0 auto 0; height: 5px; z-index: calc(var(--z-header) + 1); background: var(--acid); border-bottom: 1px solid var(--ink); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); pointer-events: none; }
 a, button, summary, [role='button'] { cursor: pointer; }
+
+/* utility links answer on hover too */
+@media (hover: hover) { .crumbs a:hover, .footer__base a:hover { background: var(--acid); color: var(--ink); } }
+.crumbs a:focus-visible, .footer__base a:focus-visible { background: var(--acid); color: var(--ink); }
+
+/* /work: big alternating project cards */
+.work-cards { display: grid; gap: 3rem; }
+.wc { display: grid; grid-template-columns: minmax(0, 7fr) minmax(0, 5fr); grid-template-rows: auto 1fr; }
+.wc .pm__bar { grid-column: 1 / -1; }
+.wc__img { display: block; border-right: var(--b) solid var(--ink); background: var(--ink); overflow: hidden; }
+.wc__img img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: scale 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+@media (hover: hover) { .wc:hover .wc__img img { scale: 1.04; } }
+.wc .pm__title { font-size: var(--t-xl); }
+.wc__join { display: inline-block; justify-self: start; background: var(--yellow); border: 3px solid var(--ink); padding: 0.2rem 0.6rem; font-weight: 700; }
+.work-cards li:nth-child(even) .wc { grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); }
+.work-cards li:nth-child(even) .wc__img { order: 2; border-right: 0; border-left: var(--b) solid var(--ink); }
+.work-cards li:nth-child(odd) .wc { rotate: -0.6deg; } .work-cards li:nth-child(even) .wc { rotate: 0.6deg; }
+@media (max-width: 900px) {
+  .wc, .work-cards li:nth-child(even) .wc { grid-template-columns: 1fr; }
+  .wc__img, .work-cards li:nth-child(even) .wc__img { order: 0; border: 0; border-bottom: var(--b) solid var(--ink); }
+}
+@media (prefers-reduced-motion: reduce) { .work-cards .wc { rotate: none !important; } }

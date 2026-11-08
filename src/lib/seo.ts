@@ -9,6 +9,8 @@ export interface PageMeta {
   ogImage: string;
   ogType: 'website' | 'profile' | 'article';
   noindex?: boolean;
+  /** Above-the-fold image to fetch before scripts (LCP). */
+  preloadImage?: string;
   jsonLd: Record<string, unknown>;
 }
 
@@ -319,6 +321,7 @@ export function renderHead(meta: PageMeta): string {
     `<meta name="twitter:title" content="${t}" />`,
     `<meta name="twitter:description" content="${d}" />`,
     `<meta name="twitter:image" content="${esc(meta.ogImage)}" />`,
+    meta.preloadImage ? `<link rel="preload" as="image" href="${meta.preloadImage}" fetchpriority="high" />` : '',
     `<script type="application/ld+json" id="ld-graph">${jsonForScript(meta.jsonLd)}</script>`,
   ]
     .filter(Boolean)

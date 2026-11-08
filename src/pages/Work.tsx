@@ -14,7 +14,7 @@ export function Work() {
         Things that <span className="hl hl--acid">survived</span>
       </PageHead>
       <section className="section wrap" aria-label="Projects">
-        <WorkIndex level={2} />
+        <WorkIndex level={2} eager variant="cards" />
       </section>
       <section className="section--tight wrap">
         <div className="card card--lg bg-purple" style={{ display: 'flex', flexWrap: 'wrap', gap: '1.5rem', justifyContent: 'space-between', alignItems: 'center' }}>

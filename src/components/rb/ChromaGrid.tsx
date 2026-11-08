@@ -33,6 +33,8 @@ export interface ChromaGridProps {
   frame?: boolean;
   theme?: 'dark' | 'light';
   className?: string;
+  /** Local edit: load images eagerly when the grid is above the fold (LCP). */
+  eager?: boolean;
 }
 
 const THEMES: Record<'dark' | 'light', Record<string, string>> = {
@@ -142,7 +144,8 @@ export const ChromaGrid = ({
   showInfo = true,
   frame = false,
   theme = 'dark',
-  className = ''
+  className = '',
+  eager = false
 }: ChromaGridProps) => {
   const rootRef = useRef<HTMLDivElement>(null);
   const settingsRef = useRef<{ damping: number; fadeOut: number; spotlight: boolean } | null>(null);
@@ -273,8 +276,8 @@ export const ChromaGrid = ({
             <>
               <span className="chroma-wash" aria-hidden="true" />
               <div className="chroma-media" data-chroma-area="">
-                <img className="chroma-mono" src={item.image} alt={item.alt ?? item.title ?? ''} loading="lazy" />
-                <img className="chroma-color" src={item.image} alt="" aria-hidden="true" loading="lazy" />
+                <img className="chroma-mono" src={item.image} alt={item.alt ?? item.title ?? ''} loading={eager ? 'eager' : 'lazy'} {...(eager && index === 0 ? { fetchPriority: 'high' as const } : {})} />
+                <img className="chroma-color" src={item.image} alt="" aria-hidden="true" loading={eager ? 'eager' : 'lazy'} />
                 <span className="chroma-media-rim" aria-hidden="true" />
               </div>
               {showInfo && (item.title || item.subtitle) && (
