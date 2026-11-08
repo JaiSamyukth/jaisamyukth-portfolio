@@ -6,6 +6,7 @@ import { Engine } from '../engine/react';
 import { startScroll, stopScroll } from '../engine';
 import { setupMotion } from '../motion/setup';
 import { LocalTime } from './Bits';
+import { Progress } from './Progress';
 import ClickSpark from './rb/ClickSpark';
 import Magnet from './rb/Magnet';
 import CircularText from './rb/CircularText';
@@ -142,6 +143,7 @@ export function Shell({ children }: { children: React.ReactNode }) {
         <div className="curtain__seam" />
         <div className="curtain__label" />
       </div>
+      <Progress />
       <Frame />
       <main id="main" tabIndex={-1}>
         {children}

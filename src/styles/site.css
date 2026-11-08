@@ -28,7 +28,7 @@ html { scrollbar-color: var(--yellow) var(--ink); }
 .hl { padding: 0 0.15em; display: inline-block; }
 .hl--yellow { background: var(--yellow); color: var(--blue); rotate: -1.5deg; }
 .hl--acid { background: var(--acid); color: var(--ink); }
-.hl--pink { background: var(--pink); color: #fff; }
+.hl--pink { background: var(--pink); color: var(--ink); }
 .c-acid { color: var(--acid); } .c-yellow { color: var(--yellow); } .c-pink { color: var(--pink); } .c-blue { color: var(--blue); } .c-purple { color: var(--purple); }
 
 /* ---------- layout ---------- */
@@ -45,7 +45,7 @@ html { scrollbar-color: var(--yellow) var(--ink); }
 .card--lg { box-shadow: var(--shadow-lg); }
 .bg-acid { background: var(--acid); color: var(--ink); }
 .bg-yellow { background: var(--yellow); color: var(--ink); }
-.bg-pink { background: var(--pink); color: #fff; }
+.bg-pink { background: var(--pink); color: var(--ink); } /* ink on pink: 6.3:1 (white was 3.3:1) */
 .bg-blue { background: var(--blue); color: #fff; }
 .bg-purple { background: var(--purple); color: var(--ink); }
 .bg-ink { background: var(--ink); color: var(--paper); }
@@ -60,7 +60,7 @@ html { scrollbar-color: var(--yellow) var(--ink); }
 }
 .neo-btn--paper { background: #fff; }
 .neo-btn--yellow { background: var(--yellow); }
-.neo-btn--pink { background: var(--pink); color: #fff; }
+.neo-btn--pink { background: var(--pink); color: var(--ink); }
 .neo-btn--ink { background: var(--ink); color: var(--paper); box-shadow: 6px 6px 0 var(--acid); }
 @media (hover: hover) { .neo-btn:hover { translate: -3px -3px; box-shadow: 9px 9px 0 var(--ink); } .neo-btn--ink:hover { box-shadow: 9px 9px 0 var(--acid); } }
 .neo-btn:focus-visible { translate: -3px -3px; box-shadow: 9px 9px 0 var(--ink); }
@@ -305,3 +305,14 @@ button.chip:focus-visible, a.chip:focus-visible { background: var(--acid); color
   .hero__rot { flex-direction: column; align-items: flex-start; }
   .rot-pill { white-space: nowrap; font-size: clamp(1rem, 4.6vw, 1.25rem); }
 }
+
+/* ---------- ui-ux-pro-max pre-delivery fixes ---------- */
+html { scroll-padding-top: calc(var(--header-h) + 1rem); } /* sticky header never covers focus */
+@media (pointer: coarse) {
+  .tap, .crumbs a, .footer__links a, .footer__base a { min-height: 44px; display: inline-flex; align-items: center; }
+  .neo-btn, .frame__menu-btn { min-height: 48px; }
+}
+.contact-cards a:hover, .contact-cards a:nth-child(3):hover { color: inherit; }
+@media (hover: hover) { .contact-cards a:nth-child(3):hover { background: var(--pink); color: var(--ink); } }
+.progress { position: fixed; inset: 0 0 auto 0; height: 5px; z-index: calc(var(--z-header) + 1); background: var(--acid); border-bottom: 1px solid var(--ink); transform-origin: 0 50%; transform: scaleX(var(--p, 0)); pointer-events: none; }
+a, button, summary, [role='button'] { cursor: pointer; }

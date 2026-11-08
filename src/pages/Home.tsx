@@ -22,6 +22,7 @@ export function Home() {
           color="#0a0a0a"
           skewWithVelocity={6}
           numCopies={4}
+          pauseOnHover
         />
       </section>
 

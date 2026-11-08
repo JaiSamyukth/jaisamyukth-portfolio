@@ -159,7 +159,7 @@ export function About() {
       </section>
 
       <section className="band bg-blue bt" aria-hidden="true">
-        <ScrollVelocity texts={['Available for contracts ✦ Fixing broken code ✦ Ignoring best practices to get things done ✦']} velocity={50} fontSize="clamp(1.3rem, 3vw, 2.6rem)" fontWeight={700} color="#ffffff" numCopies={3} />
+        <ScrollVelocity texts={['Available for contracts ✦ Fixing broken code ✦ Ignoring best practices to get things done ✦']} velocity={50} fontSize="clamp(1.3rem, 3vw, 2.6rem)" fontWeight={700} color="#ffffff" numCopies={3} pauseOnHover />
       </section>
     </>
   );
